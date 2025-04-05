@@ -1,0 +1,498 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{accents}
+\usepackage{wasysym}
+\usepackage{hyperref}
+
+\renewcommand{\contentsname}{Índice de Contenidos}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        {\Huge \textsc{Ecuaciones Diferenciales \\ \vspace{10px} Ordinarias}}
+    \end{center}
+
+    \vspace{10px}
+
+    \hfill{\textit{-- Alto, policía, a cometido usted un crimen.}}
+
+    \hfill{\textit{-- Lo asumo.}}
+
+    \hfill{\textit{-- Lo arresto.}}
+
+    \tableofcontents
+\end{titlepage}
+
+\newpage
+
+\section{Soluciones Ejercicios}
+
+En esta sección se detallarán los argumentos utilizados para resolver los ejercicios planteados en clase (una selección de ellos, que me canso).
+
+\subsection{Relación 1}
+
+\begin{enumerate}
+    \item \textit{Considera la EDO}
+    
+    \[x'(t) = x(t), \hspace{20px} t \in I \subset \mathbb{R}.\]
+
+    \begin{itemize}
+        \item \textit{Probar que si $x(t_0) = 0$ para algún $t_0 \in I$, entonces $x(t) = 0$ para todo $t \in I$.}
+
+        \vspace{7px}
+
+        \textsc{Demostración:} Supongamos, por reducción al absurdo, que existe $t_1 \in I$ tal que $x(t_1) \neq 0$. Además, no es ninguna pérdida de generalidad suponer que $x(t_1) > 0$.
+        De esta información obtenemos inmediatamente que $t_0 < t_1$, pues apartir de $t_1$ la función es creciente. Más aún, podemos asumir sin miramientos que $t_0 = \max\{t \in I: x(t) = 0\}\footnote{Afirmar la existencia de dicho máximo se deja al ingenio del lector.}$ y que $t_1 - t_0 < 1$.
+
+        Después de establecer estas hipótesis y aclaraciones, lo primero que hacemos es aplicar el Teorema del Valor Medio para obtener que
+
+        \[\frac{x(t_1) - x(t_0)}{t_1 - t_0} = x'(t_2), \hspace{20px} t_2 \in (t_0, t_1),\]
+
+        de donde sacamos
+
+        \[x(t_1) = x(t_2)(t_1 - t_0)\]
+
+        usando la condición de la EDO propuesta.
+
+        Repitiendo este proceso de manera reiterada, podemos construir una sucesión $(t_n)_n \subset I$ tal que, para cada $n \geq 2$, $t_n$ es un punto del intervalo $(t_0, t_{n-1})$ que satisface
+
+        \[x(t_{n-1}) = x(t_n)(t_{n-1} - t_0).\]
+
+        Mediante una supérflua inducción se puede argumentar fácilmente que, considerando la sucesión
+
+        \[a_n = x(t_n)(t_{n-1} - t_0)(t_{n-2} - t_0) \dots (t_1 - t_0),\]
+
+        se tiene que $x(t_1) = a_n$ para todo $n \in \mathbb{N}$, por lo que $\lim_{n \to \infty} (a_n) = x(t_1)$. No obstante, por otra parte, es fácil notar a partir de las hipótesis marcadas que $a_n \leq x(t_1)(t_1 - t_0)^{n-1}$ y, en consecuencia, como $t_1 - t_0 < 1$, que $\lim_{n \to \infty} (a_n) = 0$. En definitiva, hemos inferido que $x(t_1) = 0$, lo cual contradice la suposición inicial de que $x(t_1) > 0$, por lo que concluimos que $x$ debe ser nula en todo $I$. \hfill{\textsc{Q.e.d.}}
+
+        \vspace{7px}
+
+        \item \textit{Sean $x(t), y(t)$ soluciones de la EDO con $y(t) \neq 0$. Probar que existe $\lambda \in \mathbb{R}$ tal que $x(t) = \lambda y(t)$.}
+        
+        \vspace{7px}
+
+        \textsc{Demostración:} Sea $\lambda : I \longrightarrow \mathbb{R}$ una función tal que $\lambda(t) = x(t)/y(t)$ para todo $t \in I$, función la cual está bien definida debido a que $y(t) \neq 0$ en todo su dominio (apartado anterior).
+
+        A continuación, si derivamos, obtenemos que
+
+        \[\lambda'(t) = \frac{x'(t)y(t) - x(t)y'(t)}{(y(t))^2},\]
+
+        y, usando la información sobre la EDO, nos queda que
+
+        \[\frac{x'(t)y(t) - x(t)y'(t)}{(y(t))^2} = \frac{x(t)y(t) - x(t)y(t)}{(y(t))^2} = 0,\]
+
+        por lo que $\lambda'(t) = 0$ y, por subsiguiente, la función $\lambda(t)$ es constante. Llamemos $\lambda \in \mathbb{R}$ a dicha constante\footnote{Abuso de lenguaje o si como me gusta caramba.}.
+
+        Por cómo habíamos construido la función es inmediato observar que $x(t) = \lambda y(t)$, que es lo que tanto ansiábamos. \hfill{\textsc{Q.e.d.}}
+
+        \vspace{7px}
+
+        \item \textit{Concluir que las únicas soluciones de esta EDO son de la forma $x(t) = \lambda e^t, \lambda \in \mathbb{R}$.}
+        
+        \vspace{7px}
+
+        \textsc{Solución:} Es un resultado inmediato invocando el apartado anterior, ya que la función $y(t) = e^t$ satisface la EDO del ejercicio. $\hfill\square$
+    \end{itemize}
+
+    \vspace{12px}
+
+    \item \textit{Probar que si $x(t)$ es una solución de la EDO}
+
+    \[x''(t) + x(t) = 0,\]
+
+    \textit{entonces es también solución de}
+
+    \[x'(t)^2 + x(t)^2 = k,\]
+
+    \textit{para algún $k \in \mathbb{R}$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración:} Aunque no se especifica en el enunciado, 
+    suponemos que el dominio de definición de $x$ es todo $\mathbb{R}$. Habiendo hecho esta puntualización inicial, comenzamos suponiendo que $x''(t) + x(t) = 0$. A continuación, consideramos $f : \mathbb{R} \longrightarrow \mathbb{R}$ tal que 
+    
+    \[f(t) = x'(t)^2 + x(t)^2, \hspace{20px} \forall t \in \mathbb{R}.\]
+
+    Al tomar la derivada de $f$ notamos que
+
+    \[f'(t) = 2x'(t)x''(t) + 2x(t)x'(t) = 2x'(t)(x''(t) + x(t)),\]
+
+    y, aplicando la hipótesis, llegamos a que
+
+    \[2x'(t)(x''(t) + x(t)) = 2x'(t) \cdot 0 = 0,\]
+
+    por lo que sabemos que $x'(t)^2 + x(t)^2 = f(t) = k$ para todo $t$ real, donde $k \in \mathbb{R}$ es una constante. Este hecho es consecuencia de que la derivada sea nula en todo su dominio. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{7px}
+
+    \textit{Encontrar una solución de $x'(t)^2 + x(t)^2 = k$ que no sea solución de $x''(t) + x(t) = 0$.}
+
+    \vspace{7px}
+
+    \textsc{Solución:} Para cualquier $k > 0$ tomamos la función $x(t) = \sqrt{k}$, donde notamos inmediatamente que satisface $x'(t)^2 + x(t)^2 = k$, mientras que obviamente no es solución de la otra. $\hfill\square$
+
+    \newpage
+
+    \textit{¿Qué tiene que cumplir una solución de $x'(t)^2 + x(t)^2 = k$ para ser solución de $x''(t) + x(t) = 0$?}
+
+    \vspace{7px}
+
+    \textsc{Solución:} Descartamos el caso $k = 0$ pues en ese se cumplen ambas EDOs trivialmente, por lo que de ahora en adelante asumiremos $k > 0$. Ahora si, en primer lugar, se tiene que cumplir que $x \in C^2$ para poder considerarla solución de la segunda EDO. Además, vamos a probar que otra condición necesaria\footnote{Esta condición de hecho también es suficiente, pero se sale de los contenidos de este curso.} que tiene
+    que satisfacer es que, considerando $D := \{t \in \mathbb{R}: x'(t) \neq 0\}$, se debe tener $D$ denso en $\mathbb{R}$.
+
+    Para probar que es una condición necesaria, supongamos que $D$ no es denso en $\mathbb{R}$ y veamos que no es solución de la segunda EDO. 
+    
+    En consecuencia, como $D$ no es denso en $\mathbb{R}$, $\overline{D} \neq \mathbb{R}$ o, lo que es lo mismo, existen $t_0, r \in \mathbb{R}$ tales que $(t_0 - r, t_0 + r) \cap D = \emptyset$. Por tanto, para todo $t \in (t_0 - r, t_0 + r)$
+    se tiene $x'(t) = 0$, con lo que deducimos que $x$ es constante en dicho intervalo.
+
+    Al ser constante, y sabiendo que $x'(t)^2 + x(t)^2 = k$ con $x'(t) = 0$, obtenemos que $x(t) = \sqrt{k} > 0$ en todo el intervalo\footnote{También podría tomar la solución negativa $-\sqrt{k}$, pero no afecta al argumento.}. Con esta información llegamos fácilmente a que no satisface $x''(t) + x(t) = 0$,
+    pues $x''(t) = 0$ mientras que $x(t) > 0$. $\hfill\square$
+
+    \vspace{12px}
+
+    \item \textit{Se considera el problema de Cauchy}
+    
+    \[
+    \begin{cases}
+        x'(t)^2 + x(t)^2 = a^2, \\
+        x(0) = b.
+    \end{cases}
+    \hspace{20px} a \geq 0, b \in \mathbb{R}.
+    \]
+
+    \begin{itemize}
+        \item \textit{Probar que $x(t) = a\sin t$ es solución de la EDO.}
+        
+        \vspace{7px}
+
+        \textsc{Demostración:} Es un proceso desmesuradamente metódico, pero habrá que redactar o 
+        el referí se queja. El primer paso (y prácticamente el último) es calcular la derivada
+
+        \[x'(t) = a\cos t,\]
+
+        con lo que ya obtenemos que
+
+        \[x'(t)^2 + x(t)^2 = a^2\cos^2t + a^2\sin^2t = a^2(\cos^2t + \sin^2t) = a^2.\]
+
+        \hfill{\textsc{Q.e.d.}}
+
+        \vspace{7px}
+
+        \item \textit{Probar que si $a < |b|$ entonces el problema anterior no tiene solución.}
+
+        \vspace{7px}
+
+        \textsc{Demostración:} Vamos sin rodeos. Como $x'(t)^2 \geq 0$, entonces nos queda que 
+
+        \[x(t)^2 \leq x'(t)^2 + x(t)^2 = a^2,\]
+
+        de donde sacamos que $x(t) \leq a$ y, en particular, $x(0) \leq a < |b|$, por lo que concluimos que no se puede dar $x(0) = b$. \hfill{\textsc{Q.e.d.}}
+
+        \vspace{7px}
+
+        \newpage
+
+        \item \textit{Usando que $x(t) = a\sin t$ es una solución de la EDO, encontrar una solución del problema de Cauchy cuando $|b| \leq a$.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} En primer lugar, como $|b| \leq a$, llegamos a que\footnote{Hemos descartado implícitamente el caso $a = 0$, pues no aporta ningún interés.}
+
+        \[|b| \leq a \Longrightarrow -a \leq b \leq a \Longrightarrow -1 \leq \frac{b}{a} \leq 1,\]
+
+        con lo que se deduce que existe $t_0 \in \mathbb{R}$ tal que $\sin t_0 = b/a$. Apartir de aquí el ejercicio se escribe solo,
+        basta tomar la función $x(t) = a\sin(t + t_0)$ y ver que cumple las condiciones del problema de Cauchy planteado. En efecto,
+        comprobar que verfica la EDO se lleva a cabo de una manera análoga al primer apartado, y en cuanto a la condición inicial, se reduce 
+        simplemente a desarrollar
+
+        \[x(0) = a\sin(0 + t_0) = a \cdot \frac{b}{a} = b.\]
+
+        $\hfill\square$
+    \end{itemize}
+
+    \item \textit{Reducir las siguientes EDOs de segundo orden a un sistema equivalente de primer orden}
+        
+    \[a) \hspace{10px} x''(t) = \frac{1 - x'(t)^2}{x(t)} - 2k\sqrt{1 - x'(t)^2}, \hspace{15px} b) \hspace{10px} x''(t) = f(x'(t))x(t),\]
+
+    \[c) \hspace{10px} \sin x'''(t) + \cos x''(t) + \tan x'(t) = x^2(t) - 1. \hspace{88px}\]
+
+    \vspace{7px}
+
+    \textsc{Solución:} To be continued.
+
+    \vspace{12px}
+
+    \item \textit{Se define}
+    
+    \[x(t) = x(t_0) + \int_{t_0}^{t} tf(s, x(s))\, ds,\]
+
+    \textit{siendo $f$ una función continua. ¿Qué EDO cumple $x(t)$?}
+
+    \vspace{7px}
+
+    \textsc{Solución:} En primer lugar, notamos que
+
+    \[\int_{t_0}^{t} tf(s, x(s))\, ds = t \int_{t_0}^{t} f(s, x(s))\, ds,\]
+
+    para que, a lo hora de derivar, obtener
+
+    \[x'(t) = \int_{t_0}^{t} f(s, x(s))\, ds + tf(t, x(t)).\]
+
+    Además, si "despejamos" de la ecuación original la expresión $\int_{t_0}^{t} f(s, x(s))\, ds$ concluimos el ejercicio con la EDO en forma normal\footnote{La seguridad sobre esta afirmación va menguando cada vez más.}
+
+    \[x'(t) = \frac{x(t) - x(t_0)}{t} + tf(t, x(t)).\]
+
+    $\hfill\square$
+
+    \newpage
+
+    \item \textit{Encontrar una EDO que admita como soluciones a las siguientes familias de funciones.}
+
+    \[a) \hspace{10px} x(t) = Ae^t + Be^{-t}, \hspace{20px} b) \hspace{10px} x(t) = Ae^t + Bte^t, \hspace{20px} c) \hspace{10px} x(t) = Ae^t\cos t + Be^t\sin t.\]
+
+    \vspace{7px}
+
+    \textsc{Solución:} Contestemos ordenadamente a los distintos apartados.
+
+    \begin{itemize}
+        \item[$a)$] En este caso es fácil deducir que una EDO que cumple la solicitud del enunciado se trata de
+        
+        \[x''(t) = x(t),\]
+
+        de donde la inspiración puede provenir de las funciones trigonométricas hiperbólicas.
+
+        \item[$b)$] En este caso hay que estrujar algo más los sesos. Primero calculamos la primera derivada, quedándose
+        
+        \[x'(t) = Ae^t + Bte^t + Be^t = x(t) + Be^t,\]
+
+        de donde se deduce que $Be^t = x'(t) - x(t)$. A continuación, calculamos la segunda derivada
+
+        \[x''(t) = Ae^t + Bte^t + 2Be^t = x(t) + 2(x'(t) - x(t)),\]
+
+        a paritr de lo cual concluimos sin mucho esfuerzo que la EDO satisfecha por esta familia es
+
+        \[x''(t)  = 2x'(t) - x(t).\]
+
+        \item[$c)$] Me aburro, se deja como enigma al cuidado del lector\footnote{Indicación: deriva, anda.}.
+    \end{itemize}
+
+    $\hfill\square$
+
+    \vspace{12px}
+
+    \item \textit{Se considera la EDO}
+    
+    \[x'(t) = t + x(t)^3.\]
+
+    \textit{Se pide:}
+
+    \begin{itemize}
+        \item \textit{Representar de forma aproximada las isoclinas.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Usar el comando \texttt{plot2d} en \textit{wxMaxima}. La representación gráfica de las curvas para $\lambda = -5, ..., 5$ es
+
+        \includegraphics[width=\textwidth]{curva.png}
+
+        $\hfill\square$
+
+        \vspace{7px}
+
+        \item \textit{Representar la curva en $\mathbb{R}^2$ donde las soluciones de la EDO alcanzan un punto crítico.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Se correspondería con la cruva generada al sustituir $\lambda = 0$. La ecuación que la representa es $x = \sqrt[3]{-t}$.
+
+        \includegraphics[width=\textwidth]{critico.png}
+
+        $\hfill\square$
+
+        \newpage
+
+        \vspace{7px}
+
+        \item \textit{Estudiar el número de ceros de una solución $x(t)$ en función de la condición inicial \\ $x(0) = x_0$.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Antes de comenzar a diferenciar entre los distintos casos, asentamos ciertas propiedades. Primero de todo, notamos que si la solución se encuentra por debajo de la curva del apartado anterior, entonces será decreciente, mientras que si se sitúa por encima será creciente. En segundo lugar, usando esta información, notamos que si una solución corta a la curva $x = \sqrt[3]{-t}$, entonces solo lo hará esa vez, por lo que esa intersección representa el único punto crítico de $x(t)$, que es de hecho mínimo absoluto (quizás convenga reflexionar esta afirmación). Con estas clarificaciones, hagamos el estudio pertinente:
+
+        \begin{itemize}
+            \item[($x_0 > 0$)] En este caso, la solución $x(t)$ no tendría ningún cero. Es sencillo ver que esto se debe a que el punto de corte con la curva de puntos críticos tiene lugar cuando $t < 0$, sección en la cual $\sqrt[3]{-t} > 0$, por lo que el mínimo de $x(t)$ será positivo y, en particular, distinto de 0.
+
+            \item[($x_0 = 0$)] Se trata del caso más trivial, pues el mínimo absoluto se encuentra justamente en ese punto $t = 0$. To sum up, tiene un único 0.
+
+            \item[($x_0 < 0$)] Por contra, este caso requiere de más detenimiento y racionalización, pues puede darse el caso en el que tenga uno o dos ceros. Lo cierto es que como se vio en clase me da soberano palo seguir redactando.
+        \end{itemize}
+
+        $\hfill\square$
+    \end{itemize}
+
+    \vspace{12px}
+
+    \item \textit{Dada la curva}
+    
+    \[C = \{(t, x) \in \mathbb{R}^2 : t^2 + 2x^2 + 2t + 2x = 1\},\]
+
+    \textit{se pide:}
+
+    \begin{itemize}
+        \item \textit{Estudiar cuántas componentes de $C$ se pueden extraer que se puedan expresar como un grafo $(t, x(t))$.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Aunque no es necesario, puede ser de utilidad darse cuenta de que $C$ se corresponde con una elipse. En concreto, viene descrita por la siguiente ecuación
+
+        \[\left(\frac{t+1}{\sqrt{5/2}}\right)^2 + \left(\frac{x+1/2}{\sqrt{5}/2}\right)^2 = 1.\]
+
+        Su representación gráfica sería la siguiente:
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=200px]{eclipse.png}            
+        \end{figure}
+
+        Habiendo hecho este análisis previo es trivial notar que podemos separar la curva en dos grafos: la parte de ``arriba''; y la parte de ``abajo''. 
+        Para obtener las expresiones explícitas podemos usar la fórmula de Bhaskara, de donde $x(t)$ para la parte superior es 
+
+        \[x(t) = -\frac{1}{2} + \frac{\sqrt{-2t^2-4t+3}}{2},\]
+
+        y para la parte inferior
+
+        \[x(t) = -\frac{1}{2} - \frac{\sqrt{-2t^2-4t+3}}{2}.\]
+
+        $\hfill\square$
+
+        \vspace{7px}
+
+        \item \textit{Encontrar una EDO de la forma $x'(t) = f(t, x(t))$ que admita como soluciones las funciones del apartado anterior.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Derivando se puede llegar sin muchos obstáculos a que una EDO que cumple las condiciones del enunciado es
+
+        \[x'(t) = -\frac{t+1}{2x(t) + 1}.\]
+
+        $\hfill\square$
+
+        \vspace{7px}
+
+        \item \textit{Usando la expresión de $C$, reducir la EDO anterior a una autónoma.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Aunque sospecho que no es realmente lo que te pide, no he conseguido obtener una EDO en forma normal y autónoma, admito mi incompetencia.
+        Nos vamos a encargar de despejar la expresión
+
+        \[\left(\frac{t+1}{2x+1}\right)^2\]
+
+        en la ecuación de la elipse para así obtener una fórmula para $x'(t)^2$. Simplemente seguimos las siguientes implicaciones lógicas:
+
+        \[\left(\frac{t+1}{\sqrt{5/2}}\right)^2 + \left(\frac{x+1/2}{\sqrt{5}/2}\right)^2 = 1 \Rightarrow \left(\frac{t+1}{\sqrt{5/2}}\right)^2 + \left(\frac{2x+1}{\sqrt{5}}\right)^2 = 1 \Rightarrow\]
+
+        \[\left(\frac{t+1}{2x+1}\right)^2 \cdot \frac{1}{2} + 1 = \left(\frac{\sqrt{5}}{2x+1}\right)^2 \Rightarrow \left(\frac{t+1}{2x+1}\right)^2 = 2 \cdot \left[\left(\frac{\sqrt{5}}{2x+1}\right)^2 - 1\right].\]
+
+        Con esta sucesión de pasos de inferencia y el resultado del apartado anterior llegamos a la siguiente EDO autónoma, aunque no en forma normal\footnote{Confío en la ausencia de erratas a lo largo del ejercicio, corroborar las cuentas requiere demasiado esfuerzo.}:
+
+        \[x'(t)^2 = 2 \cdot \left[\left(\frac{\sqrt{5}}{2x(t)+1}\right)^2 - 1\right].\]
+
+        $\hfill\square$
+
+        \newpage
+    \end{itemize}
+
+    \item \textit{Encontrar la familia de trayectorias ortogonales a las siguientes familias de curvas}
+
+    \[a) \hspace{10px} x = e^{\lambda t}, \hspace{20px} b) \hspace{10px} t x = \lambda, \hspace{20px} c) \hspace{10px} x = \lambda t^4.\]
+
+    \vspace{7px}
+
+    \textsc{Solución:} Lo cierto es que este ejercicio es bastante monótono y sin sazón, pero bueno pongámonos manos a la obra.
+
+    \begin{itemize}
+        \item[$a)$] El primer paso es derivar la expresión $x(t) = e^{\lambda t}$ y despejar $\lambda$ para quitar la dependencia. Se debe llegar a algo del estilo
+        
+        \[x'(t) = \frac{x(t)}{t}\log x(t),\]
+
+        por lo que la EDO satisfecha por la familia de trayectorias de nuestro interés es
+
+        \begin{equation}
+            x'(t) = -\frac{t}{x(t) \log x(t)}
+            \label{eq::eq1}
+        \end{equation}
+
+        Para encontrar (al menos) una posible familia de soluciones de la EDO \eqref{eq::eq1}, agrupamos todos los factores de $x(t)$ a un lado de la igualdad y los de $t$ al otro.
+        Nos quedamos con la siguiente ecuación
+
+        \[x(t)x'(t)\log x(t) = -t,\]
+
+        donde integramos en ambos extremos (cada quien se las apaña para encontrar las primitivas), y concluimos con la expresión implícita para $x(t)$
+
+        \[\frac{1}{2}x(t)^2(\log x(t) - 1/2) + \frac{1}{2}t^2 = \lambda, \hspace{20px} \lambda \in \mathbb{R}.\]
+
+        $\hfill\square$
+
+        \vspace{7px}
+
+        \item[$b)$] Salen hiperbólas, los detalles se te delegan a ti, el lector. ¡Ánimo! $\hfill\square$
+
+        \vspace{7px}
+
+        \item[$c)$] Elipses, ¿a qué esperas? $\hfill\square$
+    \end{itemize}
+
+    \vspace{12px}
+
+    \item \textit{Expresar cada enunciado como una ecuación diferencial}
+    
+    \begin{itemize}
+        \item \textit{El grafo de $x(t)$ verifica que la pendiente de la recta tangente en un punto es el cuadrado de la distancia del punto al origen.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Es insultántemente fácil. Todo el mundo sabe que la pendiente de la recta tangente se corresponde con el valor de la derivada, por lo que ya lo tenemos a punto de ebullir.
+        Sería nada más y nada menos que la exhibida EDO
+
+        \[x'(t) = x(t)^2 + t^2.\]
+
+        $\hfill\square$
+        
+        \vspace{7px}
+
+        \item \textit{El grafo de $x(t)$ verifica en cada punto que la distancia del origen al punto de corte de la recta tangente con el eje $x$ coincide con la distancia del origen al punto de corte de la recta normal con el eje $t$.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} TODO.
+
+        \vspace{7px}
+
+        \item \textit{El grafo de $x(t)$ verifica que la recta normal en cada punto pasa por el origen de coordenadas.}
+
+        \vspace{7px}
+
+        \textsc{Solución:} Siendo este apartado un caso particular del anterior no entiendo por qué aparece después. En fin, la mayor dificultad reside en saberse la ecuación de la recta normal.
+        No obstante, asumimos que el receptor está familiarizado con dicha fórmula, de manera que las cuentas se simplifican mucho, quedándose la siguiente EDO como resultado final\footnote{Trabaja un poco, no te voy a hacer todo.}
+
+        \[x(t)x'(t)=-t.\]
+
+        $\hfill\square$
+    \end{itemize}
+
+    \vspace{12px}
+
+    \item \textit{Supongamos que está nevando con intensidad constante. Una máquina quitanieves sale a las 12 del medio día y recorre 2km en la primera hora, y posteriormente 1km en la segunda hora. ¿A qué hora empezó a nevar?}
+\end{enumerate}
+
+\newpage
+
+\subsection{Relación 2}
+
+\end{document}
