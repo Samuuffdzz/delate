@@ -31,13 +31,118 @@ Otro resultado útil es que $\sum_{i = 0}^{n} c^{i} = \frac{1 - c^{n + 1}}{1 - c
 
 Esto es equivalente a la definición de sucesión de Cauchy, permitiéndonos asegurar que, efectivamente, una sucesión contractiva es de Cauchy y, consecuentemente, convergente.
 
+\newpage
+
 \section{Ejercicio 7}
 
-Sean $b_i, 1 \leq i \leq n$, numeros reales positivos cuyo producto es 1.
+Sean $b_i, 1 \leq i \leq n, n > 1$, numeros reales positivos cuyo producto es 1.
 
-$a)$ Demuestre que si no todos los $b_i$ son iguales y están ordenados de forma creciente, entonces $b_1 < 1 < b_n$.
+\begin{itemize}
+    \item[$a)$] Demuestre que si no todos los $b_i$ son iguales y se suponen ordenados de forma creciente,
+    $b_1 \leq b_2 \leq ... \leq b_n$, entonces $b_1 < 1 < b_n$.
 
-\textbf{Dem:} Por reducción al absurdo, si asuminos que todos son menores 
+    \vspace{7px}
+
+    \textsc{Demostración}: Supongamos, de manera absurda, que $b_1 \geq 1$ o que $b_n \leq 1$. Únicamente se detalla el razonamiento para el primer escenario, quedando a elección del lector si decide darle el cierre que se merece a esta prueba.
+
+    Bien, supuesto $b_1 \geq 1$ y sabiendo que no todos son iguales, adquirimos $b_n > 1$, por lo que llegamos a
+
+    \[b_1b_2...b_n = (b_1b_2...b_{n-1})b_n \geq 1 \cdot b_n > 1,\]
+
+    de donde la contradicción aflora de forma radiante. \hfill{\textsc{Q.e.d.}}
+
+    \item[$b)$] Utilizando inducción en $n$, pruebe que
+    
+    \begin{equation}
+        b_1b_2...b_n = 1 \leq \frac{b_1 + b_2 + ... + b_n}{n},
+        \label{eq:agm}
+    \end{equation}
+
+    y que solo se tiene la igualdad cuando todos los $b_i$ son iguales.
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Creo que nada ha de decirse respecto a la obviedad de que, en \eqref{eq:agm}, la igualdad al menos ocurre cuando los $b_i$ comparten el mismo valor, es decir, 1.
+    Por tanto, de aquí en adelante asumimos que no son enteramente iguales y nos las apañaremos para fundamentar la desigualdad estricta.
+
+    Procedamos con la inducción:
+
+    \begin{itemize}
+        \item \textbf{Caso base}: $n = 2$. Simplemente nos limitamos a estudiar la desigualdad
+        
+        \[1 = b_1b_2 = \sqrt{b_1b_2} < \frac{b_1 + b_2}{2},\]
+
+        de la siguiente manera:
+
+        \[\sqrt{b_1b_2} < \frac{b_1 + b_2}{2} \iff b_1b_2 < \frac{(b_1 + b_2)^2}{4}\]
+        \[\hspace{100px} \iff 4b_1b_2 < b_1^2 + 2b_1b_2 + b_2^2\]
+        \[\hspace{83px}\iff b_1^2 - 2b_1b_2 + b_2^2 > 0\]
+        \[\hspace{65px}\iff (b_1 - b_2)^2 > 0,\]
+
+        lo cual es siempre cierto bajo las hipótesis impuestas (i.e. $b_1 \neq b_2$). Nótese que, en verdad, lo que hemos probado es que para cualesquiera $x, y \in \mathbb{R}^+$ distintos se tiene que $\sqrt{xy} < (x + y) / 2$.
+
+        \item \textbf{Paso inductivo}. Supongamos que, para $n$ reales postivos $a_1, a_2, ..., a_n$ (no todos iguales) arbitrarios tales que $a_1a_2...a_n = 1$, se cumple que
+        
+        \begin{equation}
+            n < a_1 + a_2 + ... + a_n.
+            \label{eq:agmstrc}
+        \end{equation}
+
+        A continuación, considerando $n + 1$ reales positivos ordenados $b_1b_2...b_{n+1}$ (no todos iguales) cuyo producto es $1$, veamos que se satisface $n + 1 \leq b_1 + b_2 + ... + b_{n + 1}$. Para ello, construimos la secuencia de números auxiliares $a_1, a_2, ..., a_n$ tales que
+
+        \[
+        a_k := 
+        \begin{cases}
+            b_1b_{n + 1} & \text{si $k = 1$} \\
+            b_k & \text{si $1 < k \leq n$}
+        \end{cases}
+        .\]
+
+        De esta manera, es evidente que su producto sigue valiendo $1$. No obstante, tenemos que diferenciar dos casos, pues puede suceder que después de hacer este
+        agrupamiento todos los $a_i$ valgan $1$. En dicho escenario, se tiene trivialmente que $n = a_1 + a_2 + ... + a_n$, mientras que si no se da esta condición aplicamos 
+        la hipótesis de inducción para alcanzar \eqref{eq:agmstrc}. En definitiva, no importa el escenario, sabemos que
+
+        \[n \leq a_1 + a_2 + ... + a_n = b_1b_{n+1} + b_2 + ... + b_n.\]
+
+        Pero está claro que aún no hemos terminado. Si tan sólo se pudiese afirmar que $1 < b_1 + b_{n + 1} - b_1b_{n + 1}$... Un momento, pero si sí que se puede, ¡allá que vamos pandilla!
+
+        Teniendo presente en mente que $b_1 < 1 < b_{n + 1}$ por el apartado anterior, notamos que 
+
+        \[1 < b_{n + 1} \Longrightarrow 1 - b_1 < b_{n + 1}(1 - b_1),\]
+
+        pues $1 - b_1 > 0$, y de aquí llegamos a que
+
+        \[1 < b_1 + b_{n + 1} - b_1b_{n + 1}.\]
+
+        Los restantes y vagos argumentos se confían al rector. \hfill{\textsc{Q.e.d.}}
+    \end{itemize}
+
+    \item[$c)$] Deduzca que si $a_i > 0, 1 \leq i \leq n$, son números reales, entonces
+    
+    \[\sqrt[n]{a_1a_2...a_n} \leq \frac{a_1 + a_2 + ... + a_n}{n}.\]
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Denotemos mediante $x \in \mathbb{R}$ a la media geométrica de los $a_i$, o más llanamente
+
+    \[x := \sqrt[n]{a_1a_2...a_n}.\]
+
+    Considerando los términos $b_i = a_i / x$, a poco que lo pienses, llegamos a que
+
+    \[\sqrt[n]{b_1b_2...b_n} = 1\]
+
+    o, lo que es lo mismo, que el producto de los $b_i$ es $1$, por lo que estamos en condiciones de invocar el resultado del apartado $b)$. En consecuencia, obtenemos que
+
+    \[\frac{\sqrt[n]{a_1a_2...a_n}}{x} = \sqrt[n]{b_1b_2...b_n} = 1 \leq \frac{b_1 + b_2 + ... + b_n}{n},\]
+
+    y, pasando la $x$ multiplicando, concluimos finalmente que
+
+    \[\sqrt[n]{a_1a_2...a_n} \leq \frac{x(b_1 + b_2 + ... + b_n)}{n} = \frac{a_1 + a_2 + ... + a_n}{n}.\]
+
+    $\hfill\square$
+\end{itemize}
+
+\newpage
 
 \section{Ejercicio 22*}
 
