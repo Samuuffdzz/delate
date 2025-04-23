@@ -1228,4 +1228,35 @@ Sean $(A, \leq)$ y $(B, \leq')$ conjuntos parcialmente ordenados y definimos en 
     \item[(\textit{i})] Argumento $\mu\phi n_0$
 \end{enumerate}
 
+\newpage
+
+\section{Resultado sin mucho valor pero que me enorgullece}
+
+\textbf{Teorema} \, \textit{Sea $(a_n)_n \subset \mathbb{R}$ una sucesión en los reales definida mediante la expresión recurrente}
+
+\[
+\begin{cases}
+    a_0 = a \\
+    a_n = a_{n - 1} + a_{n - 2} + ... + a_0 & \textit{si $n > 0$}
+\end{cases},
+\]
+
+\noindent \textit{donde $a \in \mathbb{R}$ es un número real cualquiera. Entonces se satisface la identidad}
+
+\[a_n = 2^{n - 1}a_0 = 2^{n - 1}a, \hspace{20px} \textit{para $n > 0$.}\]
+
+\vspace{10px}
+
+\noindent \textsc{Demostración}: En primer lugar, sin mucha agonía cognitiva podemos sacar de la definición que $a_1 = a_0 = 0$, por lo que nos centramos en lo que resta de la demostración en $n > 1$.
+
+En particular, por ser $n > 1$ sabemos que cada término $a_n$ depende de, como poco, $2$ términos anteriores. En consecuencia, podemos asegurar sin miedo a cometer ningún crimen atroz que
+
+\[a_n = a_{n - 1} + a_{n - 2} + ... + a_0 = a_{n - 1} + (a_{n - 2} + ... + a_0) = a_{n - 1} + a_{n - 1} = 2a_{n - 1}.\]
+
+\noindent De esta manera deducimos final y sencillamente mediante una supérflua inducción que, en efecto, tenemos
+
+\[a_n = 2^{n - 1}a_0 = 2^{n - 1}a, \hspace{20px} \text{para $n > 0$.}\]
+
+\hfill{\textsc{Q.e.d.}}
+
 \end{document}
