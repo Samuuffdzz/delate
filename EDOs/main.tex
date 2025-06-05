@@ -8,6 +8,7 @@
 \usepackage{accents}
 \usepackage{wasysym}
 \usepackage{hyperref}
+\usepackage{mdframed}
 
 \renewcommand{\contentsname}{Índice de Contenidos}
 
@@ -494,5 +495,94 @@ En esta sección se detallarán los argumentos utilizados para resolver los ejer
 \newpage
 
 \subsection{Relación 2}
+
+\begin{enumerate}
+    \item \textit{Se considera la EDO \[x' = f(t, x),\] con $f : \Omega \subset \mathbb{R}^2 \rightarrow \mathbb{R}$ continua.
+    Supongamos que el conjunto de todas las soluciones de esta EDO es un espacio vectorial real. Probar que la EDO es lineal homogénea.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}\footnote{A lo largo de la demostración asumiremos que para cada $(t_0, x_0) \in \Omega$ existe una solución $x$ de la EDO tal que $x(t_0) = x_0$. Esto es, ningún punto del dominio de $f$ está ``inutilizado''.}: Veamos que, definiendo $a(t) = f(t, 1)$ cuando $t \in \mathbb{R}, (t, 1) \in \Omega$, se satisface
+    \[f(t, x) = a(t)x,\]
+    si $(t, x) \in \Omega$.
+    Para ello, en primer lugar, notamos que por ser el conjunto de soluciones un espacio vectorial (llamémoslo $\mathcal{S}_f$), se cumple
+
+    \begin{equation}
+        f(t, \alpha x(t)) = (\alpha x)'(t) = \alpha x'(t) = \alpha f(t, x(t)),
+        \label{eq:rel2ej1:0}
+    \end{equation}
+
+    para todo $\alpha \in \mathbb{R}, x \in \mathcal{S}_f$ y $t \in \mathbb{R}$ válido. 
+    
+    Ya casi lo tenemos. Ahora, tomando un punto $(t, x) \in \Omega$ arbitrario con $x \neq 0$, escogemos\footnote{Si pones en duda la existencia de tal función quiero decirte que tienes problemas de confianza que deben ser tratados. Pero, adelante, intenta argumentarlo, tampoco te vendrá mal, \textit{cateto opuesto}.} $y \in \mathcal{S}_f$ tal que $y(t) = 1$ y aplicamos \eqref{eq:rel2ej1:0} para llegar sin obstáculos a
+
+    \[f(t, x) = f(t, x\cdot1) = f(t, xy(t)) = xf(t, 1) = a(t)x.\]
+
+    Por último, resta argumentar el caso cuando $x = 0$, pero apoyándonos en la continuidad de $f$ se puede inferir con escaso deterioro encefálico. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item \textit{Sean $a, b : \mathbb{R} \rightarrow \mathbb{R}$ funciones continuas tales que $a(t) \geq c > 0$ para todo $t \in \mathbb{R}$ y \[\lim_{t \to \infty} b(t) = 0.\] Probar que las soluciones de la EDO $x' + a(t)x = b(t)$ tienden a cero cuando $t \to \infty$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: \textit{Indicación: L'Hôpital.} \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item \textit{Considérese la ecuación \[x' = f(t, x),\] siendo $f \in C^{\infty}(\Omega)$ definida en cierto abierto $\Omega \subset \mathbb{R}^2$. Probar que sus soluciones son también $C^{\infty}$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Queremos probar que, siendo $x : I \subset \mathbb{R} \rightarrow \mathbb{R}$ solución de la EDO, entonces $x \in C^n(I)$ para todo $n \in \mathbb{N}$. Con este objetivo, procedemos por inducción sobre $n$ para demostrar, como hipótesis de inducción, que:
+
+    \begin{mdframed}
+    \textit{la $n$-ésima derivada de $x$ viene dada por una expresión $x^{n)}(t)$ en la que únicamente aparecen las derivadas $x^{k)}(t)$ ($k < n$) y
+     las parciales de $f$ aplicadas en $(t, x(t))$, convinadas por sumas de productos entre ellas.}
+    \end{mdframed}
+
+    El caso base nos viene asegurado por ser $x$ solución de la EDO. Para el paso inductivo, suponemos la propiedad anterior cierta para la derivada $n$-ésima. En consecuencia, al expresar $x^{n + 1)} = (x^{n)})'$ usamos la regla para la derivada de la suma y del producto, para obtener con un escueto razonamiento lo que anhelábamos. \hfill{\textsc{Q.e.d.a.s.?.}}
+
+    \newpage
+
+    \item \textit{Razonar las siguientes preguntas.}
+    
+    \begin{enumerate}
+        \item[\textit{(a)}] \textit{¿Puede la función $\phi(t) = t^2$, para todo $t \in \mathbb{R}$, resolver una EDO lineal de primer orden homogénea? ¿Y completa?}
+
+        \vspace{7px}
+
+        \textsc{Solución}: Para la primera cuestión, la respuesta es, lastimosamente, negativa. El motivo de esto es que $\phi$ se anula para $t = 0$, por lo que, para que fuese solución de una EDO lineal homo, debería ser idénticamente nula. No obstante, creo que hay suficientes evidencias para creer que eso no es así.
+
+        En cuanto a la segunda pregunta, me satisface anunciarles que existe la posibilidad. Tomando $a \equiv 0$ y $b(t) = 2t$. $\hfill\square$
+
+        \vspace{7px}
+
+        \item[\textit{(b)}] \textit{¿Pueden las funciones $\phi(t) = e^t, \psi(t) = e^{-t}$, para todo $t \in \mathbb{R}$, resolver una misma EDO lineal de primer orden homogénea? ¿Y completa?}
+
+        \vspace{7px}
+
+        \textsc{Solución}: Aunque por motivos distintos, este aparatdo presenta el mismo patrón de respuestas que el anterior. La primera es falsa porque las funciones $\phi, \psi$ no son linealmente dependientes entre si, razón por la cual no pueden ser soluciones de una misma EDO lineal homogénea.
+
+        Para la segunda parte debemos resolver un sistemas de ecuaciones, pero donde las incógnitas son las funciones $a$ y $b$. Presenta un mayor reto redactar su resolución en \LaTeX \, que intentar valerte por tus propios medios, es por eso que te es delegada dicha tarea. $\hfill\square$
+
+        \vspace{7px}
+
+        \item[\textit{(c)}] \textit{Sea $x : [1, 2] \rightarrow \mathbb{R}$ una solución del problema de Cauchy}
+        
+        \[
+        \begin{cases}
+            x' = t + x^2, \\
+            x(1) = 2.
+        \end{cases}
+        \]
+
+        \textit{¿Puede ser $x(2) = 1$?}
+
+        \vspace{7px}
+
+        \textsc{Solución}: No es posible, ya que la derivada cumple \[x' = t + x^2 \geq t \geq 1 > 0,\] por lo que $x$ es creciente, pero $1 \not > 2$. $\hfill\square$
+    \end{enumerate}
+\end{enumerate}
 
 \end{document}
