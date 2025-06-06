@@ -601,8 +601,67 @@ En esta sección se detallarán los argumentos utilizados para resolver los ejer
 
         \vspace{7px}
 
-        \item[\textit{(e)}] \textit{Sea $a : \mathbb{R} \rightarrow \mathbb{R}$ una función continua y supongamos que existe $t_0 \in \mathbb{R}$ tal que $a(t) \leq 1/t^2$ para todo $t > t_0$. Probar que cualquier solución de la EDO $x' = a(t)x$ cumple $\lim_{t \to \infty} x(t) < \infty$. ¿Es cierto si se impone $a(t) \leq 1/t$?}
+        \item[\textit{(e)}] \textit{Sea $a : \mathbb{R} \rightarrow \mathbb{R}$ una función continua y supongamos que existe $t_0 \in \mathbb{R}$ tal que $a(t) \leq 1/t^2$ para todo $t > t_0$. Probar que cualquier solución de la EDO $x' = a(t)x$ cumple $\lim_{t \to \infty} x(t) < \infty$.}
+
+        \vspace{7px}
+
+        \textsc{Demostración}: Sabemos, por uno de los resultados clave de este tema, que las soluciones son de la forma \[x = \lambda e ^{\int a(t)\,dt}, \hspace{20px} \lambda \in \mathbb{R},\] pero nada nos impide tonar como primitiva la integral definida \[\int_{t_0}^{t} a(s)\, ds.\]
+
+        Por último, haciendo uso de los criterios de convergencia para integrales impropias, e invocando la hipótesis de que $a(t) \leq 1/t^2$, concluimos sin entorpecimientos que \[\int_{t_0}^{\infty} a(s)\,ds < \infty\] y, por tanto, el límite a estudiar cumple \[\lim_{t \to \infty} x(t) = \lambda e^{\int_{t_0}^{\infty} a(s)\,ds} < \infty.\]
+
+        \hfill{\textsc{Q.e.d.}}
+
+        \vspace{7px}
+
+        \textit{¿Es cierto si se impone $a(t) \leq 1/t$?}
+
+        \vspace{7px}
+
+        \textsc{Solución}: Me temo que no. A modo de contraejemplo, basta estudiar el caso de la igualdad $a(t) = 1/t$. La mano de obra recae sobre tus hombros. $\hfill\square$
     \end{enumerate}
+
+    \vspace{12px}
+
+    \item \textit{Dadas $f, g$ funciones derivables, en general es falso que se cumple la identidad \[(f(t)g(t))' = f'(t)g'(t).\] Fijando $f(t) = e^{t^3 + 2t}$, determinar las funciones $g(t)$ que satisfacen tal identidad.}
+
+    \vspace{7px}
+
+    \textsc{Solución}: \textit{Indicación: Transformar la identidad del enunciado para expresarla como una EDO lineal homogénea de primer orden. El siguiente paso es resolverla, ya está.} $\hfill\square$
+
+    \begin{center}
+        {(Los siguientes dos ejercicios requieren demasiada mano de obra como para que alguien piense que voy a detallar la resolución.)}
+    \end{center}
+
+    \item \textit{Resolver las siguientes EDOs usando el método que convenga en cada caso...}
+
+    \vspace{12px}
+
+    \item \textit{Encontrar las soluciones de las siguientes EDOs buscando (si procede) factores integrantes de la forma que se indica...}
+
+    \vspace{7px}
+
+    \item[13.] \textit{Dadas $f : I \subset \mathbb{R} \rightarrow \mathbb{R}$ y $g : J \subset \mathbb{R} \rightarrow \mathbb{R}$ funciones continuas, supongamos que $g(0) = 0$ y $g(x) \leq x$ en un entorno de $x = 0$. Probar que la única solución del problema de Cauchy}
+    
+    \[
+    \begin{cases}
+        x' = f(t)g(x) \\
+        x(t_0) = 0,
+    \end{cases}
+    \hspace{20px}
+    t_0 \in I,
+    \]
+
+    \textit{es $x(t) = 0$ para todo $t \in I$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Resaltar, antes de nada, que a $g$ también hay que exigirle\footnote{Hagan vostros los estudios pertinentes.} derivabilidad y derivada continua en $x = 0$. Dicho esto, empezamos viendo que, bajo estas hipótesis marcadas, se cumple que $g'(0) = 1$. 
+    Para ello definimos $h(x) := x - g(x)$ satisfaciendo $h(0) = 0$ y $h(x) \geq 0$ en un entorno de $x = 0$. En consecuencia, por un resultado básico de análisis, sabemos que $h'(0) = 0$, pues la función posee un mínimo relativo en $x = 0$.
+    Ahora, aplicando la regla de la derivada de la suma y despejando, llegamos a que, en efecto, $g'(0) = 1$.
+
+    Con este resultado, es fácil obtener mediante la regla de L'Hôpital que
+
+    \[\lim_{x \to \infty} \frac{g(x)}{x} = 1.\]
 \end{enumerate}
 
 \end{document}
