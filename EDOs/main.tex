@@ -582,6 +582,26 @@ En esta sección se detallarán los argumentos utilizados para resolver los ejer
         \vspace{7px}
 
         \textsc{Solución}: No es posible, ya que la derivada cumple \[x' = t + x^2 \geq t \geq 1 > 0,\] por lo que $x$ es creciente, pero $1 \not > 2$. $\hfill\square$
+
+        \vspace{7px}
+
+        \item[\textit{(d)}] \textit{¿Existe alguna constante $\mu \in \mathbb{R}$ tal que la EDO $x' = (\mu + \cos^2t)x$ tenga soluciones $\pi$-periódicas no triviales?}
+
+        \vspace{7px}
+
+        \textsc{Solución}: Afirmativo. Para ello nos centramos en encontrar una primitiva para $\mu + \cos^2t$. Dando por sentado que la antiderivada del $\cos^2$ es bien conocida por el público, nos queda la siguiente primitiva
+
+        \[\int \mu \cos^2t\,dt = \mu t + \frac{t}{2} + \frac{\sin(2t)}{4},\]
+
+        y como deseamos que esta expresión sea $\pi$-periódica, notamos que nos conviene tomar $\mu = -1/2$. A modo de conclusión, vemos que con dicha elección nuestras soluciones son de la forma
+
+        \[x(t) = \lambda e^{\sin(2t)/4}, \hspace{20px} \lambda \in \mathbb{R},\]
+
+        cuya periocidad confío en que podreis verificar. $\hfill\square$
+
+        \vspace{7px}
+
+        \item[\textit{(e)}] \textit{Sea $a : \mathbb{R} \rightarrow \mathbb{R}$ una función continua y supongamos que existe $t_0 \in \mathbb{R}$ tal que $a(t) \leq 1/t^2$ para todo $t > t_0$. Probar que cualquier solución de la EDO $x' = a(t)x$ cumple $\lim_{t \to \infty} x(t) < \infty$. ¿Es cierto si se impone $a(t) \leq 1/t$?}
     \end{enumerate}
 \end{enumerate}
 
