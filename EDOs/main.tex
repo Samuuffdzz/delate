@@ -37,6 +37,7 @@
 En esta sección se detallarán los argumentos utilizados para resolver los ejercicios planteados en clase (una selección de ellos, que me canso).
 
 \subsection{Relación 1}
+\label{seq:1:1}
 
 \begin{enumerate}
     \item \textit{Considera la EDO}
@@ -640,7 +641,34 @@ En esta sección se detallarán los argumentos utilizados para resolver los ejer
 
     \vspace{7px}
 
-    \item[13.] \textit{Dadas $f : I \subset \mathbb{R} \rightarrow \mathbb{R}$ y $g : J \subset \mathbb{R} \rightarrow \mathbb{R}$ funciones continuas, supongamos que $g(0) = 0$ y $g(x) \leq x$ en un entorno de $x = 0$. Probar que la única solución del problema de Cauchy}
+    \item[13.] (Corrección) \textit{Dadas $f : I \subset \mathbb{R} \rightarrow \mathbb{R}$ y $g : J \subset \mathbb{R} \rightarrow \mathbb{R}$ funciones continuas, supongamos que $g(0) = 0$ y $|g(x)| \leq |x|$ en un entorno de $x = 0$. Probar que la única solución del problema de Cauchy}
+    
+    \[
+    \begin{cases}
+        x' = f(t)g(x) \\
+        x(t_0) = 0,
+    \end{cases}
+    \hspace{20px}
+    t_0 \in I,
+    \]
+
+    \textit{es $x(t) = 0$ para todo $t \in I$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: La demostración comparte irrebatibles similitudes con la descrita en el apartado 1.a) de la sección \ref{seq:1:1}. Sea $x$ solución del problema de Cauchy y tomamos $t_0 \in K \subset I$ compacto tal que $|g(x(t))| \leq |x(t)|$ para todo $t \in K$.
+    Definimos, además, la cota $M := \sup\{|f(t)| : t \in K\} < \infty$.
+
+    Con estos establecimientos, suponemos, sin pérdida de generalidad, que $x(t) \neq 0$ para todo $t > t_0$, es decir, $t_0$ es el ``último'' punto donde $x = 0$ (por la izquierda es análogo). A continuación, consideramos $t_1 > t_0$ tal que $t_1 - t_0 < 1/(2M)$ y notamos, gracias al Teorema del Valor Medio, que \[\left|\frac{x(t_1)}{t_1 - t_0}\right| = |x'(t_2)| = |f(t_2)g(x(t_2))| \leq |f(t_2)||x(t_2)|, \hspace{20px},\]
+    donde $t_2 \in (t_0, t_1)$, lo cual nos conduce a \[|x(t_1)| \leq |x(t_2)||f(t_2)||t_1 - t_0|.\]
+
+    Reiterando este proceso construimos una sucesión $(t_n) \subset I$ tal que, para cada $n \geq 2$, $t_n$ es un punto de $(t_0, t_{n-1})$ cumpliendo \[|x(t_{n-1})| \leq |x(t_n)||f(t_n)||t_{n-1} - t_0|.\]
+
+    Aplicando una más que elemental inducción aseguramos lo que, \textit{a bote pronto}, era evidente, esto es \[|x(t_1)| \leq |x(t_n)||f(t_2)||f(t_3)| \cdots |f(t_n)||t_{1} - t_0||t_2 - t_0| \cdots |t_{n-1} - t_0|,\] por lo que, utilizando las hipótesis iniciales, llegamos a \[|x(t_1)| \leq cM^{n-1}\left(\frac{1}{2M}\right)^{n-1} = \frac{c}{2^{n-1}},\] donde $c = \sup\{|x(t)| : t \in K\}$. A partir de esta desigualdad, es indiscutible afirmar $x(t_1) = 0$, pero esto desentona con la asunción inicial $\rightsquigarrow$ contradicción. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item[13.] (Variación) \textit{Dadas $f : I \subset \mathbb{R} \rightarrow \mathbb{R}$ y $g : J \subset \mathbb{R} \rightarrow \mathbb{R}$ funciones continuas, supongamos que $g(0) = 0$ y $g(x) \leq x$ en un entorno de $x = 0$. Probar que la única solución del problema de Cauchy}
     
     \[
     \begin{cases}

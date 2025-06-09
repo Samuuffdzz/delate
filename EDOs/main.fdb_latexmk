@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1749469567.57716 "/home/samuuffdzz/Sumael/delate/EDOs/main.tex" "main.pdf" "main" 1749469568.60929 0
+["pdflatex"] 1749512707.5031 "/home/samuuffdzz/Sumael/delate/EDOs/main.tex" "main.pdf" "main" 1749512708.60192 0
   "/etc/texmf/web2c/texmf.cnf" 1733395192.76793 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/samuuffdzz/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1733395358.92976 11524 e0e17e83529f7f848393e74992abdf92 ""
-  "/home/samuuffdzz/Sumael/delate/EDOs/main.tex" 1749469567.29499 32514 30e458b6e665007457907e06cd009e44 ""
+  "/home/samuuffdzz/Sumael/delate/EDOs/main.tex" 1749512707.22037 34720 13af839fe610c7b607be1c8db87bde2f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -129,10 +129,10 @@
   "critico.png" 1743856873.15691 19857 c85689e8991bab19f96b94da459b8e65 ""
   "curva.png" 1743856873.15691 71175 7a5a3692e810bbadd06c617d2a57d8fc ""
   "eclipse.png" 1743856873.15791 11025 1f82066b7b32e8be285237e2d898d889 ""
-  "main.aux" 1749469568.48 729 7c929b9a7dce6e6d133c8385e91de581 "pdflatex"
-  "main.out" 1749469568.481 377 0c6e67cb0173d8b223b626032f5810bb "pdflatex"
-  "main.tex" 1749469567.29499 32514 30e458b6e665007457907e06cd009e44 ""
-  "main.toc" 1749469568.481 232 3dac33792dc0f89d3a5248d1ff7ff9ca "pdflatex"
+  "main.aux" 1749512708.46839 789 58a388d9d426bc6af2d8b0e47b61eec5 "pdflatex"
+  "main.out" 1749512708.46939 377 0c6e67cb0173d8b223b626032f5810bb "pdflatex"
+  "main.tex" 1749512707.22037 34720 13af839fe610c7b607be1c8db87bde2f ""
+  "main.toc" 1749512708.47039 232 3dac33792dc0f89d3a5248d1ff7ff9ca "pdflatex"
   (generated)
   "main.aux"
   "main.log"
