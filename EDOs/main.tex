@@ -655,13 +655,22 @@ En esta sección se detallarán los argumentos utilizados para resolver los ejer
 
     \vspace{7px}
 
-    \textsc{Demostración}: Resaltar, antes de nada, que a $g$ también hay que exigirle\footnote{Hagan vostros los estudios pertinentes.} derivabilidad y derivada continua en $x = 0$. Dicho esto, empezamos viendo que, bajo estas hipótesis marcadas, se cumple que $g'(0) = 1$. 
-    Para ello definimos $h(x) := x - g(x)$ satisfaciendo $h(0) = 0$ y $h(x) \geq 0$ en un entorno de $x = 0$. En consecuencia, por un resultado básico de análisis, sabemos que $h'(0) = 0$, pues la función posee un mínimo relativo en $x = 0$.
+    \textsc{Demostración}: Resaltar, antes de nada, que a $g$ también hay que exigirle\footnote{Hagan vostros los estudios pertinentes.} derivabilidad en $x = 0$. Dicho esto, empezamos viendo que, bajo estas hipótesis marcadas, se cumple que $g'(0) = 1$. 
+    
+    Para ello definimos $h(x) := x - g(x)$ satisfaciendo $h(0) = 0$ y $h(x) \geq 0$ en un entorno de $x = 0$. En consecuencia, por un resultado básico de análisis, sabemos que $h'(0) = 0$, pues la función posee un mínimo relativo en dicho punto.
     Ahora, aplicando la regla de la derivada de la suma y despejando, llegamos a que, en efecto, $g'(0) = 1$.
 
-    Con este resultado, es fácil obtener mediante la regla de L'Hôpital que
+    Habiendo asentado este resultado previo, pasamos a suponer $x$ solución del problema de Cauchy cumpliendo, de manera absurda, que existe $t_1 > t_0$ tal que $x(t) > 0$, para cada $t \in (t_0, t_1]$. A continuación, tomando las siguientes primitivas \[F(t) = \int_{t}^{t_1} f(s)\,ds, \hspace{20px} G(x) = \int_{x}^{x_1} \frac{1}{g(u)}\,du, \hspace{20px} x_1 = x(t_1),\]
+    la teoría de las EDOs en variables separadas nos asegura que $x$ viene definida, de forma implícita, por una ecuación de la forma
 
-    \[\lim_{x \to \infty} \frac{g(x)}{x} = 1.\]
+    \begin{equation}
+        G(x(t)) = F(t) + \lambda, \hspace{20px} \lambda \in \mathbb{R}.
+        \label{eq:rel2ej13:0}
+    \end{equation}
+
+    No obstante, como se tiene $g'(0) = 1$ sabems que, al expresarse en forma de límite, se cumple \[\lim_{x \to 0} \frac{g(x)}{x} = 1,\] por lo que las integrales impropias de $1/g(x)$ y $1/x$ tienen el mismo comportamiento, en términos de convergencia, al aproximarse a $0$. En particular, deducimos que $G(x)$ diverge cuando $x \to 0$. Nos acercamos a la contradicción, espero que sintais la misma excitación que yo.
+
+    Unificando \eqref{eq:rel2ej13:0} y el hecho de que $x(t) \to 0$ si $t \to t_0$, llegamos a que $F(t)$ diverge cuando nos aproximamos a $t_0$, pero eso entra en contradicción con la hipótesis de continuidad sobre $f$. El sin-sentido procede de haber supuesto $x$ no idénticamente nula, por lo que concluimos que la única posible solución para el problema de Cauchy es $x \equiv 0$. \hfill{\textsc{Q.e.d.}}
 \end{enumerate}
 
 \end{document}
