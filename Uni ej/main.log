@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.5)  15 MAY 2025 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.5)  1 JUL 2025 21:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -154,6 +154,8 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+) (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count281
@@ -161,20 +163,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
@@ -228,306 +230,306 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 16.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 17.
  (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 28.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 29.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 28.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 29.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 28.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 29.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 28.
-
-Missing character: There is no � in font cmr10!
-Missing character: There is no � in font cmr10!
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 30.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 30.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 30.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 30.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 29.
 
 Missing character: There is no � in font cmr10!
 Missing character: There is no � in font cmr10!
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 30.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 31.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 30.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 31.
+
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 31.
+
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 31.
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 31.
+
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 31.
 
 Missing character: There is no � in font cmr10!
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 
-Overfull \hbox (3.60742pt too wide) in paragraph at lines 251--252
+Overfull \hbox (3.60742pt too wide) in paragraph at lines 252--253
 \OT1/cmr/bx/n/10 Sol: \OT1/cmr/m/n/10 Por re-ducci^^Son al ab-surdo. Supong-amos que $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 es finito, en con-se-cuen-cia tendr^^Sa m^^Saximo, llam^^Semoslo
  []
 
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
 [9] [10]
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 349.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 350.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 349.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 350.
 
 Missing character: There is no � in font cmr10!
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 
  []
 
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--581
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 588--589
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
 
  []
 
 [23] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
 
  []
 
 [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 720--721
+Underfull \hbox (badness 10000) in paragraph at lines 721--722
 
  []
 
 [28] [29]
-Overfull \hbox (13.08014pt too wide) detected at line 758
+Overfull \hbox (13.08014pt too wide) detected at line 759
 \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 mn\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([])  \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^ []\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 ;
  []
 
 [30] [31] [32] [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 928--929
+Underfull \hbox (badness 10000) in paragraph at lines 929--930
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 960--961
+Underfull \hbox (badness 10000) in paragraph at lines 961--962
 
  []
 
 [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1046
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1047
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1085
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
 
  []
 
-[41] [42] [43] [44] [45] (./main.aux)
+[41] [42] [43] [44] [45] [46] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3750 strings out of 476106
- 54440 string characters out of 5793933
+ 3795 strings out of 476106
+ 55254 string characters out of 5793933
  1944975 words of memory out of 5000000
- 25724 multiletter control sequences out of 15000+600000
+ 25765 multiletter control sequences out of 15000+600000
  570393 words of font info for 84 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  57i,14n,65p,880b,391s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/samuuffdzz/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (45 pages, 390414 bytes).
+ </home/samuuffdzz/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (46 pages, 395953 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
+ 280 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

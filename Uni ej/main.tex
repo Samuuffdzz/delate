@@ -6,6 +6,7 @@
 \usepackage{enumitem}
 \usepackage{accents}
 \usepackage{wasysym}
+\usepackage{cancel}
 
 \title{$\partial d$b$6$}
 \author{Samuel Fernández Riquelme}
@@ -1258,5 +1259,39 @@ En particular, por ser $n > 1$ sabemos que cada término $a_n$ depende de, como 
 \[a_n = 2^{n - 1}a_0 = 2^{n - 1}a, \hspace{20px} \text{para $n > 0$.}\]
 
 \hfill{\textsc{Q.e.d.}}
+
+\newpage
+
+\section{Salteado de Álgebra Lineal}
+
+\begin{enumerate}
+    \item[11.] Utiliza la $PAQ$-reducción de matrices para probar que dada una matriz $A$, existe una matriz $B$ tal que $A = ABA$. Esta matriz recibe el nombre de \textbf{inversa generalizada} de $A$.
+
+    \vspace{7px}
+    
+    \textsc{Demostración}: Como ya es costumbre, escondemos todo tipo de muestra de duda e incertidumbre presenciada durante la realización del ejercicio, para dejar únicamente las ideas certeras y refinadas, con la meta de generar en el lector un sentimiento de insuficiencia y desconfianza en sus propias habilidades.
+
+    Dicho lo cual, comenzamos especificando las dimensiones de $A \in \mathcal{M}_{n \times m}(\mathbb{K})$ y estableciendo como candidato $B = QR^tP$, donde las matrices $P, Q$ y $R$ vienen dadas por la $PAQ$-reducción, satisfaciendo
+
+    \begin{equation}
+        PAQ = R = 
+        \left(
+        \hspace{6px}
+        \begin{matrix}
+            I_r & \vline & 0 \\
+            \hline
+            0 & \vline & 0
+        \end{matrix}
+        \hspace{6px}
+        \right),
+        \label{eq:paqr}     
+    \end{equation}
+
+    siendo, además, $P$ y $Q$ invertibles. Despejando $A$ en \eqref{eq:paqr} llegamos a $A = P^{-1}RQ^{-1}$, por lo que, al desarrollar la expresión $ABA$, nos queda
+
+    \[ABA = P^{-1}R\cancel{Q^{-1}Q}R^t\cancel{PP^{-1}}RQ^{-1} = P^{-1}RR^tRQ^{-1}.\]
+
+    ¿Es mucho pedir que $RR^tR = R$? Te ahorro la intriga, no lo es, pero como deberíamos parar de pedir y dar más a cambio, te dejo que busques tú una justificación. \hfill{\textsc{Q.e.d.}}
+\end{enumerate}
 
 \end{document}
