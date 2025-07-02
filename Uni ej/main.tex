@@ -1291,7 +1291,35 @@ En particular, por ser $n > 1$ sabemos que cada término $a_n$ depende de, como 
 
     \[ABA = P^{-1}R\cancel{Q^{-1}Q}R^t\cancel{PP^{-1}}RQ^{-1} = P^{-1}RR^tRQ^{-1}.\]
 
-    ¿Es mucho pedir que $RR^tR = R$? Te ahorro la intriga, no lo es, pero como deberíamos parar de pedir y dar más a cambio, te dejo que busques tú una justificación. \hfill{\textsc{Q.e.d.}}
+    ¿Es mucho pedir que $RR^tR = R$? Te ahorro la intriga, no lo es, pero como deberíamos parar de pedir y dar más en su lugar, te dejo que busques tú una justificación. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{7px}
+
+    Prueba también que
+
+    \begin{enumerate}
+        \item[(a)] Si $A$ es invertible, entonces $B = A^{-1}$.
+
+        \vspace{7px}
+
+        \textsc{Demostración}: Seguimos la a continuación presentada concatenación de equivalencias lógicas
+
+        \[\cancel{A}BA = \cancel{A} \iff BA = I_n \iff B = A^{-1}.\]
+
+        \hfill{\textsc{Q.e.d.}}
+
+        \vspace{7px}
+
+        \item[(b)] Si el sistema de ecuaciones $Ax = b$ tiene solución, entonces $x = Bb$ es una de ellas.
+        
+        \vspace{7px}
+
+        \textsc{Demostración}: Consideremos $y \in \mathbb{K}^n$ tal que $Ay = b$, cuya existencia nos la asegura la hipótesis de compatibilidad del sistema. Tras esta puntualización, únicamente nos falta verificar que $x = Bb$ es también solución. En efecto, al desarrollar nos queda
+
+        \[Ax = ABb \underbrace{=}_{Ay = b} ABAy \underbrace{=}_{A = ABA} Ay = b.\]
+
+        \hfill{\textsc{Q.e.d.}}
+    \end{enumerate}
 \end{enumerate}
 
 \end{document}
