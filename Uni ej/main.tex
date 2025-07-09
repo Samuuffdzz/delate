@@ -7,6 +7,7 @@
 \usepackage{accents}
 \usepackage{wasysym}
 \usepackage{cancel}
+\usepackage{hyperref}
 
 \title{$\partial d$b$6$}
 \author{Samuel Fernández Riquelme}
@@ -1321,5 +1322,74 @@ En particular, por ser $n > 1$ sabemos que cada término $a_n$ depende de, como 
         \hfill{\textsc{Q.e.d.}}
     \end{enumerate}
 \end{enumerate}
+
+\newpage
+
+\section{Challenger}
+
+\textbf{Problema} \, \textit{Sea $x \in \mathbb{R}$ un número real arbitrario y definimos la sucesión recurrente $(x_n)_n \subset \mathbb{R}$ dada por}
+
+\[
+x_n :=
+\begin{cases}
+    x & \textit{si $n = 0$,} \\
+    \left|x_{n-1} - \frac{1}{2^n}\right| & \textit{en otro caso.}
+\end{cases}
+\]
+
+\noindent \textit{Probar que existe el límite $L : \mathbb{R} \rightarrow \mathbb{R}$ en función de $x$ y dar una fórmula cerrada para su valor.}
+
+\vspace{7px}
+
+\noindent\textsc{Demostración}: Dividimos el estudio en tres casos:
+
+\begin{itemize}
+    \item Cuando $x \geq 1$. En este escenario nos ocuparemos de comprobar que
+
+    \[x_{n-1} - \frac{1}{2^n} \geq \frac{1}{2^n},\]
+    
+    para $n > 0$ o, lo que es equivalente
+
+    \begin{equation}
+        x_{n} \geq \frac{1}{2^n},
+        \label{eq:hi39}
+    \end{equation}
+
+    para todo $n \geq 0$, i.e. podemos omitir los valores absolutos. Vamos con ello, procediendo para este fin por inducción sobre $n$.
+
+    El caso base, $n = 0$, nos viene asegurado inmediatamente por la hipótesis, pues $x_0 = x \geq 1 = 1/2^0$. Para el salto inductivo suponemos \eqref{eq:hi39} cierto para $n$ y vamos a ver que se verifica para $n + 1$. 
+    En efecto, nos queda
+
+    \[x_{n+1} = \left|x_n - \frac{1}{2^{n+1}}\right| \underbrace{=}_{\text{custiónalo}} x_n - \frac{1}{2^{n+1}} \geq \frac{1}{2^n} - \frac{1}{2^{n+1}} = \frac{1}{2^{n+1}}.\]
+
+    Tras este razonamiento, valiéndonos del principio de inducción, podemos eliminar sin miedo a futuros remordimientos los valores absolutos de la expresión de $(x_n)_n$. Así, la sucesión se reduce a una simple serie geométrica, cuyo límite es \[L(x) = x - 1, \hspace{20px} \forall x \geq 1.\]
+
+    \item Cuando $x \leq 0$. Jugueteando un rato con el término $x_1$ se puede deducir que $L$ es simétrica respecto a $x = 1/2$, por lo que en este caso, si $x \leq 0$, cuncluimos que \[L(x) = -x, \hspace{20px} \forall x \leq 0.\]
+    
+    \item Cuando $0 < x < 1$. Para el particular restante, sacaremos nuevamente la baza de la inducción, en este caso para probar
+    
+    \[0 \leq x_n \leq \frac{1}{2^n}, \hspace{20px} \forall n \in \mathbb{N}.\]
+
+    El caso base, $n = 0$, es nuevamente consecuencia directa de la hipótesis inicial. 
+    Para el paso inductivo, supongamos $0 \leq x_n \leq 1/2^n$. En consecuencia, obtenemos, por una parte \[x_n - \frac{1}{2^{n+1}} \leq \frac{1}{2^n} - \frac{1}{2^{n+1}} = \frac{1}{2^{n+1}},\] y, por otra parte \[x_n - \frac{1}{2^{n+1}} \geq -\frac{1}{2^{n+1}}.\]
+
+    De esta manera concluimos que \[x_{n+1} = \left|x_n - \frac{1}{2^{n+1}}\right| \leq \frac{1}{2^{n+1}},\] donde, además, $x_{n+1} \geq 0$ trivialmente por ser el resultado de un valor absoluto. Por último, aplicando el principio de inducción y el criterio del sandwich deducimos finalmente que
+
+    \[L(x) = 0, \hspace{20px} \forall x \in (0, 1).\]
+\end{itemize}
+
+Con esto y un roscón, le damos el cierre merecido a la demostración, explicitando la fórmula conjunta para $L$:
+
+\[
+L(x) =
+\begin{cases}
+    -x & \text{si $x \leq 0$,} \\
+    0 & \text{si $0 < x < 1$,} \\
+    x - 1 & \text{si $x \geq 1$,}
+\end{cases}
+\hspace{20px} \forall x \in \mathbb{R}.
+\]
+
+\noindent Alternativamente, y por puro alardeo, se puede expresar como $L(x) = \max\{-x, 0, x - 1\}$ para todo $x \in \mathbb{R}$. \hfill{\textsc{Q.e.d.}}
 
 \end{document}
