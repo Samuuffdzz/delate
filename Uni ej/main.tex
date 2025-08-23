@@ -1392,4 +1392,29 @@ L(x) =
 
 \noindent Alternativamente, y por puro alardeo, se puede expresar como $L(x) = \max\{-x, 0, x - 1\}$ para todo $x \in \mathbb{R}$. \hfill{\textsc{Q.e.d.}}
 
+\vspace{12px}
+
+\noindent\textbf{Problema} \, \textit{Sea $n \in \mathbb{N}$. Cuántas soluciones existen de pares ordenados de enteros positivos $(x, y)$ para la ecuación} 
+
+\[\frac{xy}{x+y} = n\textit{?}\]
+
+\noindent\textsc{Demostración}: Antes de nada, factorizamos $n = p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$. Dicho lo cual, comenzamos modificando la expresión para dejar la variable $y$ en función de $x$, tal y como se plantea:
+
+\[\frac{xy}{x+y} = n \iff xy = n(x+y) = nx + ny \iff y(x-n) = nx \iff y = \frac{nx}{x-n}.\]
+
+A continuación, como se debe dar $y > 0$, inferimos que $x > n$, por lo que efectuamos la sustitución $x = n + r, r > 0,$ para llegar a la expresión
+
+\[y = \frac{n(n+r)}{r},\]
+
+\noindent de donde nos interesa encontrar para qué valores de $r$ el cociente es entero. Esto se traduce a imponer que $r \mid n(n+r)$.
+
+Tras un peridodo de ensayo y error, llegamos a la conclusión que tales valores de $r$ se caracterizan por ser de la forma
+
+\begin{equation}
+    r = p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}, \hspace{20px} 0 \leq \beta_j \leq 2\alpha_j.
+    \label{eq:putman1960}
+\end{equation}
+
+\noindent La cantidad de enteros $r$ satisfaciendo \eqref{eq:putman1960} es $(2\alpha_1 + 1)(2\alpha_2 + 1)\cdots(2\alpha_k + 1)$. Ver que ese número está en biyección con el cardinal de las soluciones es más asunto de pequeños formalismos, por lo que pido al oyente un acto de fé con tal de ahorrarnos a todos un fébril malestar. \hfill{\textsc{Q.e.d.}}
+
 \end{document}
