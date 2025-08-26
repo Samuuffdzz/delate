@@ -9,6 +9,8 @@
 \usepackage{cancel}
 \usepackage{hyperref}
 
+\renewcommand{\figurename}{Figura}
+
 \title{$\partial d$b$6$}
 \author{Samuel Fernández Riquelme}
 \date{October 2023}
@@ -1406,9 +1408,9 @@ A continuación, como se debe dar $y > 0$, inferimos que $x > n$, por lo que efe
 
 \[y = \frac{n(n+r)}{r},\]
 
-\noindent de donde nos interesa encontrar para qué valores de $r$ el cociente es entero. Esto se traduce a imponer que $r \mid n(n+r)$.
+\noindent de donde nos interesa encontrar para qué valores de $r$ el cociente es entero. Esto se traduce en imponer que $r \mid n(n+r) = n^2 + nr$ o, de manera equivalente, $r \mid n^2$ pues sabemos trivialmente que $r \mid nr$.
 
-Tras un peridodo de ensayo y error, llegamos a la conclusión que tales valores de $r$ se caracterizan por ser de la forma
+Representando $r$ como factorización de primos, llegamos a la conclusión que tales valores de $r$ se caracterizan por ser de la forma
 
 \begin{equation}
     r = p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}, \hspace{20px} 0 \leq \beta_j \leq 2\alpha_j.
@@ -1416,5 +1418,40 @@ Tras un peridodo de ensayo y error, llegamos a la conclusión que tales valores 
 \end{equation}
 
 \noindent La cantidad de enteros $r$ satisfaciendo \eqref{eq:putman1960} es $(2\alpha_1 + 1)(2\alpha_2 + 1)\cdots(2\alpha_k + 1)$. Ver que ese número está en biyección con el cardinal de las soluciones es más asunto de pequeños formalismos, por lo que pido al oyente un acto de fé con tal de ahorrarnos a todos un fébril malestar. \hfill{\textsc{Q.e.d.}}
+
+\vspace{12px}
+
+\noindent\textbf{Porblema} \, \textit{Probar que, para $n \in \mathbb{N}^*$,}
+
+\[\sum_{r=0}^{n} \frac{(2n)!}{(r!)^2((n-r)!)^2} = \binom{2n}{n}^2.\]
+
+\noindent\textsc{Demostración}: Abordaremos la demostración por argumento de combinatoria. Para cada $0 \leq r \leq n$ interpretamos el valor \[\frac{(2n)!}{(r!)^2((n-r)!)^2}\] como las maneras de reordenar el multi-conjunto $\{(0, 0) \cdot r, (1, 1) \cdot r, (0, 1) \cdot (n - r), (1, 0) \cdot (n - r)\}$. Al tomar la suma
+
+\begin{equation}
+    \sum_{r=0}^{n}\frac{(2n)!}{(r!)^2((n-r)!)^2}
+    \label{eq:eq001}
+\end{equation}
+
+\noindent recogemos las distintas posibilidades (disjuntas) para cada $r$.
+
+Por otro lado, en cuanto a la expresión \begin{equation}
+\binom{2n}{n}^2,
+\label{eq:eq002}
+\end{equation} la podemos contemplar como las maneras de distribuir, dentro de un cuadrícula de $2n \times 2$ (ancho $\times$ alto) casillas, $n$ fichas en cada fila.
+Con el fin de facilitar la demostración, vamos a representar cada cuadrícula por sus columnas (como fichas de dominó), sustituyendo las celdas libres y las ocupadas por 0's y 1's, respectivamente. Para asistir a la comprensión se aconseja consultar Figura \ref{fig:tiling}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=300px]{tilings.png}
+    \caption{Ejemplo para $n = 3$. Su traducción sería $((0, 1), (1, 0), (0, 1), (1, 1), (1, 0), (0, 0))$.}
+    \label{fig:tiling}
+\end{figure}
+
+Como paso transitorio (y crucial), veamos que, suponiendo la existencia de exactamente $0 \leq r \leq n$ pares $(0, 0)$, entonces el resto del reparto cumple\footnote{Dicho sea de paso, y aunque pueda resultar obvio bajo la mirada de cualquier pensador crítico, las mentes menos beneficiadas por el azar agradecerán saber que en cada fila hay $n$ casillas ocupadas y otras $n$ libres.}: $r$ pares $(1, 1)$, $n - r$ pares $(0, 1)$ y $n - r$ pares $(1, 0)$.
+Al haber $r$ pares $(0, 0)$, en la fila superior (o la inferior, el argumento es simétrico) quedan precisamente $n - r$ celdas libres que deben situarse ``sobre'' una ocupada de la fila baja, pues de no ser así crecería el número de pares $(0, 0)$. Esto prueba el cardinal de pares $(0, 1)$.
+
+El proceso deductivo del párrafo anterior nos deja $r$ celdas ocupadas aún por ``emparejar'', cada una de las cuales, luego de razonar brevemente, deben ir situadas bajo otra celda ocupada, lo cual zanja también los $(1, 1)$. Y, por último, sin tener más remedio, los $n - r$ pares restantes se ven obligados a ser $(1, 0)$.
+
+Para concluir, tras probar este \textit{lema transitorio}, vuestro sistema nervioso central no se pondrá conflictivo para aceptar la biyección entre \eqref{eq:eq001} y \eqref{eq:eq002}. Pues nada, una nueva aventura en la que resultamos invictos llega a su fin. \hfill{\textsc{T.h.e.E.n.d.}}
 
 \end{document}

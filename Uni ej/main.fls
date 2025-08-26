@@ -188,6 +188,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./tilings.png
+INPUT ./tilings.png
+INPUT ./tilings.png
+INPUT ./tilings.png
+INPUT ./tilings.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
