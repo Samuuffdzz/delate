@@ -1421,6 +1421,8 @@ Representando $r$ como factorización de primos, llegamos a la conclusión que t
 
 \vspace{12px}
 
+\newpage
+
 \noindent\textbf{Porblema} \, \textit{Probar que, para $n \in \mathbb{N}^*$,}
 
 \[\sum_{r=0}^{n} \frac{(2n)!}{(r!)^2((n-r)!)^2} = \binom{2n}{n}^2.\]
@@ -1450,8 +1452,21 @@ Con el fin de facilitar la demostración, vamos a representar cada cuadrícula p
 Como paso transitorio (y crucial), veamos que, suponiendo la existencia de exactamente $0 \leq r \leq n$ pares $(0, 0)$, entonces el resto del reparto cumple\footnote{Dicho sea de paso, y aunque pueda resultar obvio bajo la mirada de cualquier pensador crítico, las mentes menos beneficiadas por el azar agradecerán saber que en cada fila hay $n$ casillas ocupadas y otras $n$ libres.}: $r$ pares $(1, 1)$, $n - r$ pares $(0, 1)$ y $n - r$ pares $(1, 0)$.
 Al haber $r$ pares $(0, 0)$, en la fila superior (o la inferior, el argumento es simétrico) quedan precisamente $n - r$ celdas libres que deben situarse ``sobre'' una ocupada de la fila baja, pues de no ser así crecería el número de pares $(0, 0)$. Esto prueba el cardinal de pares $(0, 1)$.
 
-El proceso deductivo del párrafo anterior nos deja $r$ celdas ocupadas aún por ``emparejar'', cada una de las cuales, luego de razonar brevemente, deben ir situadas bajo otra celda ocupada, lo cual zanja también los $(1, 1)$. Y, por último, sin tener más remedio, los $n - r$ pares restantes se ven obligados a ser $(1, 0)$.
+El proceso deductivo del párrafo anterior nos deja $r$ celdas ocupadas aún por ``emparejar'' en la fila inferior, cada una de las cuales, luego de razonar brevemente, deben ir situadas bajo otra celda ocupada, lo cual zanja también los $(1, 1)$. Y, por último, sin tener más remedio, los $n - r$ pares restantes se ven obligados a ser $(1, 0)$.
 
-Para concluir, tras probar este \textit{lema transitorio}, vuestro sistema nervioso central no se pondrá conflictivo para aceptar la biyección entre \eqref{eq:eq001} y \eqref{eq:eq002}. Pues nada, una nueva aventura en la que resultamos invictos llega a su fin. \hfill{\textsc{T.h.e.E.n.d.}}
+Para concluir, tras probar este \textit{lema transitorio}, pongo todas mis esperanzas en que vuestro sistema nervioso central no se pondrá conflictivo para aceptar la biyección entre \eqref{eq:eq001} y \eqref{eq:eq002}. Pues nada, una nueva aventura en la que resultamos invictos llega a su fin. \hfill{\textsc{T.h.e.E.n.d.}}
+
+\newpage
+
+\noindent\textbf{Problema} \, \textit{Probar que todo primo $p > 3$ satisface\footnote{Equivalentemente, $p^2 \equiv 1$ (mod $24$).} $p^2 = 24k + 1$, donde $k \in \mathbb{Z}$.}
+
+\vspace{7px}
+
+\noindent\textsc{Demostración}: Nos centramos en dar condiciones suficientes sobre los $n \in \mathbb{Z}$ tales que \[n^2 = 24k + 1, \hspace{20px} k \in \mathbb{Z},\] notando para ello que \[n^2 = 24k + 1 \iff n^2 - 1 = 24k \iff (n - 1)(n + 1) = 24k.\]
+
+Por una parte, veamos que si $2 \nmid n$ entonces $8 \mid n^2 - 1$. En efecto, al ser $n$ impar, ambos factores $n - 1$ y $n + 1$ son pares y, en adición, exactamente uno de ellos será múltiplo de $4$, por lo que el producto conjunto será divisible entre $8$.
+Por otra parte, suponiendo que $3 \nmid n$, es trivial deducir que alguno de los términos $n - 1$ o $n + 1$ serán múltiplo de $3$.
+
+En definitiva, asumiendo $n \in \mathbb{Z}$ tal que $2 \nmid n$ y $3 \nmid n$, entonces se tiene que $24 \mid n^2 - 1$. Y, para cerrar la demostración, notamos que los primos $p > 3$ son precisamente un caso particular de tales $n$, por lo que hemos demostrado lo que se nos pedía. \hfill{\textsc{Q.e.d.}}
 
 \end{document}

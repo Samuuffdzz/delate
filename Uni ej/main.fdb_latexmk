@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1756222476.01648 "/home/samuuffdzz/Sumael/delate/Uni ej/main.tex" "main.pdf" "main" 1756222476.69519 0
+["pdflatex"] 1756664462.19144 "/home/samuuffdzz/Sumael/delate/Uni ej/main.tex" "main.pdf" "main" 1756664463.25936 0
   "/etc/texmf/web2c/texmf.cnf" 1733395192.76793 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/samuuffdzz/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1733395358.92976 11524 e0e17e83529f7f848393e74992abdf92 ""
-  "/home/samuuffdzz/Sumael/delate/Uni ej/main.tex" 1756222475.81041 103205 012e08f01747d4ef70ce38672065e746 ""
+  "/home/samuuffdzz/Sumael/delate/Uni ej/main.tex" 1756664461.90642 104434 a2d2c05d9ba5876b8da1885a564c4446 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -53,6 +53,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1248133631 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
@@ -118,9 +119,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1733395201.27703 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733395222 6831074 6d0bb4f9c9ac72a280e9235352c04db9 ""
-  "main.aux" 1756222476.6187 6552 1697b3c74b357133f5db1254b6ed7752 "pdflatex"
-  "main.out" 1756222476.6187 8225 09fda0114418d78e312a8ff4af191bcf "pdflatex"
-  "main.tex" 1756222475.81041 103205 012e08f01747d4ef70ce38672065e746 ""
+  "main.aux" 1756664463.11721 6552 dab6fa93b79008d869272966ed61b726 "pdflatex"
+  "main.out" 1756664463.11821 8225 09fda0114418d78e312a8ff4af191bcf "pdflatex"
+  "main.tex" 1756664461.90642 104434 a2d2c05d9ba5876b8da1885a564c4446 ""
   "tilings.png" 1756212926.77878 6562 c451ba24fbcb665912c2f4f0dc95ab85 ""
   (generated)
   "main.aux"
