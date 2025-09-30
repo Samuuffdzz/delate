@@ -34,7 +34,7 @@
 
 \section{Resolucion Ejercicios}
 
-Caulquiera que podrá interpretar el propósito de esta sección a partir del encabezado. Se redactaran solo aquellos ejercicios que susciten un interés especial (bajo mi criterio).
+Caulquiera podrá interpretar el propósito de esta sección a partir del encabezado. Se redactaran solo aquellos ejercicios que susciten un interés especial (bajo mi criterio).
 
 \begin{enumerate}
     \item[\textbf{1.1.7}] \textit{Demostrar que si $(X, *)$ es un monoide finito y $x \in X$ entonces las siguientes condiciones son equivalentes:}
@@ -48,7 +48,34 @@ Caulquiera que podrá interpretar el propósito de esta sección a partir del en
 
     \vspace{7px}
 
-    \textsc{Demostración}: El flujo de la prueba va a ser el siguiente: 
+    \textsc{Demostración}: El flujo de la prueba va a ser el siguiente: suponer $x$ cancelable por la izquierda y concluir que $x$ tiene simétrico por la derecha, para deducir, seguidamente, que $x$ es cancelable por la derecha. Queda a las necesidades de cada uno convencerse de la suficiencia de este argumento.
+
+    Supongamos $x$ cancelable por la izquierda y definamos la aplicación $f : X \to X$ dada por \[f(a) = x * a.\] Bajo estas hipótesis, $f$ es biyectiva. En efecto, para probar la inyectividad aplicamos el ser $x$ cancelable y llegamos a que \[f(a) = f(a') \Rightarrow x * a = x * a' \Rightarrow a = a'.\] Más aún, gracias a un resultado del ejercicio 1.1.2, como $X$ es un conjunto finito $f$ es además sobreyectiva (o, si me permites, biyectiva). 
+    En consecuencia, para $e$ el nuetro de $X$, existe $a \in X$ cumpliendo $f(a) = e$, por lo que, en definitiva, nos queda \[x * a = f(a) = e,\] es decir, $x$ tiene simétrico por la derecha.
+
+    Siguiendo esta línea, veamos que $x$ es cancelable por la derecha, suponiendo para ello $y, z \in X$ arbitrarios tales que $y * x = z * x$. El único paso restante es comprobar que \[y = y * e = y * x * a = z * x * a = z * e = z.\]
+
+    \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item[\textbf{1.1.8}] \textit{Sea $*$ una operación en un conjunto $X$ y supongamos que $*$ tiene un neutro y tres elementos $a, b, c$ tales que $a \neq c$, $b$ es el simétrico por la izquierda de $a$ y $c$ es el simétrico por la izquierda de $b$. Demostrar que $*$ no es asociativa.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Es un razonamiento directo, únicamente es necesario examinar la expresión $c * b * a$: \[(c * b) * a = e * a = a \neq c = c * e = c * (b * a).\]
+
+    \hfill{\textsc{Q.e.d.}}
+
+    \vspace{7px}
+
+    \newpage
+
+    \textit{Concluir que si $(M, *)$ es un monoide en el que todo elemento tiene simétrico por la izquierda, entonces $(M, *)$ es un grupo.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Sea $a \in M$ arbitrario. Por hipótesis, $a$ tiene simétrico por la izquierda, digámosle $b$, y este, a su vez, tiene también simétrico por la izquierda $c$. No obstante, como $*$ es conmutativa, para no llegar a contradicción al aplicar el resultado anterior, se debe dar $a = c$. En consecuencia, para terminar, nos queda que \[a * b = c * b = e,\] \[b * a = e,\] por lo que $a$ es invertible. \hfill{\textsc{Q.e.d.}}
 \end{enumerate}
 
 \end{document}
