@@ -11,6 +11,7 @@
 \usepackage{mdframed}
 
 \renewcommand{\contentsname}{Índice de Contenidos}
+\newcommand{\mcd}{\text{mcd}}
 
 \begin{document}
 
@@ -75,7 +76,24 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
 
     \vspace{7px}
 
-    \textsc{Demostración}: Sea $a \in M$ arbitrario. Por hipótesis, $a$ tiene simétrico por la izquierda, digámosle $b$, y este, a su vez, tiene también simétrico por la izquierda $c$. No obstante, como $*$ es conmutativa, para no llegar a contradicción al aplicar el resultado anterior, se debe dar $a = c$. En consecuencia, para terminar, nos queda que \[a * b = c * b = e,\] \[b * a = e,\] por lo que $a$ es invertible. \hfill{\textsc{Q.e.d.}}
+    \textsc{Demostración}: Sea $a \in M$ arbitrario. Por hipótesis, $a$ tiene simétrico por la izquierda, digámosle $b$, y este, a su vez, tiene también simétrico por la izquierda $c$. No obstante, como $*$ es conmutativa, para no llegar a contradicción al aplicar el resultado anterior, se debe dar $a = c$. En consecuencia, para terminar, nos queda que
+
+    \begin{equation*}
+    \begin{split}
+        a * b & = c * b = e, \\
+        b * a & = e,
+    \end{split}
+    \end{equation*}
+
+    por lo que $a$ es invertible. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item[\textbf{1.2.2}] \textit{Sea $m \in \mathbb{Z}$. Demostrar que si $m$ no es cuadrado en $\mathbb{Z}$, entonces tampoco es un cuadrado en $\mathbb{Q}$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Nos ocuparemos, en su lugar, de probar el contrarrecíproco de la proposición del enunciado. Suponemos $m = q^2$ donde $q = a / b \in \mathbb{Q}, a, b \in \mathbb{Z}$ y $\mcd(a, b) = 1$. En consecuencia, deducimos que \[m = \frac{a^2}{b^2},\] y al despejar $a^2 = b^2m$ notamos que \[a^2 = b(bm) \Longrightarrow b \mid a^2,\] donde invocamos el Lema de Euclides para obtener $b \mid a$. No obstante, como $a$ y $b$ eran coprimos, la única causa justificada es que $b = 1$, por lo que concluimos finalmente que $m = a^2$. \hfill{\textsc{Q.e.d.}}
 \end{enumerate}
 
 \end{document}
