@@ -1251,7 +1251,7 @@ Sean $(A, \leq)$ y $(B, \leq')$ conjuntos parcialmente ordenados y definimos en 
 
 \vspace{10px}
 
-\noindent \textsc{Demostración}: En primer lugar, sin mucha agonía cognitiva podemos sacar de la definición que $a_1 = a_0 = 0$, por lo que nos centramos en lo que resta de la demostración en $n > 1$.
+\noindent \textsc{Demostración}: En primer lugar, sin mucha agonía cognitiva podemos sacar de la definición que $a_1 = a_0 = a$, por lo que nos centramos en lo que resta de la demostración en $n > 1$.
 
 En particular, por ser $n > 1$ sabemos que cada término $a_n$ depende de, como poco, $2$ términos anteriores. En consecuencia, podemos asegurar sin miedo a cometer ningún crimen atroz que
 
@@ -1468,5 +1468,35 @@ Por una parte, veamos que si $2 \nmid n$ entonces $8 \mid n^2 - 1$. En efecto, a
 Por otra parte, suponiendo que $3 \nmid n$, es trivial deducir que alguno de los términos $n - 1$ o $n + 1$ serán múltiplo de $3$.
 
 En definitiva, asumiendo $n \in \mathbb{Z}$ tal que $2 \nmid n$ y $3 \nmid n$, entonces se tiene que $24 \mid n^2 - 1$. Y, para cerrar la demostración, notamos que los primos $p > 3$ son precisamente un caso particular de tales $n$, por lo que hemos demostrado lo que se nos pedía. \hfill{\textsc{Q.e.d.}}
+
+\vspace{12px}
+
+    \noindent\textbf{Problema} \, \textit{Demostrar que si $a, b \in \mathbb{Z}$ son dos enteros coprimos, entonces $a^2$ y $b^2$ también lo son.}
+
+    \vspace{7px}
+
+    \noindent\textsc{Demostración}: Por ser $a, b$ coprimos, existen $x, y \in \mathbb{Z}$ tales que
+
+    \begin{equation}
+        ax + by = 1
+        \label{eq:eq003},
+    \end{equation}
+
+    \noindent de donde, elevando al cuadrado a ambos lados de la ecuación, nos deja que
+
+    \begin{equation}
+        a^2x^2 + 2abxy + b^2y^2 = (ax + by)^2 = 1.
+        \label{eq:eq004}
+    \end{equation}
+
+    \noindent Por otra parte, si además múltiplicamos \eqref{eq:eq003} por $2abxy$ en ambas partes, obtenemos la valiosa identidad
+
+    \[2a^2x^2by + 2b^2y^2ax = 2abxy,\]
+
+    \noindent por lo que, al sustituir en \eqref{eq:eq004} desembocamos finalmente en 
+
+    \[a^2x^2(2by + 1) + b^2y^2(2ax + 1) = a^2x^2 + 2a^2x^2by + 2b^2y^2ax + b^2y^2 = a^2x^2 + 2abxy + b^2y^2 = 1,\]
+
+    \noindent concluyendo así que $a^2$ y $b^2$ son comprimos, pues hemos conseguido expresar $1$ como combinación lineal de $a^2$ y $b^2$. \hfill{\textsc{Q.e.d.}}
 
 \end{document}
