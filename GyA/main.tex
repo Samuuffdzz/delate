@@ -12,6 +12,7 @@
 
 \renewcommand{\contentsname}{Índice de Contenidos}
 \renewcommand{\tablename}{Tabla}
+\renewcommand{\ker}{\text{Ker}}
 \newcommand{\mcd}{\text{mcd}}
 
 \begin{document}
@@ -113,6 +114,21 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
     \vspace{7px}
 
     \textsc{Solución}: Tomando $m = 12$ se puede comprobar que $\mathbb{Z}[\sqrt{d}] \not\subseteq \mathbb{Z}[\sqrt{12}]$, para todo $d$ libre de cuadrados. $\hfill\square$
+
+    \newpage
+
+    \item[\textbf{1.7.3}] \textit{Sea $a \in \mathbb{R}$. ¿Qué se deduce al aplicar el Primer Teorema de Isomorfía al homomorfismo $\mathbb{R}[X] \to \mathbb{R}$, dado por $P(X) \mapsto P(a)$? ¿Y qué se deduce al aplicarlo al homomorfismo $\mathbb{R}[X] \to \mathbb{C}$, dado por $P(X) \mapsto P(i)$?}
+
+    \vspace{7px}
+
+    \textsc{Solución}: La respuesta a la primera pregunta se resume en una aplicación directa que no requiere ninguna ingeniosidad. En cambio, el segundo interrogante encierra un gran enigma. Por ello, como resolver misterios es lo único que aviva nuestro alma, vamos a darle unas reflexiones.
+
+    En primer lugar, vamos a verificar que dicho homomorfismo es suryectivo. Con tal fin, dotémosle de un nombre más manejable; pudiera ser $f$. Este paso es bastante elemental, pues para cualquier $z = a + ib \in \mathbb{C}, a, b \in \mathbb{R}$ es evidente que \[f(a + bX) = z,\] donde $a + bX \in \mathbb{R}[X]$ sin ninguna clase de dubitacón.
+
+    El siguiente y último paso se basa en comprobar que $\ker f = \langle X^2 + 1\rangle$. Para ello notamos que, dado $P(X) \in \mathbb{R}[X]$, se tiene\footnote{El lector debe hacerse a la idea que se trata de divisibilidad de polinomios en el contexto de $\mathbb{C}$.} \[f(P(X)) = 0 \iff P(i) = 0 \iff (X - i) \mid P(X),\] y por ser todos los coeficientes reales \[(X - i) \mid P(X) \iff (X + i) \mid P(X).\] Esta secuencia de equivalencias se puede sintetizar como $f(P(X)) = 0$ si y solo si\footnote{O, más llanamente, $f(P(X)) = 0 \iff P(X) \in \mathbb{R}[X] \cap \langle X - i \rangle \cap \langle X + i \rangle$.} $P(X) \in \langle X - i \rangle \cap \langle X + i \rangle$ y $P(X) \in \mathbb{R}[X]$, considerando tanto $\langle X - i \rangle$ como $\langle X + i \rangle$ ideales de $\mathbb{C}[X]$.
+    Es más, el estudiante aventurero puede convencerse de que $\langle X - i \rangle + \langle X + i \rangle = \langle 1 \rangle$, por lo que, invocando el Teorema Chino de los Restos, extraemos que $\langle X - i \rangle \cap \langle X + i \rangle = \langle X - i \rangle \langle X + i \rangle = \langle X^2 + 1 \rangle$.
+
+    Aunque en un primer vistazo puediese parecer que hemos finalizado la prueba, nos topamos con el inconveniente de que, hasta ahora, estamos considerando $\langle X^2 + 1 \rangle$ como ideal de $\mathbb{C}[X]$. Sin embargo, sabiendo que $\mathbb{R}[X]$ es subanillo de $\mathbb{C}[X]$ y en vigor del Tercer Teorema de Isomorfía obtenemos que $\mathbb{R}[X] \cap \langle X^2 + 1 \rangle$ es ideal de $\mathbb{R}[X]$. \textit{Mañana lo terminaré.}
 \end{enumerate}
 
 \end{document}
