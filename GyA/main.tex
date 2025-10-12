@@ -128,7 +128,21 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
     El siguiente y último paso se basa en comprobar que $\ker f = \langle X^2 + 1\rangle$. Para ello notamos que, dado $P(X) \in \mathbb{R}[X]$, se tiene\footnote{El lector debe hacerse a la idea que se trata de divisibilidad de polinomios en el contexto de $\mathbb{C}$.} \[f(P(X)) = 0 \iff P(i) = 0 \iff (X - i) \mid P(X),\] y por ser todos los coeficientes reales \[(X - i) \mid P(X) \iff (X + i) \mid P(X).\] Esta secuencia de equivalencias se puede sintetizar como $f(P(X)) = 0$ si y solo si\footnote{O, más llanamente, $f(P(X)) = 0 \iff P(X) \in \mathbb{R}[X] \cap \langle X - i \rangle \cap \langle X + i \rangle$.} $P(X) \in \langle X - i \rangle \cap \langle X + i \rangle$ y $P(X) \in \mathbb{R}[X]$, considerando tanto $\langle X - i \rangle$ como $\langle X + i \rangle$ ideales de $\mathbb{C}[X]$.
     Es más, el estudiante aventurero puede convencerse de que $\langle X - i \rangle + \langle X + i \rangle = \langle 1 \rangle$, por lo que, invocando el Teorema Chino de los Restos, extraemos que $\langle X - i \rangle \cap \langle X + i \rangle = \langle X - i \rangle \langle X + i \rangle = \langle X^2 + 1 \rangle$.
 
-    Aunque en un primer vistazo puediese parecer que hemos finalizado la prueba, nos topamos con el inconveniente de que, hasta ahora, estamos considerando $\langle X^2 + 1 \rangle$ como ideal de $\mathbb{C}[X]$. Sin embargo, sabiendo que $\mathbb{R}[X]$ es subanillo de $\mathbb{C}[X]$ y en vigor del Tercer Teorema de Isomorfía obtenemos que $\mathbb{R}[X] \cap \langle X^2 + 1 \rangle$ es ideal de $\mathbb{R}[X]$. \textit{Mañana lo terminaré.}
+    % Aunque en un primer vistazo puediese parecer que hemos finalizado la prueba, nos topamos con el inconveniente de que, hasta ahora, estamos considerando $\langle X^2 + 1 \rangle$ como ideal de $\mathbb{C}[X]$. Sin embargo, sabiendo que $\mathbb{R}[X]$ es subanillo de $\mathbb{C}[X]$ y en vigor del Tercer Teorema de Isomorfía obtenemos que $\mathbb{R}[X] \cap \langle X^2 + 1 \rangle$ es ideal de $\mathbb{R}[X]$. \textit{Mañana lo terminaré.}
+
+    Concluimos de esta manera que $\ker f = \mathbb{R}[X] \cap \langle X^2 + 1 \rangle$ ideal de $\mathbb{R}[X]$, por lo que abusaremos un poco de la notación y diremos que $\ker f = \langle X^2 + 1 \rangle$. Para terminar, aplicamos ahora sí el Primer Teorema de Isomorfía y concluimos que
+
+    \[\frac{\mathbb{R}[X]}{\langle X^2 + 1 \rangle} \simeq \mathbb{C}.\]
+
+    $\hfill\square$
+
+    \vspace{12px}
+
+    \item[\textbf{1.7.2}] \textit{Demostrar el recíproco del Teorema Chino de los Restos para anillos; es decir, probar que si $I_1, ..., I_n$ son ideales de un anillo $A$ tales que la aplicación $f : A \to \prod_{i=1}^{n} A / I_i$, dada por $f(a) = (a + I_1, ..., a + I_n)$ es suprayectiva, entonces $I_i + I_j = (1)$, para todo $i \neq j$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Es suficiente con probar que, dados $i < j$, se cumple $1 \in I_i + I_j$. En efecto, sean $1 \leq i < j \leq n$ arbitrarios. En consecuencia, por ser $f$ suprayectiva, existe $a \in A$ satisfaciendo \[f(a) = (I_1, ..., I_i, ..., 1 + I_j, ..., I_n),\] deduciendo, en particular, que $a + I_i = I_i$ y $a + I_j = 1 + I_j$ o, dicho de otra manera, $a \in I_i$ y $1 - a \in I_j$. Para dar término a la demostración, inferimos que \[1 = a + (1 - a) \in I_i + I_j.\] \hfill{\textsc{Q.e.d.}}
 \end{enumerate}
 
 \end{document}
