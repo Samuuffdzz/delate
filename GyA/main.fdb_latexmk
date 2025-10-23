@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1761255703.98972 "/home/samuuffdzz/Sumael/delate/GyA/main.tex" "main.pdf" "main" 1761255704.77551 0
+["pdflatex"] 1761255849.24726 "/home/samuuffdzz/Sumael/delate/GyA/main.tex" "main.pdf" "main" 1761255849.96701 0
   "/etc/texmf/web2c/texmf.cnf" 1733395192.76793 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/samuuffdzz/Sumael/delate/GyA/main.tex" 1761255702.99929 18818 8150b65f41809a44d7aa543f9b6efb58 ""
+  "/home/samuuffdzz/Sumael/delate/GyA/main.tex" 1761255848.9972 18817 cd81380517bff67735cb740d42de0920 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -119,10 +119,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1733395201.27703 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733395222 6831074 6d0bb4f9c9ac72a280e9235352c04db9 ""
-  "main.aux" 1761255704.64598 374 b4e00232d4bdd9e3249a680b3a66f3cb "pdflatex"
-  "main.out" 1761255704.64598 151 6cf6e9f907a038c497b0015c82bff3d9 "pdflatex"
-  "main.tex" 1761255702.99929 18818 8150b65f41809a44d7aa543f9b6efb58 ""
-  "main.toc" 1761255704.64698 77 05f752d7daaf9a64fc426a66ce86a59c "pdflatex"
+  "main.aux" 1761255849.84444 374 b4e00232d4bdd9e3249a680b3a66f3cb "pdflatex"
+  "main.out" 1761255849.84444 151 6cf6e9f907a038c497b0015c82bff3d9 "pdflatex"
+  "main.tex" 1761255848.9972 18817 cd81380517bff67735cb740d42de0920 ""
+  "main.toc" 1761255849.84544 77 05f752d7daaf9a64fc426a66ce86a59c "pdflatex"
   (generated)
   "main.aux"
   "main.log"
