@@ -14,6 +14,8 @@
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\ker}{\text{Ker}}
 \newcommand{\mcd}{\text{mcd}}
+\newcommand{\car}{\text{Car}}
+\newcommand{\mcm}{\text{mcm}}
 
 \begin{document}
 
@@ -101,7 +103,7 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
     
     \vspace{7px}
 
-    \textsc{Demostración}: Iniciamos la demostración factorizando $m = p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$ y definiendo, a continuación, los números \[n = p_1^{b_1}p_2^{b_2}\cdots p_k^{b_k}, \hspace{10px} d = p_1^{a_1 - 2b_1}p_2^{a_2 - 2b_2}\cdots p_k^{a_k - 2b_k}, \hspace{10px} \text{con } b_i = \left\lfloor \frac{a_i}{2}\right\rfloor.\]
+    \textsc{Demostración}: Iniciamos la demostración factorizando $m = up_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$, donde $u \in \{-1, 1\}$, y definiendo, a continuación, los números \[n = p_1^{b_1}p_2^{b_2}\cdots p_k^{b_k}, \hspace{10px} d = up_1^{a_1 - 2b_1}p_2^{a_2 - 2b_2}\cdots p_k^{a_k - 2b_k}, \hspace{10px} \text{con } b_i = \left\lfloor \frac{a_i}{2}\right\rfloor.\]
 
     Por una parte, es inmediato notar que $m = n^2d$ y, por otra parte, el método de construcción nos asegura que $0 \leq a_i - 2b_i \leq 1$, para cada $1 \leq i \leq k$, con lo que deducimos que $d$ es libre de cuadrados.
 
@@ -142,7 +144,7 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
 
     \vspace{7px}
 
-    \textsc{Demostración}: Es suficiente con probar que, dados $i < j$, se cumple $1 \in I_i + I_j$. En efecto, sean $1 \leq i < j \leq n$ arbitrarios. En consecuencia, por ser $f$ suprayectiva, existe $a \in A$ satisfaciendo \[f(a) = (I_1, ..., I_i, ..., 1 + I_j, ..., I_n),\] deduciendo, en particular, que $a + I_i = I_i$ y $a + I_j = 1 + I_j$ o, dicho de otra manera, $a \in I_i$ y $1 - a \in I_j$. Para dar término a la demostración, inferimos que \[1 = a + (1 - a) \in I_i + I_j.\] \hfill{\textsc{Q.e.d.}}
+    \textsc{Demostración}: Es suficiente con probar que, dados $i < j$, se cumple $1 \in I_i + I_j$. En efecto, sean $1 \leq i < j \leq n$ arbitrarios. En consecuencia, por ser $f$ suprayectiva, existe $a \in A$ satisfaciendo \[f(a) = (0 + I_1, ..., 0 + I_i, ..., 1 + I_j, ..., 0 + I_n),\] deduciendo, en particular, que $a + I_i = 0 + I_i$ y $a + I_j = 1 + I_j$ o, dicho de otra manera, $a \in I_i$ y $1 - a \in I_j$. Para dar término a la demostración, inferimos que \[1 = a + (1 - a) \in I_i + I_j.\] \hfill{\textsc{Q.e.d.}}
 
     \newpage
 
@@ -186,6 +188,52 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
     Para el paso inductivo, supongamos que $f_n$ es un endomorfismo y observemos, en primer lugar, que $f_{n + 1}(x) = x^{p^{n + 1}} = (x^{p^n})^p = (f_1 \circ f_n)(x)$. En consecuencia, inferimos que $f_{n + 1} = f_1 \circ f_n$, por lo que es suficiente con probar que $f_1$ es endomorfismo. Cotejar la conservación del producto y de la unidad se deja como desafío elemental para el lector. En cuanto a la suma, nos valemos del consagrado Binomio de Newton\footnote{Para los escépticos, el Binomio de Newton es válido para cualquier anillo conmutativo.} para desarrollar \[f_1(x + y) = (x + y)^p = \sum_{r=0}^{p} \binom{p}{r} x^{p-r}y^r = x^p + y^p + \sum_{r=1}^{p-1} \binom{p}{r}x^{p-r}y^r,\] y, a continuación, aplicamos \eqref{eq:000}, unido al hecho de que $p$ es la característica de $A$, para llegar a que \[x^p + y^p + \sum_{r=1}^{p-1} \binom{p}{r}x^{p-r}y^r = x^p + y^p = f_1(x) + f_1(y).\]
 
     Habiendo probado que $f_1$ es endomorfismo, el resto de la demostración se sigue del principio de inducción. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item[\textbf{2.1.12}] \textit{Demostrar que, si $K$ es un cuerpo finito con un subcuerpo $F$, entonces el cardinal de $K$ es una potencia del cardinal de $F$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Consideramos $K$ como $F$ espacio vectorial y tomamos, a continuación, una base $\mathcal{B} = \{u_1, ..., u_n\}$ de $K$, cuya existencia viene asegurada por ser $K$ finitamente generado ($K = <K>$).
+
+    Con estas definiciones notamos que la aplicación $\varphi : F^n \to K$ dada por \[\varphi(\lambda_1, ..., \lambda_n) = \lambda_1u_1 + \cdots + \lambda_nu_n\] es biyectiva. La sobretividad la obtenemos por ser $\mathcal{B}$ sistema generador y, por otra parte, sabemos que la independencia lineal de $\mathcal{B}$ nos da unicidad en la representación de cada elemento de $K$, por lo que $\varphi$ es inyectiva. En definitiva, deducimos que \[|K| = |F^n| = |F|^n.\] \hfill{\textsc{Q.e.d.}}
+
+    \vspace{7px}
+
+    \textit{Deducir que:}
+
+    \begin{itemize}
+        \item[\textit{(1)}] \textit{El cardinal de cualquier cuerpo finito es potencia de un número primo.}
+
+        \vspace{7px}
+
+        \textsc{Solución}: Dado $K$ un cuerpo finito cualquiera, vamos a examinar $F := \{n1 : n \in \mathbb{Z}\}$ el subanillo primo de $K$. Debido a que $K$ es cuerpo sabemos que, en particular, es dominio, por lo que $F$ también es dominio.
+
+        Para determinar la característica de $F$ nos percatamos de que, al ser $K$ finito, existen $n, m \in \mathbb{Z}$ distintos tales que $n1 = m1$, y al pasar restando resulta en que $(n - m)1 = 0$, para deducir inmediatamente que $\car(K) = \car(F) \neq 0$, pues $n - m \neq 0$. Más aún, aplicando el ejercicio 2.1.5 deducimos que $\car(K) = \car(F) = p$, con $p \in \mathbb{N}$ primo.
+
+        A continuación, tocaría comprobar que $|F| = \car(F) = p$, pero os doy la oportunidad privilegiada de perfilar vuestro auto-entendimiento y que hagais los argumentos pertinentes. (Indicación: encontrar biyección con $\mathbb{Z}_p$.) \textit{Moving on}, si asumimos dicha afirmación como dogma, invocamos el primer resultado del ejercicio para llegar a que \[|K| = |F|^n = p^n, \hspace{10px} n \in \mathbb{N}.\] $\hfill\square$ 
+
+        \vspace{7px}
+
+        \item[\textit{(2)}] \textit{Si $K$ es un cuerpo finito con un subcuerpo $F$, entonces existen un número primo $p$ y enteros positivos $n$ y $m$ tales que $n \mid m, |F| = p^n$ y $|K| = p^m$.}
+
+        \vspace{7px}
+
+        \textsc{Solución}: Banal\footnote{Banach.}. $\hfill\square$
+    \end{itemize}
+
+    \vspace{12px}
+
+    \item[\textbf{2.2.7}] \textit{Sea $S = \{s_1, ..., s_n\}$ un subconjunto finito de un anillo $A$ y supongamos que para cada $i \neq j$ se verifica que $(s_i, s_j) = A$. Demostrar que $\mcm(S) = \prod_{i=1}^{n} s_i$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Como anotación inicial, aclaramos que $(s, t) = (s) + (t)$ para cualesquiera dos elementos $s, t$ de un anillo $A$. Dicho lo cual, notamos que las hipótesis descritas en el enunciado son un caso particular de las pedidas en el Teorema Chino de los Restos, por lo que invocamos dicho resultado para deducir \[\bigcap_{i = 1}^{n} (s_i) = \prod_{i=1}^{n} (s_i) = \left(\prod_{i=1}^{n} s_i\right),\] donde la última igualdad se deja al cuidado del lector. Por último, en vigor del apartado (2) del ejercicio 2.2.5, concluimos que 
+
+    \[\mcm(S) = \prod_{i=1}^{n}s_i.\]
+
+    \hfill{\textsc{Q.e.d.}}
 \end{enumerate}
 
 \end{document}
