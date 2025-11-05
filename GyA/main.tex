@@ -52,7 +52,7 @@
 
 \newpage
 
-\section{Resolucion Ejercicios}
+\section{Anillos}
 
 Caulquiera podrá interpretar el propósito de esta sección a partir del encabezado. Se redactaran solo aquellos ejercicios que susciten un interés especial (bajo mi criterio).
 
@@ -262,11 +262,21 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
         \item \textit{$\mu(a) = 1$ si y sólo si $a$ es unidad.}
     \end{itemize}
 
+    \textit{Demostrar que si $\mu(a)$ es irreducible, entonces $a$ es irreducible en $D$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Sea $a \in D$ tal que $\mu(a)$ es irreducible y supongamos que $a = bc, b, c \in D$. Por la primera propiedad de $\mu$ sabemos que \[\mu(a) = \mu(bc) = \mu(b)\mu(c),\] y como $\mu(a)$ es irreducible por hipótesis $\mu(b) \in \mathbb{Z}^* \lor \mu(c) \in \mathbb{Z}^*$. No obstante, como la imagen por $\mu$ es no negativa, podemos afirmar que $\mu(b) = 1 \lor \mu(c) = 1$, con lo que deducimos que $b \in D^* \lor c \in D^*$. Este razonamiento nos permite concluir que $a$ es irreducible. \hfill{\textsc{Q.e.d.}}
+
+    \newpage
+
     \textit{Demostrar que $D$ es un dominio de factorización.}
 
     \vspace{7px}
 
-    \textsc{Demostración}: 
+    \textsc{Demostración}: Abordamos la demostración por inducción completa sobre el valor de $\mu(a)$. Para el caso base, si $\mu(a) = 1$, entonces $a$ es unidad y se puede factorizar.
+    
+    En cuanto al paso inductivo, dado $n \geq 1$, supongamos que $x \in D$ se puede factorizar si $1 \leq \mu(x) \leq n$ y veamos que si $\mu(a) = n + 1$ entonces $a$ también es factorizable. En efecto, sea $a \in D$ tal que $\mu(a) = n + 1$. Si $a$ fuese irreducible, ya habríamos términado, por lo que asumiremos que $a$ es reducible. Consecuentemente, existen $b, c \in D \setminus D^*$ cumpliendo $a = bc$, y al invocar la primera propiedad de $\mu$ nos queda que \[\mu(b)\mu(c) = \mu(a) = n + 1,\] de donde deducimos\footnote{Como $a \neq 0$ se tiene que $b, c \neq 0$ y, por otra parte, como $b$ y $c$ no son unidades, por la tercera propiedad, sus imagenes son distintas de $1$.} que $\mu(b), \mu(c) > 1$ y, por tanto, $1 < \mu(b), \mu(c) < n + 1$. En particular, tanto $b$ como $c$ satisfacen la hipótesis de inducción, por lo que son factorizables y así será $a$, pues si $b = up_1 \cdots p_k$ y $c = vq_1 \cdots q_l$ escribimos \[a = bc = (uv)p_1 \cdots p_kq_1 \cdots q_l.\] \hfill{\textsc{Q.e.d.}}
 
     \vspace{12px}
 
@@ -276,5 +286,9 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
 
     \textsc{Demostración}: Definamos $p = ab$ y usemos el Lema 2.28 para deducir que \[\delta(p) = \delta(a) \leq \delta(x), \forall x \in (a) \setminus \{0\} \Longrightarrow (p) = (a),\] por lo que $p$ y $a$ son asociados o, dicho de forma más conveniente, $p = au$ con $u \in D^*$. Rememorando la definición de $p$ inferimos que $ab = au$, para concluir $b = u \in D^*$. \hfill{\textsc{Q.e.d.}}
 \end{enumerate}
+
+\newpage
+
+\section{Grupos}
 
 \end{document}
