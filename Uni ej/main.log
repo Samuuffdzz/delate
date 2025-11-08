@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.5)  8 OCT 2025 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.26)  8 NOV 2025 21:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -134,11 +134,22 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip53
+\labelindent=\skip56
 \enit@outerparindent=\dimen160
-\enit@toks=\toks25
+\enit@toks=\toks31
 \enit@inbox=\box53
 \enit@count@id=\count276
 \enitdp@description=\count277
@@ -154,8 +165,6 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
-) (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
-Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
@@ -261,48 +270,193 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip54
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+\Hy@SectionHShift=\skip57
+) (/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+ (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box54
-) (./main.aux)
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+) (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count294
+Package zref Info: New property: abspage on input line 67.
+) (/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+\mdf@templength=\skip58
+\c@mdf@globalstyle@cnt=\count295
+\mdf@skipabove@length=\skip59
+\mdf@skipbelow@length=\skip60
+\mdf@leftmargin@length=\skip61
+\mdf@rightmargin@length=\skip62
+\mdf@innerleftmargin@length=\skip63
+\mdf@innerrightmargin@length=\skip64
+\mdf@innertopmargin@length=\skip65
+\mdf@innerbottommargin@length=\skip66
+\mdf@splittopskip@length=\skip67
+\mdf@splitbottomskip@length=\skip68
+\mdf@outermargin@length=\skip69
+\mdf@innermargin@length=\skip70
+\mdf@linewidth@length=\skip71
+\mdf@innerlinewidth@length=\skip72
+\mdf@middlelinewidth@length=\skip73
+\mdf@outerlinewidth@length=\skip74
+\mdf@roundcorner@length=\skip75
+\mdf@footenotedistance@length=\skip76
+\mdf@userdefinedwidth@length=\skip77
+\mdf@needspace@length=\skip78
+\mdf@frametitleaboveskip@length=\skip79
+\mdf@frametitlebelowskip@length=\skip80
+\mdf@frametitlerulewidth@length=\skip81
+\mdf@frametitleleftmargin@length=\skip82
+\mdf@frametitlerightmargin@length=\skip83
+\mdf@shadowsize@length=\skip84
+\mdf@extratopheight@length=\skip85
+\mdf@subtitleabovelinewidth@length=\skip86
+\mdf@subtitlebelowlinewidth@length=\skip87
+\mdf@subtitleaboveskip@length=\skip88
+\mdf@subtitlebelowskip@length=\skip89
+\mdf@subtitleinneraboveskip@length=\skip90
+\mdf@subtitleinnerbelowskip@length=\skip91
+\mdf@subsubtitleabovelinewidth@length=\skip92
+\mdf@subsubtitlebelowlinewidth@length=\skip93
+\mdf@subsubtitleaboveskip@length=\skip94
+\mdf@subsubtitlebelowskip@length=\skip95
+\mdf@subsubtitleinneraboveskip@length=\skip96
+\mdf@subsubtitleinnerbelowskip@length=\skip97
+ (/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box55
+\mdf@footnotebox=\box56
+\mdf@splitbox@one=\box57
+\mdf@splitbox@two=\box58
+\mdf@splitbox@save=\box59
+\mdfsplitboxwidth=\skip98
+\mdfsplitboxtotalwidth=\skip99
+\mdfsplitboxheight=\skip100
+\mdfsplitboxdepth=\skip101
+\mdfsplitboxtotalheight=\skip102
+\mdfframetitleboxwidth=\skip103
+\mdfframetitleboxtotalwidth=\skip104
+\mdfframetitleboxheight=\skip105
+\mdfframetitleboxdepth=\skip106
+\mdfframetitleboxtotalheight=\skip107
+\mdffootnoteboxwidth=\skip108
+\mdffootnoteboxtotalwidth=\skip109
+\mdffootnoteboxheight=\skip110
+\mdffootnoteboxdepth=\skip111
+\mdffootnoteboxtotalheight=\skip112
+\mdftotallinewidth=\skip113
+\mdfboundingboxwidth=\skip114
+\mdfboundingboxtotalwidth=\skip115
+\mdfboundingboxheight=\skip116
+\mdfboundingboxdepth=\skip117
+\mdfboundingboxtotalheight=\skip118
+\mdf@freevspace@length=\skip119
+\mdf@horizontalwidthofbox@length=\skip120
+\mdf@verticalmarginwhole@length=\skip121
+\mdf@horizontalspaceofbox=\skip122
+\mdfsubtitleheight=\skip123
+\mdfsubsubtitleheight=\skip124
+\c@mdfcountframes=\count296
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count297
+\c@mdf@env@i=\count298
+\c@mdf@env@ii=\count299
+\c@mdf@zref@counter=\count300
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) (/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count301
+\U@D=\dimen167
+\l@unhyphenated=\language89
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count302
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks32
+\es@quotdepth=\count303
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (./main.aux
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen167
-\scratchbox=\box55
-\nofMPsegments=\count295
-\nofMParguments=\count296
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen168
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count304
+\scratchdimen=\dimen168
+\scratchbox=\box60
+\nofMPsegments=\count305
+\nofMParguments=\count306
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count307
+\MPscratchDim=\dimen169
+\MPnumerator=\count308
+\makeMPintoPDFobject=\count309
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
@@ -340,299 +494,371 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 17.
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+LaTeX Info: Redefining \. on input line 17.
+LaTeX Info: Redefining \% on input line 17.
+<murcialog.png, id=172, 602.25pt x 148.555pt>
+File: murcialog.png Graphic file (type png)
+<use murcialog.png>
+Package pdftex.def Info: murcialog.png  used on input line 21.
+(pdftex.def)             Requested size: 122.07442pt x 30.11261pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 21.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./murcialog.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 32.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 60.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 32.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 60.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 32.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 60.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 32.
-
-Missing character: There is no � in font cmr10!
-Missing character: There is no � in font cmr10!
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 34.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 34.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 34.
-
-
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 34.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 60.
 
 Missing character: There is no � in font cmr10!
 Missing character: There is no � in font cmr10!
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 34.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 62.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 34.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 62.
+
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 62.
+
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 62.
 
 Missing character: There is no � in font cmr10!
-[1
+Missing character: There is no � in font cmr10!
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 62.
+
+
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 62.
+
+Missing character: There is no � in font cmr10!
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.66 \newpage
+              [1] [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-[6]
 Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 
-Overfull \hbox (3.60742pt too wide) in paragraph at lines 255--256
-\OT1/cmr/bx/n/10 Sol: \OT1/cmr/m/n/10 Por re-ducci^^Son al ab-surdo. Supong-amos que $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 es finito, en con-se-cuen-cia tendr^^Sa m^^Saximo, llam^^Semoslo
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
  []
 
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 [9] [10]
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 353.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 381.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 353.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 381.
 
 Missing character: There is no � in font cmr10!
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
-
- []
-
-[15]
 Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
-
- []
-
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--466
+
+ []
+
 [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 560--561
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--565
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
+
+ []
+
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 599--600
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 604.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 605.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--597
+Underfull \hbox (badness 10000) in paragraph at lines 624--625
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
 
  []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 647.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 648.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 649.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 655.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 657.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 661.
 
 [23] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 680--681
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 700.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 701.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 702.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 703.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 
  []
 
-[26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+[26]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 721.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 725.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 745.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
 [28] [29]
-Overfull \hbox (13.08014pt too wide) detected at line 762
+Overfull \hbox (13.08014pt too wide) detected at line 790
 \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 mn\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([])  \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^ []\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 ^^Q \OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 ;
  []
 
 [30] [31] [32] [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 932--933
+Underfull \hbox (badness 10000) in paragraph at lines 960--961
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 964--965
+Underfull \hbox (badness 10000) in paragraph at lines 992--993
 
  []
 
 [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1050
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1065--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1088
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1116
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1113--1114
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
 
  []
 
 [41] [42] [43] [44] [45] [46] [47] [48]
-<tilings.png, id=443, 792.9625pt x 242.9075pt>
+<tilings.png, id=446, 792.9625pt x 242.9075pt>
 File: tilings.png Graphic file (type png)
 <use tilings.png>
-Package pdftex.def Info: tilings.png  used on input line 1447.
+Package pdftex.def Info: tilings.png  used on input line 1475.
 (pdftex.def)             Requested size: 301.1261pt x 92.24278pt.
- [49 <./tilings.png>] [50] (./main.aux)
+ [49 <./tilings.png>] [50] (./main.aux
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -641,18 +867,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 09FDA0114418D78E312A8FF4AF191BCF;8225.
  ) 
 Here is how much of TeX's memory you used:
- 10911 strings out of 476106
- 163702 string characters out of 5793933
- 1944975 words of memory out of 5000000
- 32652 multiletter control sequences out of 15000+600000
- 570393 words of font info for 84 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
- 75i,14n,79p,880b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/samuuffdzz/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (50 pages, 439092 bytes).
+ 13497 strings out of 474222
+ 211647 string characters out of 5748732
+ 1945975 words of memory out of 5000000
+ 35422 multiletter control sequences out of 15000+600000
+ 567762 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 79i,14n,93p,880b,669s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (51 pages, 434256 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
+ 599 PDF objects out of 1000 (max. 8388607)
+ 491 compressed objects within 5 object streams
  130 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 347 words of extra memory for PDF output out of 10000 (max. 10000000)
 
