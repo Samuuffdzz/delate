@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{accents}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+
+\renewcommand{\contentsname}{Índice de Contenidos}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\ker}{\text{Ker}}
+\newcommand{\mcd}{\text{mcd}}
+\newcommand{\car}{\text{Car}}
+\newcommand{\mcm}{\text{mcm}}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{minipage}{0.4\textwidth}
+        \includegraphics[height=30px]{murcialog.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        \hfill{Samuel Fernández Riquelme}
+
+        \hfill{\today}
+    \end{minipage}
+
+    \vspace{10px}
+
+    \hrule
+
+    \vspace{7px}
+
+    \begin{center}
+        {\Huge \textsc{Funciones de Variable \\ \vspace{5px} Compleja}}
+    \end{center}
+
+    \vspace{10px}
+
+    \hfill{\textit{-- You are real to me.}}
+
+    \tableofcontents
+\end{titlepage}
+
+\newpage
+
+\section{Ejercicios}
+
+\begin{itemize}
+    \item \textit{Sean $(a_n)_{n=1}^N$ y $(b_n)_{n=1}^N$ dos sucesiones finitas de números complejos. Denotamos mediante $B_k = \sum_{n=1}^{k} b_n$ a las sumas parciales de la serie $\sum b_n$, considerando $B_0 = 0$ por convenio. Demostrar la fórmula de \textbf{sumación por partes}}
+    
+    \begin{equation}
+        \sum_{n=M}^{N} a_nb_n = A_NB_N - a_MB_{M-1} - \sum_{n=M}^{N}(a_{n + 1} - a_n)B_n.
+        \label{eq:000}
+    \end{equation}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: La idea clave de la prueba es expresar $b_n = B_n - B_{n - 1}$ y operar con la aritmética. Como debe ser siempre, antes de continuar alentamos al lector a que emplee su propio ingenio para completar la demostración.
+
+    Ahora sí, proseguimos (\textit{spoiler alert}). Con la modificación expuesta en el paso anterior, desarrollamos el brazo izquierdo de \eqref{eq:000} como se indica
+
+    \begin{equation*}
+        \begin{split}
+            \sum_{n=M}^{N} a_nb_n &= \sum_{n=M}^{N} a_n(B_n - B_{n - 1}) \\
+            &= \sum_{n=M}^{N} a_nB_n - \sum_{n=M}^{N} a_nB_{n-1} \\
+            &= a_NB_N + \sum_{n=M}^{N-1} a_nB_n - \sum_{n=M-1}^{N-1} a_{n+1}B_n \hspace{20px} \text{[desplazamos índice]} \\
+            &= a_NB_N - a_MB_{M-1} + \sum_{n=M}^{N-1} a_nB_n - \sum_{n=M}^{N-1} a_{n+1}B_n \\
+            &= a_NB_N - a_MB_{M-1} - \sum_{n=M}^{N-1} (a_{n+1} - a_n)B_n.
+        \end{split}
+    \end{equation*}
+
+    Si alguna transición entre igualdades os requiere notable dedicación no os culpo, por esta vez. Hasta luego ganster. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item \textit{\textbf{Teorema de Abel.} Sea $\sum_{n=1}^{\infty} a_n$ una serie de números complejos convergente. Demostrar que}
+    
+    \[\lim_{r \to 1, r < 1} \sum_{n=1}^{\infty} r^na_n = \sum_{n=1}^{\infty} a_n.\]
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Déjame salir. $\hfill\square$
+\end{itemize}
+
+\end{document}
