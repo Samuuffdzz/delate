@@ -75,17 +75,48 @@
         \end{split}
     \end{equation*}
 
-    Si alguna transición entre igualdades os requiere notable dedicación no os culpo, por esta vez. Hasta luego ganster. \hfill{\textsc{Q.e.d.}}
+    Si alguna transición entre igualdades os requiere notable dedicación no os culpo, por esta vez. Hasta luego gangster. \hfill{\textsc{Q.e.d.}}
 
     \vspace{12px}
 
-    \item \textit{\textbf{Teorema de Abel.} Sea $\sum_{n=1}^{\infty} a_n$ una serie de números complejos convergente. Demostrar que}
+    \item \textit{\textbf{Teorema de Abel.} Sea $\sum_{n=0}^{\infty} a_n$ una serie de números complejos convergente. Demostrar que}
     
-    \[\lim_{r \to 1, r < 1} \sum_{n=1}^{\infty} r^na_n = \sum_{n=1}^{\infty} a_n.\]
+    \[\lim_{r \to 1, r < 1} \sum_{n=0}^{\infty} r^na_n = \sum_{n=0}^{\infty} a_n.\]
 
     \vspace{7px}
 
-    \textsc{Demostración}: Déjame salir. $\hfill\square$
+    \textsc{Demostración}: Aclaramos, antes de sumergirnos en el caos, que podemos considerar siempre $0 < r < 1$ y que, para cada uno de tales $r$, la serie $\sum r^na_n$ converge absolutamente. Definimos, a continuación, los valores \[A = \sum_{n=0}^{\infty} a_n \hspace{10px} \text{y} \hspace{10px} A_k = \sum_{n=0}^{k} a_n, \hspace{10px} k \in \mathbb{N},\] y notamos que, bajo las hipótesis, se cumple que \[A = A\frac{1 - r}{1 - r} = (1 - r)A\frac{1}{1-r} = (1 - r)\sum_{n=0}^{\infty}r^nA.\]
+    Por otra parte, invocando \eqref{eq:000} en la serie $\sum r^na_n$ y tomando $M = 0, N \to \infty$ no es difícil convencerse de que \[\sum_{n=0}^{\infty} r^na_n = (1 - r)\sum_{n=0}^{\infty} r^nA_n.\]
+
+    Todas estas observaciones previas nos facilitarán ahora estimar la cantidad
+
+    \begin{equation*}
+        \begin{split}
+            \left|\sum_{n=0}^{\infty} r^na_n - A\right| &= \left|(1 - r)\sum_{n=0}^{\infty} r^nA_n - (1 - r)\sum_{n=0}^{\infty} r^nA\right| \\
+            &= \left|(1 - r)\sum_{n=0}^{\infty} r^n(A_n - A)\right| \\
+            &\leq (1 - r)\sum_{n=0}^{\infty} r^n|A_n - A|.
+        \end{split}
+    \end{equation*}
+
+    Además, dado $\varepsilon > 0$, como tenemos por construcción $(A_n)_n \to A$, sabemos que existe $N \in \mathbb{N}$ tal que $|A_n - A| < \varepsilon$ para todo $n \geq N$. En consecuencia, por un lado, nos queda 
+
+    \begin{equation}
+        (1 - r)\sum_{n=N}^{\infty} r^n|A_n - A| \leq (1 - r)\varepsilon/2\sum_{n=N}^{\infty} r^n = r^N\varepsilon/2 < \varepsilon/2,
+        \label{eq:001}
+    \end{equation}
+
+    y, por otro lado, como $N$ es fijo y $\sum_{n=0}^{N-1} r^n|A_n - A|$ está acotado para todo $0 < r < 1$, tomando $\delta$ suficientemente pequeño, podemos asegurar que 
+
+    \begin{equation}
+        (1 - r)\sum_{n=0}^{N-1} r^n|A_n - A| < \varepsilon/2,
+        \label{eq:002}
+    \end{equation}
+
+    siempre que $1 - \delta < r < 1$. Para finalizar, unificamos \eqref{eq:001} y \eqref{eq:002} para concluir que
+
+    \[(1 - r)\sum_{n=0}^{\infty} r^n|A_n - A| = (1 - r)\sum_{n=0}^{N-1} r^n|A_n - A| + (1 - r)\sum_{n=N}^{\infty} r^n|A_n - A| < \varepsilon,\]
+
+    si $1 - \delta < r < 1$. \hfill{\textsc{Q.e.d.}}
 \end{itemize}
 
 \end{document}
