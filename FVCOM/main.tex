@@ -105,7 +105,7 @@
         \label{eq:001}
     \end{equation}
 
-    y, por otro lado, como $N$ es fijo y $\sum_{n=0}^{N-1} r^n|A_n - A|$ está acotado para todo $0 < r < 1$, tomando $\delta$ suficientemente pequeño, podemos asegurar que 
+    y, por otro lado, como $N$ es fijo y $\sum_{n=0}^{N-1} r^n|A_n - A|$ está acotado en $0 < r < 1$, tomando $\delta$ suficientemente pequeño, podemos asegurar que 
 
     \begin{equation}
         (1 - r)\sum_{n=0}^{N-1} r^n|A_n - A| < \varepsilon/2,
@@ -117,6 +117,34 @@
     \[(1 - r)\sum_{n=0}^{\infty} r^n|A_n - A| = (1 - r)\sum_{n=0}^{N-1} r^n|A_n - A| + (1 - r)\sum_{n=N}^{\infty} r^n|A_n - A| < \varepsilon,\]
 
     si $1 - \delta < r < 1$. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item \textit{Si $P \in \mathbb{C}[X]$ es un polinomio de grado $n$ con ceros $\{a_1, ..., a_n\}$, demuestra que}
+    
+    \begin{equation}
+        \frac{P'(z)}{P(z)} = \sum_{j=1}^{n} \frac{1}{z - a_j}
+        \label{eq:003}
+    \end{equation}
+
+    \vspace{5px}
+
+    \textsc{Demostración}: Procedemos por inducción sobre $n$ el grado del polinomio. El caso base $n = 1$ es sencillísimo. 
+    
+    Para el salto inductivo, suponemos que todo polinomio de grado $n$ satisface \eqref{eq:003} y consideramos $P \in \mathbb{C}[X]$ arbitrario de grado $n + 1$, con ceros $\{a_1, ..., a_n, a_{n+1}\}$. Por ser $a_{n+1}$ raíz, sabemos que $P(z) = (z - a_{n+1})Q(z)$, donde $Q$ es un polinomio complejo de grado $n$, y cuyas raices son precisamente $\{a_1, ..., a_n\}$.
+
+    Al estudiar la derivada de $P$ obtenemos \[P'(z) = ((z - a_{n+1})Q(z))' = Q(z) + (z - a_{n+1})Q'(z),\] y al dividir por $P(z)$ y hacer una instintiva aplicación de la hipótesis de inducción, completamos la desmotración:
+
+    \begin{equation*}
+        \begin{split}
+            \frac{P'(z)}{P(z)} &= \frac{Q(z) + (z - a_{n+1})Q'(z)}{(z - a_{n+1})Q(z)} \\
+            &= \frac{1}{z - a_{n+1}} + \frac{Q'(z)}{Q(z)} \hspace{15px} \text{[distribuir denominador]} \\
+            &= \frac{1}{z - a_{n+1}} + \sum_{j=1}^{n} \frac{1}{z - a_j} \hspace{15px} \text{[aplicamos H.I.]} \\
+            &= \sum_{j=1}^{n+1} \frac{1}{z - a_j} \hspace{15px} \text{[agrupar]}
+        \end{split}
+    \end{equation*}
+
+    \hfill{\textsc{Q.e.d.}}
 \end{itemize}
 
 \end{document}
