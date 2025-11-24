@@ -145,6 +145,53 @@
     \end{equation*}
 
     \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item \textit{Demuestra que, para $|z| < 1$, se cumple}
+    
+    \[\frac{z}{1 - z^2} + \frac{z^2}{1 - z^4} + \cdots + \frac{z^{2^n}}{1 - z^{2^{n+1}}} + \cdots = \frac{z}{1-z}.\]
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Fijado $n \geq 0$, vamos a estudiar la expresión 
+    
+    \begin{equation}
+        \frac{z^{2^n}}{1-z^{2^{n+1}}},
+        \label{eq:004}
+    \end{equation}
+    
+    usando para ello la fórmula de la serie geométrica con término inicial $z^{2^n}$ y razón $z^{2^{n+1}}$, con lo que desembocamos en
+
+    \[\frac{z^{2^n}}{1-z^{2^{n+1}}} = \sum_{m=0}^{\infty} \left(z^{2^{n+1}}\right)^mz^{2^n} = \sum_{m=0}^{\infty} z^{2^n(2m + 1)}.\]
+
+    A continuación, centrando nuestra atención en el exponente de $z$, notamos que la correspondencia $(n, m) \mapsto 2^n(2m + 1)$ representa una biyección entre $\mathbb{N}^* \times \mathbb{N}^*$ y $\mathbb{N}$ (la prueba de este hecho se sale de nuestro foco teórico). 
+    
+    En consecuencia, al considerar todos los posibles $n \geq 0$ y sumar sus respectivos \eqref{eq:004}, la expresión resultante consiste en una reordenación de la serie $\sum_{k=1}^{\infty} z^k$, cuyo valor es precisamente \[\frac{z}{1-z}.\]
+
+    Por último, como $|z| < 1$ por hipótesis, la serie $\sum_{k=1}^{\infty} z^k$ converge absolutamente y, a consecuencia de ello, toda reordenación tiene el mismo valor\footnote{Un así llamado Tom Apostol detalla rigurosamente dicha afirmación, a mí me dejáis tranquilo.}, con lo que conluimos la demostración. \hfill{\textsc{Q.e.d.}}
+
+    \newpage
+
+    \textit{Probar, bajo las mismas condiciones, que}
+
+    \[\frac{z}{1+z} + \frac{2z^2}{1+z^2} + \cdots + \frac{2^nz^{2^n}}{1+z^{2^n}} + \cdots = \frac{1}{1-z}.\]
+
+    \vspace{7px}
+
+    \textsc{Demostración}: De manera similar, fijamos $n \geq 0$ y examinamos la expresión
+
+    \[\frac{z^{2^n}}{1+z^{2^n}} = \frac{z^{2^n}}{1 - (-z^{2^n})},\]
+
+    donde esta vez el término inicial es $z^{2^n}$ y la razón es $-z^{2^n}$, por lo que, al desarrollar la serie, nos queda que 
+
+    \[\frac{z^{2^n}}{1+z^{2^n}} = \sum_{m=0}^{\infty} \left(-z^{2^n}\right)^mz^{2^n} = \sum_{m=0}^{\infty} (-1)^mz^{2^n(m+1)},\]
+
+    y, al multiplicar por $2^n$, obtenemos la igualdad 
+
+    \[\frac{2^nz^{2^n}}{1+z^{2^n}} = \sum_{m=0}^{\infty} (-1)^m2^nz^{2^n(m+1)}.\]
+
+    Ahora, consideramos $k > 0$ arbitrario y analizamos las apariciones de $z^k$.
 \end{itemize}
 
 \end{document}
