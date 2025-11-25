@@ -71,7 +71,7 @@ Sean $b_i, 1 \leq i \leq n, n > 1$, numeros reales positivos cuyo producto es 1.
 
 \begin{itemize}
     \item[$a)$] Demuestre que si no todos los $b_i$ son iguales y se suponen ordenados de forma creciente,
-    $b_1 \leq b_2 \leq ... \leq b_n$, entonces $b_1 < 1 < b_n$.
+    $b_1 \leq b_2 \leq \cdots \leq b_n$, entonces $b_1 < 1 < b_n$.
 
     \vspace{7px}
 
@@ -79,14 +79,14 @@ Sean $b_i, 1 \leq i \leq n, n > 1$, numeros reales positivos cuyo producto es 1.
 
     Bien, supuesto $b_1 \geq 1$ y sabiendo que no todos son iguales, adquirimos $b_n > 1$, por lo que llegamos a
 
-    \[b_1b_2...b_n = (b_1b_2...b_{n-1})b_n \geq 1 \cdot b_n > 1,\]
+    \[b_1b_2 \cdots b_n = (b_1b_2 \cdots b_{n-1})b_n \geq 1 \cdot b_n > 1,\]
 
     de donde la contradicción aflora de forma radiante. \hfill{\textsc{Q.e.d.}}
 
     \item[$b)$] Utilizando inducción en $n$, pruebe que
     
     \begin{equation}
-        b_1b_2...b_n = 1 \leq \frac{b_1 + b_2 + ... + b_n}{n},
+        b_1b_2 \cdots b_n = 1 \leq \frac{b_1 + b_2 + \cdots + b_n}{n},
         \label{eq:agm}
     \end{equation}
 
@@ -116,11 +116,11 @@ Sean $b_i, 1 \leq i \leq n, n > 1$, numeros reales positivos cuyo producto es 1.
         \item \textbf{Paso inductivo}. Supongamos que, para $n$ reales postivos $a_1, a_2, ..., a_n$ (no todos iguales) arbitrarios tales que $a_1a_2...a_n = 1$, se cumple que
         
         \begin{equation}
-            n < a_1 + a_2 + ... + a_n.
+            n < a_1 + a_2 + \cdots + a_n.
             \label{eq:agmstrc}
         \end{equation}
 
-        A continuación, considerando $n + 1$ reales positivos ordenados $b_1b_2...b_{n+1}$ (no todos iguales) cuyo producto es $1$, veamos que se satisface $n + 1 < b_1 + b_2 + ... + b_{n + 1}$. Para ello, construimos la secuencia de números auxiliares $a_1, a_2, ..., a_n$ tales que
+        A continuación, considerando $n + 1$ reales positivos ordenados $b_1b_2 \cdots b_{n+1}$ (no todos iguales) cuyo producto es $1$, veamos que se satisface $n + 1 < b_1 + b_2 + \cdots + b_{n + 1}$. Para ello, construimos la secuencia de números auxiliares $a_1, a_2, ..., a_n$ tales que
 
         \[
         a_k := 
@@ -131,10 +131,10 @@ Sean $b_i, 1 \leq i \leq n, n > 1$, numeros reales positivos cuyo producto es 1.
         .\]
 
         De esta manera, es evidente que su producto sigue valiendo $1$. No obstante, tenemos que diferenciar dos casos, pues puede suceder que después de hacer este
-        agrupamiento todos los $a_i$ valgan $1$. En dicho escenario, se tiene trivialmente que $n = a_1 + a_2 + ... + a_n$, mientras que si no se da esta condición aplicamos 
+        agrupamiento todos los $a_i$ valgan $1$. En dicho escenario, se tiene trivialmente que $n = a_1 + a_2 + \cdots + a_n$, mientras que si no se da esta condición aplicamos 
         la hipótesis de inducción para alcanzar \eqref{eq:agmstrc}. En definitiva, no importa el escenario, sabemos que
 
-        \[n \leq a_1 + a_2 + ... + a_n = b_1b_{n+1} + b_2 + ... + b_n.\]
+        \[n \leq a_1 + a_2 + \cdots + a_n = b_1b_{n+1} + b_2 + \cdots + b_n.\]
 
         Pero está claro que aún no hemos terminado. Si tan sólo se pudiese afirmar que $1 < b_1 + b_{n + 1} - b_1b_{n + 1}$... Un momento, pero si sí que se puede, ¡allá que vamos pandilla!
 
@@ -151,25 +151,25 @@ Sean $b_i, 1 \leq i \leq n, n > 1$, numeros reales positivos cuyo producto es 1.
 
     \item[$c)$] Deduzca que si $a_i > 0, 1 \leq i \leq n$, son números reales, entonces
     
-    \[\sqrt[n]{a_1a_2...a_n} \leq \frac{a_1 + a_2 + ... + a_n}{n}.\]
+    \[\sqrt[n]{a_1a_2\cdots a_n} \leq \frac{a_1 + a_2 + \cdots + a_n}{n}.\]
 
     \vspace{7px}
 
     \textsc{Solución}: Denotemos mediante $x \in \mathbb{R}$ a la media geométrica de los $a_i$, o más llanamente
 
-    \[x := \sqrt[n]{a_1a_2...a_n}.\]
+    \[x := \sqrt[n]{a_1a_2\cdots a_n}.\]
 
     Considerando los términos $b_i = a_i / x$, a poco que lo pienses, llegamos a que
 
-    \[\sqrt[n]{b_1b_2...b_n} = 1\]
+    \[\sqrt[n]{b_1b_2\cdots b_n} = 1\]
 
     o, lo que es lo mismo, que el producto de los $b_i$ es $1$, por lo que estamos en condiciones de invocar el resultado del apartado $b)$. En consecuencia, obtenemos que
 
-    \[\frac{\sqrt[n]{a_1a_2...a_n}}{x} = \sqrt[n]{b_1b_2...b_n} = 1 \leq \frac{b_1 + b_2 + ... + b_n}{n},\]
+    \[\frac{\sqrt[n]{a_1a_2\cdots a_n}}{x} = \sqrt[n]{b_1b_2\cdots b_n} = 1 \leq \frac{b_1 + b_2 + \cdots + b_n}{n},\]
 
     y, pasando la $x$ multiplicando, concluimos finalmente que
 
-    \[\sqrt[n]{a_1a_2...a_n} \leq \frac{x(b_1 + b_2 + ... + b_n)}{n} = \frac{a_1 + a_2 + ... + a_n}{n}.\]
+    \[\sqrt[n]{a_1a_2\cdots a_n} \leq \frac{x(b_1 + b_2 + \cdots + b_n)}{n} = \frac{a_1 + a_2 + \cdots + a_n}{n}.\]
 
     $\hfill\square$
 \end{itemize}
