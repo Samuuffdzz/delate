@@ -280,7 +280,9 @@ Por otro lado, de manera análoga y aplicando el hecho de que $f(b) = b$, sabemo
 
 Sea $f : \mathbb{N} \longrightarrow \mathbb{N}$ una aplicación inyectiva y $A = \{n \in \mathbb{N} : f(n) \geq n\}$. Demostrar que $A$ es un conjunto infinito. \\
 
-\noindent \textbf{Sol:} Por reducción al absurdo. Supongamos que $A$ es finito, en consecuencia tendrá máximo, llamémoslo $M =$ máx$A$
+\noindent \textsc{Demostración}: Supongamos, por reducción al absurdo, que $A$ es finito. Consecuentemente, existe $m = \max(A)$ y $M = \max(f(A))$. Definiendo $I_M = \{0, 1, 2, ..., l\}$ notamos que $f(I_M) \subseteq I_M$. En efecto, dado $0 \leq n \leq M$ se cumple, o bien $n \in A$, en cuyo escenario $f(n) \leq M$ por definición de $M$, o bien $n \notin A$, donde se tiene trivialmente que $f(n) < n \leq M$. Por otra parte, la cota $f(n) \geq 0$ se tiene gratuitamente, pues la imagen de $f$ es $\mathbb{N} = \{0, 1, 2, 3, ...\}$ en nuestro contexto.
+
+En consecuencia, la restricción $f\vert_{I_M} : I_M \longrightarrow I_M$ está bien definida y hereda la propiedad de inyectividad. Adicionalmente, como $I_M$ es un conjunto finito, se deduce que $f\vert_{I_M}$ es de igual manera sobreyectiva. Sin embargo, al contemplar la imagen de $M + 1$ sobre $f$ notamos que \[f(M + 1) \leq M,\] pues $M \geq m$ y, particularmente, $M + 1 \notin A$. Este hecho resulta en que $f(M + 1) \in I_M$, pero habíamos argumentado que todos los elementos de $I_M$ ya recibían del propio $I_M$, contradiciendo la cualidad de inyectividad asumida sobre $f$. En conclusión, $A$ ha de ser infinito. \hfill{\textsc{Q.e.d.}}
 
 \newpage
 
