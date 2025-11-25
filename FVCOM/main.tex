@@ -175,7 +175,10 @@
 
     \textit{Probar, bajo las mismas condiciones, que}
 
-    \[\frac{z}{1+z} + \frac{2z^2}{1+z^2} + \cdots + \frac{2^nz^{2^n}}{1+z^{2^n}} + \cdots = \frac{1}{1-z}.\]
+    \begin{equation}
+        \frac{z}{1+z} + \frac{2z^2}{1+z^2} + \cdots + \frac{2^nz^{2^n}}{1+z^{2^n}} + \cdots = \frac{1}{1-z}.
+        \label{eq:005}
+    \end{equation}
 
     \vspace{7px}
 
@@ -189,9 +192,24 @@
 
     y, al multiplicar por $2^n$, obtenemos la igualdad 
 
-    \[\frac{2^nz^{2^n}}{1+z^{2^n}} = \sum_{m=0}^{\infty} (-1)^m2^nz^{2^n(m+1)}.\]
+    \begin{equation}
+        \frac{2^nz^{2^n}}{1+z^{2^n}} = \sum_{m=0}^{\infty} (-1)^m2^nz^{2^n(m+1)}.
+        \label{eq:006}
+    \end{equation}
 
-    Ahora, consideramos $k > 0$ arbitrario y analizamos las apariciones de $z^k$.
+    Ahora, consideramos $k > 0$ arbitrario, lo factorizamos como $k = 2^\mu r$, donde $r \in \mathbb{N}$ es impar, y analizamos el coeficiente de $z^k$ en el brazo izquierdo de \eqref{eq:005}. Dividimos el estudio en dos casos:
+    
+    \begin{itemize}
+        \item Para cuando $0 \leq n < \mu$, su correspondiente serie \eqref{eq:006} aporta exactamente un sumando acompañado de $z^k$, cuyo coeficiente es $(-1)^m2^n$. Además, como se debe cumplir $2^n(m+1) = k = 2^\mu r$ y $n < \mu$, deducimos que $m + 1$ es par y, por ende, $m$ impar. En consecuencia, inferimos que el coeficiente que acompaña a $z^k$ es \[(-1)^m2^n = -2^n.\]
+
+        \item Para $n = \mu$, realizamos un razonamiento análogo al anterior, pero deduciendo que $m$ es par (pues $m + 1 = r$ impar), por lo que el coeficiente que acompaña a $z^k$ en este caso es \[(-1)^m2^n = 2^\mu.\]
+    \end{itemize}
+
+    Juntando estos análisis y notando que si $n > \mu$ el término $z^k$ no aparece en el respectivo \eqref{eq:006}, podemos asegurar que el coeficiente general de $z^k$ en el brazo izquierdo de \eqref{eq:005} es
+
+    \[2^\mu - (2^0 + 2^1 + \cdots + 2^{\mu - 1}) = 2^\mu - 2^\mu + 1 = 1.\]
+
+    Para terminar, como el argumento planteado en los párrafos superiroes es válido para todo $k \in \mathbb{N}$ concluimos que ambos lados de la igualdad \eqref{eq:005} representan, en efecto, una igualdad. \hfill{\textsc{Q.e.d.}}
 \end{itemize}
 
 \end{document}

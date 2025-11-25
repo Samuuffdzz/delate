@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1762511555.30099 "/home/samuuffdzz/Sumael/delate/GyA/main.tex" "main.pdf" "main" 1762511556.47361 0
+["pdflatex"] 1762797009.67989 "/home/samuuffdzz/Sumael/delate/GyA/main.tex" "main.pdf" "main" 1762797011.01849 0
   "/etc/texmf/web2c/texmf.cnf" 1733395192.76793 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/samuuffdzz/Sumael/delate/GyA/main.tex" 1762511553.72626 22221 09a1ae82a13baa04ae68ea80d7b15115 ""
+  "/home/samuuffdzz/Sumael/delate/GyA/main.tex" 1762797009.37824 22222 f5d468bfb69877799bfc69d6e709052c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -125,10 +125,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761474526.63929 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761474559 8213939 9326cc907bb960f882dc26d0afb3683c ""
-  "main.aux" 1762511556.3293 611 552264a7c4d2048185f08f69e8ab476c "pdflatex"
-  "main.out" 1762511556.3313 151 91d4efc54fb9f2492faf7b0003b8a9f2 "pdflatex"
-  "main.tex" 1762511553.72626 22221 09a1ae82a13baa04ae68ea80d7b15115 ""
-  "main.toc" 1762511556.3323 155 f8d74b944d04d0f1bf6d3e7839d57eaf "pdflatex"
+  "main.aux" 1762797010.86696 611 552264a7c4d2048185f08f69e8ab476c "pdflatex"
+  "main.out" 1762797010.86996 151 91d4efc54fb9f2492faf7b0003b8a9f2 "pdflatex"
+  "main.tex" 1762797009.37824 22222 f5d468bfb69877799bfc69d6e709052c ""
+  "main.toc" 1762797010.86996 155 f8d74b944d04d0f1bf6d3e7839d57eaf "pdflatex"
   "murcialog.png" 1761487957.65303 12692 2f1d66a033d6c12ecae7ecccfbd08c95 ""
   (generated)
   "main.aux"

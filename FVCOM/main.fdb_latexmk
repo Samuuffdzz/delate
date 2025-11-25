@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1764026186.39315 "/home/samuuffdzz/Sumael/delate/FVCOM/main.tex" "main.pdf" "main" 1764026187.04205 0
+["pdflatex"] 1764100184.05173 "/home/samuuffdzz/Sumael/delate/FVCOM/main.tex" "main.pdf" "main" 1764100184.69004 0
   "/etc/texmf/web2c/texmf.cnf" 1733395192.76793 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/samuuffdzz/Sumael/delate/FVCOM/main.tex" 1764026186.20155 9046 7e9d94b73d23a168647194a5d353ea52 ""
+  "/home/samuuffdzz/Sumael/delate/FVCOM/main.tex" 1764100183.86021 10495 5700f101fb8f241d3f67556b4fc3fa86 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -120,13 +121,15 @@
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty" 1694723124 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty" 1694723124 20785 f7d1133a287929598a897c93f8f4c44b ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1636152094 2900 1537cc8184ad1792082cd229ecc269f4 ""
+  "/usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb" 1636152094 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761474526.63929 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761474559 8213939 9326cc907bb960f882dc26d0afb3683c ""
-  "main.aux" 1764026186.9594 736 6f9f9b111c05d5fad43b2fdefefa3dc5 "pdflatex"
-  "main.out" 1764026186.9614 93 6d78fb9418eb64e3ed1a042465b046e9 "pdflatex"
-  "main.tex" 1764026186.20155 9046 7e9d94b73d23a168647194a5d353ea52 ""
-  "main.toc" 1764026186.9614 96 64d86363d45768df4f0c637b24b9996d "pdflatex"
+  "main.aux" 1764100184.60422 844 4a6690fa29dd92529487f6187504bb5d "pdflatex"
+  "main.out" 1764100184.60522 93 6d78fb9418eb64e3ed1a042465b046e9 "pdflatex"
+  "main.tex" 1764100183.86021 10495 5700f101fb8f241d3f67556b4fc3fa86 ""
+  "main.toc" 1764100184.60522 96 64d86363d45768df4f0c637b24b9996d "pdflatex"
   "murcialog.png" 1762634008.22978 12692 2f1d66a033d6c12ecae7ecccfbd08c95 ""
   (generated)
   "main.aux"
