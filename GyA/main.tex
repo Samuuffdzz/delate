@@ -253,6 +253,26 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
 
     \vspace{12px}
 
+    \item[\textbf{2.2.8}] \textit{Demostrar que si $a$ y $b$ son elementos de un anillo $A$ para los que $(a, b) = A$, entonces $(a^n, b^m) = A$ para todo $n, m \in \mathbb{N}$.}
+
+    \vspace{7px}
+
+    \textsc{Demostración}: Probaremos que, bajo las hipótesis marcadas, se cumple que $1 \in (a^n, b)$ para todo $n \in \mathbb{N}$, relegando al lector la generalización ulterior.
+
+    Por hipótesis, como $(a, b) = A$, en particular existen $x, y \in A$ tales que $ax + by = 1$. Elevando ambos lados de la igualdad a $n$ obtenemos la expresión \[(ax + by)^n = 1,\] y expandiendo el binomio y agrupando ingeniosamente  llegamos a que 
+
+    \begin{equation*}
+        \begin{split}
+            (ax + by)^n &= \sum_{j=0}^{n} \binom{n}{j}(ax)^{n-j}(by)^j \\
+            &= a^nx^n + \sum_{j=1}^{n} \binom{n}{j}(ax)^{n-j}(by)^j \\
+            &= a^nx^n + b\sum_{j=1}^{n} \binom{n}{j}(ax)^{n-j}b^{j-1}y^j,
+        \end{split}
+    \end{equation*}
+
+    donde, tras una rudimentaria comprobación, notamos se cumple $\sum_{j=1}^{n} \binom{n}{j} (ax)^{n-j}b^{j-1}y^j \in A$. Por subsecuente, concluimos que $1 \in (a^n, b)$, dejando unas condiciones más que favorables para que Ud. (\emph{función conativa}) dé una clausura apropiada a la demostración. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
     \item[\textbf{2.3.2}] \textit{Sea $D$ un dominio y supongamos que existe un aplicación $\mu : D \to \mathbb{Z}^{\geq 0}$ que verefica las tres propiedades siguientes:}
 
     \begin{itemize}
@@ -268,8 +288,6 @@ Caulquiera podrá interpretar el propósito de esta sección a partir del encabe
     \vspace{7px}
 
     \textsc{Demostración}: Sea $a \in D$ tal que $\mu(a)$ es irreducible y supongamos que $a = bc, b, c \in D$. Por la primera propiedad de $\mu$ sabemos que \[\mu(a) = \mu(bc) = \mu(b)\mu(c),\] y como $\mu(a)$ es irreducible por hipótesis $\mu(b) \in \mathbb{Z}^* \lor \mu(c) \in \mathbb{Z}^*$. No obstante, como la imagen por $\mu$ es no negativa, podemos afirmar que $\mu(b) = 1 \lor \mu(c) = 1$, con lo que deducimos que $b \in D^* \lor c \in D^*$. Este razonamiento nos permite concluir que $a$ es irreducible. \hfill{\textsc{Q.e.d.}}
-
-    \newpage
 
     \textit{Demostrar que $D$ es un dominio de factorización.}
 
