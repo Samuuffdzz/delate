@@ -13,6 +13,7 @@
 \usepackage[spanish]{babel}
 
 \renewcommand{\contentsname}{Índice de Contenidos}
+\newcommand{\mcd}{\text{mcd}}
 
 \begin{document}
 
@@ -280,7 +281,7 @@ Por otro lado, de manera análoga y aplicando el hecho de que $f(b) = b$, sabemo
 
 Sea $f : \mathbb{N} \longrightarrow \mathbb{N}$ una aplicación inyectiva y $A = \{n \in \mathbb{N} : f(n) \geq n\}$. Demostrar que $A$ es un conjunto infinito. \\
 
-\noindent \textsc{Demostración}: Supongamos, por reducción al absurdo, que $A$ es finito. Consecuentemente, existe $m = \max(A)$ y $M = \max(f(A))$. Definiendo $I_M = \{0, 1, 2, ..., l\}$ notamos que $f(I_M) \subseteq I_M$. En efecto, dado $0 \leq n \leq M$ se cumple, o bien $n \in A$, en cuyo escenario $f(n) \leq M$ por definición de $M$, o bien $n \notin A$, donde se tiene trivialmente que $f(n) < n \leq M$. Por otra parte, la cota $f(n) \geq 0$ se tiene gratuitamente, pues la imagen de $f$ es $\mathbb{N} = \{0, 1, 2, 3, ...\}$ en nuestro contexto.
+\noindent \textsc{Demostración}: Supongamos, por reducción al absurdo, que $A$ es finito. Consecuentemente, existe $m = \max(A)$ y $M = \max(f(A))$. Definiendo $I_M = \{0, 1, 2, ..., M\}$ notamos que $f(I_M) \subseteq I_M$. En efecto, dado $0 \leq n \leq M$ se cumple, o bien $n \in A$, en cuyo escenario $0 \leq f(n) \leq M$ por definición de $M$, o bien $n \notin A$, donde se tiene trivialmente que $0 \leq f(n) < n \leq M$.
 
 En consecuencia, la restricción $f\vert_{I_M} : I_M \longrightarrow I_M$ está bien definida y hereda la propiedad de inyectividad. Adicionalmente, como $I_M$ es un conjunto finito, se deduce que $f\vert_{I_M}$ es de igual manera sobreyectiva. Sin embargo, al contemplar la imagen de $M + 1$ sobre $f$ notamos que \[f(M + 1) \leq M,\] pues $M \geq m$ y, particularmente, $M + 1 \notin A$. Este hecho resulta en que $f(M + 1) \in I_M$, pero habíamos argumentado que todos los elementos de $I_M$ ya recibían del propio $I_M$, contradiciendo la cualidad de inyectividad asumida sobre $f$. En conclusión, $A$ ha de ser infinito. \hfill{\textsc{Q.e.d.}}
 
@@ -1426,7 +1427,7 @@ L(x) =
 
 \vspace{12px}
 
-\noindent\textbf{Problema} \, \textit{Sea $n \in \mathbb{N}$. Cuántas soluciones existen de pares de enteros positivos $(x, y)$ para la ecuación} 
+\noindent\textbf{Problema} \, \textit{Sea $n \in \mathbb{N}$. ¿Cuántas soluciones existen de pares de enteros positivos $(x, y)$ para la ecuación} 
 
 \[\frac{xy}{x+y} = n\textit{?}\]
 
@@ -1501,32 +1502,63 @@ En definitiva, asumiendo $n \in \mathbb{Z}$ tal que $2 \nmid n$ y $3 \nmid n$, e
 
 \vspace{12px}
 
-    \noindent\textbf{Problema} \, \textit{Demostrar que si $a, b \in \mathbb{Z}$ son dos enteros coprimos, entonces $a^2$ y $b^2$ también lo son.}
+\noindent\textbf{Problema} \, \textit{Demostrar que si $a, b \in \mathbb{Z}$ son dos enteros coprimos, entonces $a^2$ y $b^2$ también lo son.}
 
-    \vspace{7px}
+\vspace{7px}
 
-    \noindent\textsc{Demostración}: Por ser $a, b$ coprimos, existen $x, y \in \mathbb{Z}$ tales que
+\noindent\textsc{Demostración}: Por ser $a, b$ coprimos, existen $x, y \in \mathbb{Z}$ tales que
 
-    \begin{equation}
-        ax + by = 1
-        \label{eq:eq003},
-    \end{equation}
+\begin{equation}
+    ax + by = 1
+    \label{eq:eq003},
+\end{equation}
 
-    \noindent de donde, elevando al cuadrado a ambos lados de la ecuación, nos deja que
+\noindent de donde, elevando al cuadrado a ambos lados de la ecuación, nos deja que
 
-    \begin{equation}
-        a^2x^2 + 2abxy + b^2y^2 = (ax + by)^2 = 1.
-        \label{eq:eq004}
-    \end{equation}
+\begin{equation}
+    a^2x^2 + 2abxy + b^2y^2 = (ax + by)^2 = 1.
+    \label{eq:eq004}
+\end{equation}
 
-    \noindent Por otra parte, si además múltiplicamos \eqref{eq:eq003} por $2abxy$ en ambas partes, obtenemos la valiosa identidad
+\noindent Por otra parte, si además múltiplicamos \eqref{eq:eq003} por $2abxy$ en ambas partes, obtenemos la valiosa identidad
 
-    \[2a^2x^2by + 2b^2y^2ax = 2abxy,\]
+\[2a^2x^2by + 2b^2y^2ax = 2abxy,\]
 
-    \noindent por lo que, al sustituir en \eqref{eq:eq004} desembocamos finalmente en 
+\noindent por lo que, al sustituir en \eqref{eq:eq004} desembocamos finalmente en 
 
-    \[a^2x^2(2by + 1) + b^2y^2(2ax + 1) = a^2x^2 + 2a^2x^2by + 2b^2y^2ax + b^2y^2 = a^2x^2 + 2abxy + b^2y^2 = 1,\]
+\[a^2x^2(2by + 1) + b^2y^2(2ax + 1) = a^2x^2 + 2a^2x^2by + 2b^2y^2ax + b^2y^2 = a^2x^2 + 2abxy + b^2y^2 = 1,\]
 
-    \noindent concluyendo así que $a^2$ y $b^2$ son comprimos, pues hemos conseguido expresar $1$ como combinación lineal de $a^2$ y $b^2$. \hfill{\textsc{Q.e.d.}}
+\noindent concluyendo así que $a^2$ y $b^2$ son comprimos, pues hemos conseguido expresar $1$ como combinación lineal de $a^2$ y $b^2$. \hfill{\textsc{Q.e.d.}}
 
+\vspace{15px}
+
+\noindent \textbf{Problema} \, \textit{Sean $a, b$ son dos enteros positivos tales que $\mcd(a, b) = 1$ y $ab = c^n$. Probar que $a = x^n$ y $b = y^n$ para $x$ e $y$ apropiados.}
+
+\vspace{5px}
+
+\noindent \textsc{Demostración}: Nuestro foco va a estar en probar que $d = \mcd(a, c)$ y $g = \mcd(b, c)$ verifican que $a = d^n$ y $b = g^n$. Comenzamos expresando $c = dc'$ para sustituir \[ab = c^n = d^nc'^n\]
+
+\vspace{12px}
+
+\noindent \textbf{Problema} \, \textit{Si $m \neq n$, estudiar el valor de $\mcd(a^{2^m} + 1, a^{2^n} + 1)$ en función de $a > 1$.}
+
+\vspace{5px}
+
+\noindent \textsc{Solución}: Empezamos con paso firme definiendo $A_n = a^{2^n} + 1$. A continuación, vamos a deducir que \[A_n \mid A_m + A_n - 2,\] para todo $m > n$. En efecto, como $m > n$, podemos escribir $m = n + k$, donde $k$ es positivo, para desarrollar
+
+\begin{equation*}
+    \begin{split}
+        A_m + A_n - 2 &= a^{2^m} + 1 + a^{2^n} + 1 - 2 \\
+        &= a^{2^m} + a^{2^n} \\
+        &= a^{2^n2^k} + a^{2^n} \\
+        &= (a^{2^n})^{2^k} + a^{2^n} \\
+        &= a^{2^n}\left((a^{2^n})^{2^k-1} + 1\right).
+    \end{split}
+\end{equation*}
+
+Adicionalmente, y como pieza clave, notamos que el exponente $2^k - 1$ es impar, pues $k > 0$, por lo que podemos aplicar la mundialmente conocida identidad \[x^\mu + 1 = (x + 1)(x^{\mu-1} - x^{\mu-2} + \cdots - x + 1),\] válida cuando $\mu$ es impar, tomando en nuestro caso de interés $\mu = 2^k-1$ y $x = a^{2^n}$. En consecuencia, inferimos que \[A_m + A_n - 2 = a^{2^n}\left(a^{2^n} + 1\right)S,\] donde $S$ es el correspondiente sumatorio $\sum_{j=0}^{\mu-1} (-1)^jx^j$. Dicho de otra manera, hemos probado que $A_n \mid A_m + A_n - 2$.
+
+Este resultado, unido al hecho trivial de que $A_n \mid A_n$, nos permite afirmar que $A_n \mid A_m - 2$ para cualquiera $m > n$. Por subsiguiente, denotando $d = \mcd(A_n, A_m)$, notamos que, por un lado, juntando $d \mid A_n$ y $A_n \mid A_m - 2$ llegamos a que $d \mid A_m - 2$ y, por otro lado, como $d \mid A_m$ por definición, concluimos que \[d \mid 2 = A_m - (A_m - 2).\]
+
+Argumentando como previamente nos deja dos posibilidades para $d$, siendo éstas $d = 1$ o $d = 2$. Mediante, una irrisoria y poco estimmulante distinción de casos, concluimos que $d = 1$ si $a$ es par, mientras que $d = 2$ en caso contrario. $\hfill\square$
 \end{document}
