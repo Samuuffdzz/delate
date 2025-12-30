@@ -1551,14 +1551,14 @@ En definitiva, asumiendo $n \in \mathbb{Z}$ tal que $2 \nmid n$ y $3 \nmid n$, e
         A_m + A_n - 2 &= a^{2^m} + 1 + a^{2^n} + 1 - 2 \\
         &= a^{2^m} + a^{2^n} \\
         &= a^{2^n2^k} + a^{2^n} \\
-        &= (a^{2^n})^{2^k} + a^{2^n} \\
-        &= a^{2^n}\left((a^{2^n})^{2^k-1} + 1\right).
+        &= \left(a^{2^n}\right)^{2^k} + a^{2^n} \\
+        &= a^{2^n}\left(\left(a^{2^n}\right)^{2^k-1} + 1\right).
     \end{split}
 \end{equation*}
 
-Adicionalmente, y como pieza clave, notamos que el exponente $2^k - 1$ es impar, pues $k > 0$, por lo que podemos aplicar la mundialmente conocida identidad \[x^\mu + 1 = (x + 1)(x^{\mu-1} - x^{\mu-2} + \cdots - x + 1),\] válida cuando $\mu$ es impar, tomando en nuestro caso de interés $\mu = 2^k-1$ y $x = a^{2^n}$. En consecuencia, inferimos que \[A_m + A_n - 2 = a^{2^n}\left(a^{2^n} + 1\right)S,\] donde $S$ es el correspondiente sumatorio $\sum_{j=0}^{\mu-1} (-1)^jx^j$. Dicho de otra manera, hemos probado que $A_n \mid A_m + A_n - 2$.
+Adicionalmente, y como pieza clave, notamos que el exponente $2^k - 1$ es impar, pues $k > 0$, por lo que podemos aplicar la mundialmente conocida identidad \[x^\mu + 1 = (x + 1)(x^{\mu-1} - x^{\mu-2} + \cdots - x + 1),\] válida cuando $\mu$ es impar, tomando en nuestro caso de interés $\mu = 2^k-1$ y $x = a^{2^n}$. En consecuencia, inferimos que \[A_m + A_n - 2 = a^{2^n}\left(a^{2^n} + 1\right)S = a^{2^n}A_nS,\] donde $S$ es el correspondiente sumatorio $\sum_{j=0}^{\mu-1} (-1)^jx^j$. Dicho de otra manera, hemos probado que $A_n \mid A_m + A_n - 2$.
 
 Este resultado, unido al hecho trivial de que $A_n \mid A_n$, nos permite afirmar que $A_n \mid A_m - 2$ para cualquiera $m > n$. Por subsiguiente, denotando $d = \mcd(A_n, A_m)$, notamos que, por un lado, juntando $d \mid A_n$ y $A_n \mid A_m - 2$ llegamos a que $d \mid A_m - 2$ y, por otro lado, como $d \mid A_m$ por definición, concluimos que \[d \mid 2 = A_m - (A_m - 2).\]
 
-Argumentando como previamente nos deja dos posibilidades para $d$, siendo éstas $d = 1$ o $d = 2$. Mediante, una irrisoria y poco estimmulante distinción de casos, concluimos que $d = 1$ si $a$ es par, mientras que $d = 2$ en caso contrario. $\hfill\square$
+Argumentando como previamente nos deja dos posibilidades para $d$, siendo éstas $d = 1$ o $d = 2$. Mediante una irrisoria y poco estimulante distinción de casos, concluimos que $d = 1$ si $a$ es par, mientras que $d = 2$ en caso contrario. $\hfill\square$
 \end{document}
