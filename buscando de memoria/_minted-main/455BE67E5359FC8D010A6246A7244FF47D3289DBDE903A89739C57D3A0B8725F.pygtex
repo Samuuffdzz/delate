@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+En R B3
+
+Router\PYGZsh{}sh ip protocols
+
+Routing Protocol is \PYGZdq{}ospf 100\PYGZdq{}
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 171.84.17.138
+  Number of areas in this router is 3. 3 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    171.84.16.128 0.0.0.63 area 2
+    171.84.17.80 0.0.0.3 area 3
+    171.84.17.84 0.0.0.3 area 3
+    171.84.17.136 0.0.0.3 area 0
+    171.84.17.132 0.0.0.3 area 0
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    171.84.16.254        110      00:13:51
+    171.84.17.89         110      00:14:26
+    171.84.17.90         110      00:14:21
+    171.84.17.137        110      00:14:25
+    171.84.17.138        110      00:14:26
+    172.84.18.226        110      00:14:25
+  Distance: (default is 110)
+\end{Verbatim}

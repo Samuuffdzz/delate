@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+En R B1
+
+Router\PYGZsh{}sh ip route
+Codes: C \PYGZhy{} connected, S \PYGZhy{} static, I \PYGZhy{} IGRP, R \PYGZhy{} RIP, M \PYGZhy{} mobile, B \PYGZhy{} BGP
+       D \PYGZhy{} EIGRP, EX \PYGZhy{} EIGRP external, O \PYGZhy{} OSPF, IA \PYGZhy{} OSPF inter area
+       N1 \PYGZhy{} OSPF NSSA external type 1, N2 \PYGZhy{} OSPF NSSA external type 2
+       E1 \PYGZhy{} OSPF external type 1, E2 \PYGZhy{} OSPF external type 2, E \PYGZhy{} EGP
+       i \PYGZhy{} IS\PYGZhy{}IS, L1 \PYGZhy{} IS\PYGZhy{}IS level\PYGZhy{}1, L2 \PYGZhy{} IS\PYGZhy{}IS level\PYGZhy{}2, ia \PYGZhy{} IS\PYGZhy{}IS inter area
+       * \PYGZhy{} candidate default, U \PYGZhy{} per\PYGZhy{}user static route, o \PYGZhy{} ODR
+       P \PYGZhy{} periodic downloaded static route
+
+Gateway of last resort is not set
+
+     171.84.0.0/16 is variably subnetted, 7 subnets, 3 masks
+R       171.84.0.0/16 [120/10] via 172.84.18.225, 00:02:55, Serial9/0
+O IA    171.84.16.0/25 [110/65] via 171.84.17.130, 00:24:12, Serial2/0
+O IA    171.84.16.128/25 [110/66] via 171.84.17.134, 00:14:05, Serial3/0
+O IA    171.84.17.0/25 [110/128] via 171.84.17.134, 00:13:47, Serial3/0
+C       171.84.17.128/30 is directly connected, Serial2/0
+C       171.84.17.132/30 is directly connected, Serial3/0
+O       171.84.17.136/30 [110/128] via 171.84.17.130, 00:24:12, Serial2/0
+                         [110/128] via 171.84.17.134, 00:24:12, Serial3/0
+     172.84.0.0/16 is variably subnetted, 12 subnets, 4 masks
+R       172.84.16.0/23 [120/4] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.0/25 [120/2] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.128/26 [120/2] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.192/30 [120/1] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.196/30 [120/2] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.200/30 [120/2] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.204/30 [120/1] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.208/30 [120/1] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.212/30 [120/2] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.216/30 [120/3] via 172.84.18.225, 00:00:18, Serial9/0
+R       172.84.18.220/30 [120/2] via 172.84.18.225, 00:00:18, Serial9/0
+C       172.84.18.224/30 is directly connected, Serial9/0
+\end{Verbatim}

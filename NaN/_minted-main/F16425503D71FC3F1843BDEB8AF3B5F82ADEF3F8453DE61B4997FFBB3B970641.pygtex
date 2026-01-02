@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function}\PYG{+w}{ }root\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nf}{laguerre\PYGZus{}method}\PYG{p}{(}poly\PYGZus{}coeffs, x0, tol, max\PYGZus{}iter\PYG{p}{)}
+\PYG{+w}{    }\PYG{c}{\PYGZpc{} poly\PYGZus{}coeffs: [an ... a0]}
+    \PYG{n}{n} \PYG{p}{=} \PYG{n+nb}{length}\PYG{p}{(}\PYG{n}{poly\PYGZus{}coeffs}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{n}{x} \PYG{p}{=} \PYG{n}{x0}\PYG{p}{;}
+
+    \PYG{k}{for} \PYG{n}{k} \PYG{p}{=} \PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{max\PYGZus{}iter}
+        \PYG{n}{p} \PYG{p}{=} \PYG{n+nb}{polyval}\PYG{p}{(}\PYG{n}{poly\PYGZus{}coeffs}\PYG{p}{,} \PYG{n}{x}\PYG{p}{);}
+        \PYG{k}{if} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{tol}\PYG{p}{,} \PYG{n}{root} \PYG{p}{=} \PYG{n}{x}\PYG{p}{;} \PYG{k}{return}\PYG{p}{;} \PYG{k}{end}
+
+        \PYG{c}{\PYGZpc{} Derivadas para G y H}
+        \PYG{n}{dp} \PYG{p}{=} \PYG{n+nb}{polyval}\PYG{p}{(}\PYG{n}{polyder}\PYG{p}{(}\PYG{n}{poly\PYGZus{}coeffs}\PYG{p}{),} \PYG{n}{x}\PYG{p}{);}
+        \PYG{n}{d2p} \PYG{p}{=} \PYG{n+nb}{polyval}\PYG{p}{(}\PYG{n}{polyder}\PYG{p}{(}\PYG{n}{polyder}\PYG{p}{(}\PYG{n}{poly\PYGZus{}coeffs}\PYG{p}{)),} \PYG{n}{x}\PYG{p}{);}
+
+        \PYG{n}{G} \PYG{p}{=} \PYG{n}{dp} \PYG{o}{/} \PYG{n}{p}\PYG{p}{;}
+        \PYG{n}{H} \PYG{p}{=} \PYG{n}{G}\PYGZca{}\PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{n}{d2p} \PYG{o}{/} \PYG{n}{p}\PYG{p}{;}
+
+        \PYG{c}{\PYGZpc{} Calculo del denominador}
+        \PYG{n}{disc} \PYG{p}{=} \PYG{n+nb}{sqrt}\PYG{p}{((}\PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{n}{n}\PYG{o}{*}\PYG{n}{H} \PYG{o}{\PYGZhy{}} \PYG{n}{G}\PYGZca{}\PYG{l+m+mi}{2}\PYG{p}{));}
+        \PYG{p}{[}\PYG{o}{\PYGZti{}}\PYG{p}{,} \PYG{n}{idx}\PYG{p}{]} \PYG{p}{=} \PYG{n+nb}{max}\PYG{p}{([}\PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{G} \PYG{o}{+} \PYG{n}{disc}\PYG{p}{),} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{G} \PYG{o}{\PYGZhy{}} \PYG{n}{disc}\PYG{p}{)]);}
+        \PYG{n}{den} \PYG{p}{=} \PYG{p}{[}\PYG{n}{G} \PYG{o}{+} \PYG{n}{disc}\PYG{p}{,} \PYG{n}{G} \PYG{o}{\PYGZhy{}} \PYG{n}{disc}\PYG{p}{];}
+
+        \PYG{n}{dx} \PYG{p}{=} \PYG{n}{n} \PYG{o}{/} \PYG{n}{den}\PYG{p}{(}\PYG{n}{idx}\PYG{p}{);}
+        \PYG{n}{x} \PYG{p}{=} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{dx}\PYG{p}{;}
+
+        \PYG{k}{if} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{dx}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{tol}\PYG{p}{,} \PYG{n}{root} \PYG{p}{=} \PYG{n}{x}\PYG{p}{;} \PYG{k}{return}\PYG{p}{;} \PYG{k}{end}
+    \PYG{k}{end}
+    \PYG{n}{root} \PYG{p}{=} \PYG{n}{x}\PYG{p}{;}
+\PYG{k}{end}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}\PYGZgt{}tracert 172.84.18.225
+
+Tracing route to 172.84.18.225 over a maximum of 30 hops:
+
+  1   0 ms      0 ms      0 ms      172.84.17.254
+  2   0 ms      0 ms      0 ms      172.84.18.217
+  3   0 ms      28 ms     32 ms     172.84.18.201
+  4   1 ms      27 ms     31 ms     172.84.18.225
+
+Trace complete.
+\end{Verbatim}

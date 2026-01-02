@@ -1,0 +1,32 @@
+En R A2
+
+Router>en
+Router#sh ip route
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     172.84.0.0/16 is variably subnetted, 12 subnets, 4 masks
+R       172.84.16.0/23 [120/3] via 172.84.18.210, 00:00:12, Serial3/0
+                       [120/3] via 172.84.18.206, 00:00:14, Serial6/0
+                       [120/3] via 172.84.18.193, 00:00:14, Serial2/0
+R       172.84.18.0/25 [120/1] via 172.84.18.193, 00:00:14, Serial2/0
+R       172.84.18.128/26 [120/1] via 172.84.18.210, 00:00:12, Serial3/0
+C       172.84.18.192/30 is directly connected, Serial2/0
+R       172.84.18.196/30 [120/1] via 172.84.18.193, 00:00:14, Serial2/0
+                         [120/1] via 172.84.18.206, 00:00:14, Serial6/0
+R       172.84.18.200/30 [120/1] via 172.84.18.193, 00:00:14, Serial2/0
+C       172.84.18.204/30 is directly connected, Serial6/0
+C       172.84.18.208/30 is directly connected, Serial3/0
+R       172.84.18.212/30 [120/1] via 172.84.18.206, 00:00:14, Serial6/0
+R       172.84.18.216/30 [120/2] via 172.84.18.210, 00:00:12, Serial3/0
+                         [120/2] via 172.84.18.206, 00:00:14, Serial6/0
+                         [120/2] via 172.84.18.193, 00:00:14, Serial2/0
+R       172.84.18.220/30 [120/1] via 172.84.18.210, 00:00:12, Serial3/0
+C       172.84.18.224/30 is directly connected, Serial9/0

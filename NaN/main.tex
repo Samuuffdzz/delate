@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{accents}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\definecolor{bgcolor}{rgb}{0.95, 0.95, 0.95}
+
+\usepackage{xcolor}
+
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}{Índice de Contenidos}
+\renewcommand{\listingscaption}{Código}
+\renewcommand{\tablename}{Tabla}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{minipage}{0.4\textwidth}
+        \includegraphics[height=30px]{murcialog.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        \hfill{Samuel Fernández Riquelme}
+
+        \hfill{\today}
+    \end{minipage}
+
+    \vspace{10px}
+
+    \hrule
+
+    \vspace{7px}
+
+    \begin{center}
+        {\huge \textsc{Algoritmo de Laguerre}}
+    \end{center}
+
+    \vspace{10px}
+
+    \tableofcontents
+\end{titlepage}
+
+\newpage
+
+\begin{abstract}
+Se implementa el método de Laguerre para la determinación de raíces de polinomios arbitrarios, fundamentado en la relación entre las derivadas del polinomio y las identidades de Newton. Se analiza su convergencia garantizada para polinomios con raíces exclusivamente reales y su comportamiento frente a raíces múltiples. El estudio incluye el desarrollo algorítmico en Octave y la verificación de su eficiencia frente a métodos iterativos convencionales.
+\end{abstract}
+
+\section{Fundamento Teórico}
+Para un polinomio $P(x)$ de grado $n$, el método de Laguerre utiliza las funciones auxiliares $G = P'(x)/P(x)$ y $H = G^2 - P''(x)/P(x)$. La iteración se define como:
+$$ x_{k+1} = x_k - \frac{n}{G \pm \sqrt{(n-1)(nH - G^2)}} $$
+Donde el signo en el denominador se elige para maximizar su magnitud absoluta. Según \textit{Kincaid-Cheney (1994)}, si todas las raíces de $P(x)$ son reales, el método converge monótonamente hacia una raíz desde cualquier punto inicial real.
+
+\section{Implementación en Octave}
+\begin{minted}[linenos, bgcolor=backcolour, frame=single, breaklines=true]{octave}
+function root = laguerre_method(poly_coeffs, x0, tol, max_iter)
+    % poly_coeffs: [an ... a0]
+    n = length(poly_coeffs) - 1;
+    x = x0;
+    
+    for k = 1:max_iter
+        p = polyval(poly_coeffs, x);
+        if abs(p) < tol, root = x; return; end
+        
+        % Derivadas para G y H
+        dp = polyval(polyder(poly_coeffs), x);
+        d2p = polyval(polyder(polyder(poly_coeffs)), x);
+        
+        G = dp / p;
+        H = G^2 - d2p / p;
+        
+        % Calculo del denominador
+        disc = sqrt((n-1) * (n*H - G^2));
+        [~, idx] = max([abs(G + disc), abs(G - disc)]);
+        den = [G + disc, G - disc];
+        
+        dx = n / den(idx);
+        x = x - dx;
+        
+        if abs(dx) < tol, root = x; return; end
+    end
+    root = x;
+end
+\end{minted}
+
+\section{Análisis de Convergencia}
+El método presenta propiedades excepcionales cuando el polinomio posee **todas sus raíces reales**:
+\begin{itemize}
+    \item \textbf{Globalidad:} A diferencia del método de Newton, Laguerre converge independientemente del punto de partida.
+    \item \textbf{Orden de Convergencia:} Es de tercer orden (cúbica) para raíces simples, reduciéndose a lineal en raíces múltiples.
+    \item \textbf{Estabilidad:} En el caso de raíces reales, el discriminante dentro de la raíz cuadrada siempre es no negativo, lo que evita la incursión innecesaria en el plano complejo.
+\end{itemize}
+
+Mediante la prueba de diversos ejemplos se puede observar que para raíces múltiples, la convergencia del método de Laguerre se degrada de orden 3 a orden 1 (lineal). Sin embargo, sigue siendo superior al método de Newton-Raphson por su capacidad de 'saltar' regiones donde la primera derivada es cercana a cero sin divergir al infinito.
+
+\section{Referencia}
+
+Kincaid, D., \& Cheney, W. (1994). \textit{Análisis Numérico: Las matemáticas del cálculo científico}. Addison Wesley.
+
+\end{document}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Router\PYGZgt{}traceroute 171.84.16.1
+Type escape sequence to abort.
+Tracing the route to 171.84.16.1
+
+  1   171.84.16.190   0 msec    0 msec    0 msec
+  2   171.84.17.137   20 msec   0 msec    26 msec
+  3   171.84.16.1     0 msec    1 msec    0 msec
+\end{Verbatim}

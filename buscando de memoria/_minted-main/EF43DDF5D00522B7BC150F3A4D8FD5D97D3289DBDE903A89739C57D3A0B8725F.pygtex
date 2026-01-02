@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Gateway of last resort is not set
+
+     172.84.0.0/16 is variably subnetted, 12 subnets, 4 masks
+R       172.84.16.0/23 [120/1] via 172.84.18.218, 00:00:12, Serial2/0
+R       172.84.18.0/25 [120/1] via 172.84.18.201, 00:00:01, Serial3/0
+R       172.84.18.128/26 [120/1] via 172.84.18.222, 00:00:26, Serial7/0
+R       172.84.18.192/30 [120/1] via 172.84.18.201, 00:00:01, Serial3/0
+R       172.84.18.196/30 [120/1] via 172.84.18.201, 00:00:01, Serial3/0
+                         [120/1] via 172.84.18.213, 00:00:03, Serial6/0
+C       172.84.18.200/30 is directly connected, Serial3/0
+R       172.84.18.204/30 [120/1] via 172.84.18.213, 00:00:03, Serial6/0
+R       172.84.18.208/30 [120/1] via 172.84.18.222, 00:00:26, Serial7/0
+C       172.84.18.212/30 is directly connected, Serial6/0
+C       172.84.18.216/30 is directly connected, Serial2/0
+C       172.84.18.220/30 is directly connected, Serial7/0
+R       172.84.18.224/30 [120/2] via 172.84.18.222, 00:00:26, Serial7/0
+                         [120/2] via 172.84.18.213, 00:00:03, Serial6/0
+                         [120/2] via 172.84.18.201, 00:00:01, Serial3/0
+\end{Verbatim}
