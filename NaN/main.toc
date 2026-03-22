@@ -1,5 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Fundamento Teórico}{1}{section.1}%
-\contentsline {section}{\numberline {2}Implementación en Octave}{1}{section.2}%
-\contentsline {section}{\numberline {3}Análisis de Convergencia}{2}{section.3}%
-\contentsline {section}{\numberline {4}Referencia}{2}{section.4}%
