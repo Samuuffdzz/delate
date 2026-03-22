@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{accents}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+
+\renewcommand{\contentsname}{Índice de Contenidos}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\ker}{\text{Ker}}
+\newcommand{\mcd}{\text{mcd}}
+\newcommand{\car}{\text{Car}}
+\newcommand{\card}{\text{card}}
+\newcommand{\mcm}{\text{mcm}}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{minipage}{0.4\textwidth}
+        \includegraphics[height=30px]{murcialog.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\textwidth}
+        \hfill{Samuel Fernández Riquelme}
+
+        \hfill{\today}
+    \end{minipage}
+
+    \vspace{10px}
+
+    \hrule
+
+    \vspace{7px}
+
+    \begin{center}
+        {\Huge \textsc{Topología de Superficies}}
+    \end{center}
+
+    \vspace{10px}
+
+    \hfill{\textit{-- Alto, policía, ha cometido usted un crimen.}}
+
+    \hfill{\textit{-- Lo asumo.}}
+
+    \hfill{\textit{-- Lo arresto.}}
+
+    \tableofcontents
+\end{titlepage}
+
+\newpage
+
+\section{Resolución de Ejercicios}
+
+\subsection{Relación 1}
+
+\begin{itemize}
+    \item[\boxed{3}] \emph{Probar que si $\mathcal{B}$ es una base de un espacio topológico $(X, \tau)$, existe un subconjunto \textbf{denso} $D$ en $X$ ($\overline{D} = X$) tal que $\card(D) \leq \card(\mathcal{B})$.}
+
+    \vspace{5px}
+
+    \textsc{Demostración}: Invitamos al estrado al controversial Axioma de Elección para definir \[D = \{x_B : B \in \mathcal{B}\},\] donde cada $x_B$ es un elemento concreto de $B \in \mathcal{B}$. Ahora, corrobar que $\overline{D} = X$, así como que $|D| \leq |\mathcal{B}|$, son cuestiones más bien elementales y poco estimulantes.
+    
+    Por un lado, todo elemento de la base $\mathcal{B}$ interseca con $D$\footnote{Este hecho ya es una caracterización de densidad.}. En consecuencia, dado $x \in X$ y $U \in \mathcal{E}(x)$, se satisface que \[U \cap D \supset B \cap D \neq \emptyset,\] donde $B \in \mathcal{B}$ es un elemento de la base cumpliendo $x \in B \subset U$. Como habíamos tomado $x \in X$ arbitrario, deducimos $\overline{D} = X$.
+
+    Por otro lado, si consideramos la aplicación $\mathcal{B} \to D$ dada por $B \mapsto x_B$ notamos trivialmente que es sobreyectiva. Por ende, admite una inversa por la derecha $D \to \mathcal{B}$ que ha de ser inyectiva, lo que nos permite concluir que $\card(D) \leq \card(\mathcal{B})$. \hfill{\textsc{Q.e.d.}}
+
+    \vspace{12px}
+
+    \item[\boxed{9}] \textit{Sea $f : (X, \tau) \to (X, \tau)$ una aplicación continua. ¿Se puede afirmar que el conjunto formado por los puntos fijos de $f$ es cerrado?}
+
+    \vspace{5px}
+
+    \textsc{Solución}\footnote{Destacamos que el argumento al que se recurrió en clase es, salvo que se demuestre los contrario, inválido.}: Así planteado, el interrogante es negativo. A modo de contraejemplo, estúdiese $X = \mathbb{R}$, $\tau = \tau_{t} = \{\emptyset, \mathbb{R}\}$ y $f \equiv 0$.
+
+    Para poder garantizar que $F = \{x \in X : f(x) = x\}$ sea cerrado, basta con exigir que $(X, \tau)$ sea Hausdorff. Para respaldar estas palabras, veamos que $X \setminus F$ es abierto. En efecto, dado $x \notin F$ se cumple $f(x) \neq x$ por lo que, al ser $(X, \tau)$ Hausdorff, existen $U \in \mathcal{E}(x)$ y $V \in \mathcal{E}(f(x))$ de modo que $U \cap V = \emptyset$. 
+    
+    En consecuencia, considerando $V' = f^{-1}(V)$ notamos que $W = U \cap V'$ es un entorno de $x$, cumpliendo además $W \subset X \setminus F$. Este último hecho es debido a que, para cada $y \in W$ se obtiene que $y \in U$, mientras que $f(y) \in V$, y como $U \cap V = \emptyset$ por hipótesis, inferimos que $f(y) \neq y$.
+
+    Sin más que hablar, concluimos que $X \setminus F$ es abierto y, por ende, $F$ cerrado. $\hfill\square$
+\end{itemize}
+
+\subsection{Miscelánea}
+
+\noindent\textbf{Problema 7 (sección \S 19)} \, \textit{Sea $\mathbb{R}^{\infty}$ el subconjunto de $\mathbb{R}^{\omega}$ formado por todas las sucesiones ``eventualmente cero'', es decir, sucesiones $(x_1, x_2, ...)$ tales que $x_i \neq 0$ solo en una cantidad finita de términos. ¿Cuál es la clausura de $\mathbb{R}^{\infty}$ en $\mathbb{R}^{\omega}$ con la topología producto?}
+
+\medskip
+
+\noindent\textsc{Solución}: Bajo la topología producto se cumple que $\overline{\mathbb{R}^{\infty}} = \mathbb{R}^{\omega}$. Para justificarlo, tomamos $\mathbf{x} = (x_1, x_2, ...) \in \mathbb{R}^{\omega}$ arbitrario y definimos la sucesión $(\mathbf{x}_n)_n \subset \mathbb{R}^{\omega}$ dada por
+
+\begin{equation*}
+    \mathbf{x}_n(k) = \begin{cases}
+        x_k \quad & \text{si $k \leq n$}, \\
+        0 & \text{en caso contrario,}
+    \end{cases}
+\end{equation*}
+
+\noindent donde adicionalmente se cumple que $\mathbf{x}_n \in \mathbb{R}^{\infty}$.
+
+Nuestro propósito ahora es demostrar que $(\mathbf{x}_n)_n \to \mathbf{x}$. Para ello, consideramos un entorno básico de $\mathbf{x}$ de la forma $U = \prod_{k=1}^{\infty} U_k$, con cada $U_k$ entorno de $x_k$ y donde, por naturaleza de la topología producto, cada $U_k$ coincide con $\mathbb{R}$ excepto en un número finito de índices $k$. Denotémoslos acaso por $k_1, k_2, ..., k_N$. En concescuencia, existe $n_0 = \max\{k_j : 1 \leq j \leq N\}$ cumpliendo, en particular, $\mathbf{x}_n \in U$ para todo $n \geq n_0$, por lo que, como se quería ver, $(\mathbf{x}_n)_n \to \mathbf{x}$. 
+
+Para concluir, actuamos en vigor de la Proposición 2.4 deduciendo que $\mathbf{x} \in \overline{\mathbb{R}^{\infty}}$ y al haber tratado con $\mathbf{x} \in \mathbb{R}^{\omega}$ arbitrario podemos afirmar que $\overline{\mathbb{R}^{\infty}} \supset \mathbb{R}^{\omega}$. Y, por último, la contención restante se extrae trivialmente de ser $\mathbb{R}^\omega$ el espacio ambiente. $\hfill\square$
+
+\bigskip
+
+\noindent\textit{¿Y en la topología de cajas?}
+
+\medskip
+
+\noindent\textsc{Solución}: En este escenario se tiene que $\overline{\mathbb{R}^\infty} = \mathbb{R}^\infty$, es decir, $\mathbb{R}^\infty$ es cerrado en la topología de cajas. Con este fin, veamos que su complementario es abierto, tomando para ello $\mathbf{x} = (x_1, x_2, ...) \notin \mathbb{R}^\infty$ arbitrario. Por definición de $\mathbb{R}^\infty$, deducimos que existe una cantidad infinita de coordenadas de $\mathbf{x}$ tales que $x_i \neq 0$. En base a esto, construimos el entorno básico de $\mathbf{x}$ dado por $U = \prod_{k=1}^{\infty} U_k$ con
+
+\begin{equation*}
+    U_k = \begin{cases}
+        (x_k - |x_k|, x_k + |x_k|) \quad & \text{si $x_k \neq 0$,} \\
+        \mathbb{R} & \text{en caso contrario.}
+    \end{cases}
+\end{equation*}
+
+Para terminar, damos la oportunidad al lector de cutivarse cotejando que $U \subset \mathbb{R}^\omega \setminus \mathbb{R}^\infty$, lo que nos permite concluir que $\mathbb{R}^\omega \setminus \mathbb{R}^\infty$ es cerrado. $\hfill\square$
+
+\newpage
+
+\section{Resultados Teóricos}
+
+\subsection{Tema 3}
+
+\noindent\textbf{Proposición} \, \textit{Sea $(X, \tau)$ un espacio localmente conexo por caminos. Si $U \in \tau$ es un abierto de $X$, entonces el subespacio $(U, \tau\vert_{ U})$ es localmente conexo por caminos. Es decir, la cualidad de ser localmente conexo por caminos es hereditaria bajo abiertos.}
+
+\vspace{5px}
+
+\noindent\textsc{Demostración}: Dado $x \in U$ un punto cualquiera y $V \in \mathcal{E}\vert_{U}(x)$ un entorno de $x$ en $U$, se tiene que $V$ es también un abierto de $X$, por ser $U$ abierto. A continuación, sabiendo por hipótesis que $X$ es localmente conexo por caminos, podemos tomar $W \in \mathcal{E}(x)$ conexo por caminos y de modo que $W \subset V$. Para terminar, notamos trivialmente que $W$ sigue siendo arcoconexo y abierto en $(U, \tau\vert_{U})$ cumpliendo $x \in W \subset V$. \hfill{\textsc{Q.e.d.}}
+
+\bigskip
+
+\noindent\textbf{Lema (del Tubo)} \, \textit{Sean $X$ e $Y$ espacios topológicos con $Y$ compacto y sea $x_0 \in X$. Si $N$ es un abierto de $X \times Y$ con $\{x_0\} \times Y \subset N$, entonces existe $U$ abierto de $X$ tal que $\{x_0\} \times Y \subset U \times Y \subset N$.}
+
+\medskip
+
+\noindent\textsc{Demostración}: Por ser $N$ abierto, para cada $y \in Y$ existe $U_y \times V_y$ abierto de la base tal que $(x_0, y) \in U_y \times V_y \subset N$. En particular, deducimos que $x_0 \in U_y$ para todo $y \in Y$ y que \[\bigcup_{y \in Y} U_y \times V_y \subset N, \quad \bigcup_{y \in Y} V_y = Y.\]
+
+Unificando el último hecho y la compacidad de $Y$, inferimos que existen $y_1, y_2, ..., y_n$ tales que $\{V_{y_k}\}_{1 \leq k \leq n}$ es subrecubrimiento finito de $\{V_y\}_{y \in Y}$. Para esos mismos $y_k$, definimos \[U = \bigcap_{k=1}^{n} U_{y_k},\] abierto de $X$. Por último, afirmamos que $U$ cumple las condiciones deseadas, es decir, $\{x_0\} \times Y \subset U \times Y \subset N$. Las validaciones se dejan como oportunidad de aprendizaje para los alumnos más insaciables. \texttt{.align 2} \hfill{\textsc{Q.e.d.}}
+
+\bigskip
+
+\noindent\textbf{Proposición 3.34} \, \textit{Si $(X, \tau)$ es un espacio metrizable, entonces $X$ es compacto si y solo si $X$ es secesionalmente compacto.}
+
+\medskip
+
+\noindent\textsc{Demostración}: Por definición de espacio metrizable, existe $d : X \times X \to \mathbb{R}$ métrica tal que $\tau(d) = \tau$. Pasamos ahora a probar separadamente la doble implicación.
+
+\begin{itemize}
+    \item[($\Longrightarrow$)] Sea $(x_n)_n \subset X$ una sucesión arbitraria en $X$. Definimos $S = \{x_n : n \in \mathbb{N}\}$ la imagen de la sucesión y distinguimos dos escenarios:
+    
+    \begin{itemize}
+        \item Cuando $S$ tiene puntos límite. Fijamos $x \in S'$ un punto de acumulación de $S$. Por la Proposición 2.11 del Tema 2 sabemos que para cada entorno $U$ de $x$, $U$ corta a una cantidad infinita de puntos de $S$. En consecuencia\footnote{Aunque expresado con ligereza, representa una buena práctica buscar convencimiento propio.}, podemos definir una sucesión estrictamente creciente de índices $(n_k)_k \subset \mathbb{N}$ tales que \[d(x, x_{n_k}) < \frac{1}{k}, \qquad \text{para todo $k \in \mathbb{N}$}.\] De esta construcción se deduce sin escrúpulos que $(x_{n_k})_k \longrightarrow x$.
+        \item Cuando $S$ no tiene puntos límite. Invocando nuevamente la Proposición 2.11 podemos afirmar que para cada $x \in S$ existe $U_x \in \mathcal{E}(x)$ tal que $U_x \cap S = \{x\}$. Más aún, considerando $\mathcal{U} = \{U_x\}_{x \in S}$ recubrimiento de $S$ y sabiendo que $S$ es cerrado\footnote{Entre otras propiedades, en la asignatura Topología de Espacios Métricos vimos que $\overline{S} = S \cup S'$. Y, en nuestro escenario particular, $\overline{S} = S$.}, y por tanto compacto, deducimos que existe $\{U_{x_1}, U_{x_2}, ..., U_{x_N}\}$ subrecubrimiento finito de $\mathcal{U}$. Mediante un irrisorio argumento por reducción al absurdo, podemos asegurar que existe $x \in \{x_1, x_2, ..., x_N\}$ tal que $U_{x}$ contiene una cantida infinita de términos de la sucesión $(x_n)_n$.
+
+        Llegados a este punto, combinamos $U_x \cap S = \{x\}$ y la infinidad de términos de $(x_n)_n$ para concluir que existe una subsucesión constantemente $x$, y en consecuencia convergente.
+    \end{itemize}
+
+    \item[($\Longleftarrow$)] 
+\end{itemize}
+
+\end{document}
