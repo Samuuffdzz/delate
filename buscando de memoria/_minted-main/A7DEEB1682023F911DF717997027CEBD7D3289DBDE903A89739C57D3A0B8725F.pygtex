@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-En R B5
-
-Router(config)\PYGZsh{}interface serial 3/0
-Router(config\PYGZhy{}if)\PYGZsh{}ip ospf cost 31
-\end{Verbatim}

@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-En R B2:
-
-Router\PYGZsh{}conf t
-Enter configuration commands, one per line.  End with CNTL/Z.
-Router(config)\PYGZsh{}router osp
-Router(config)\PYGZsh{}router ospf 100
-Router(config\PYGZhy{}router)\PYGZsh{}area 1 range 171.84.16.0 255.255.255.128
-\end{Verbatim}
