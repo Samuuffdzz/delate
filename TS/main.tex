@@ -1,7 +1,7 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amssymb}
-\usepackage[margin=3cm]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{enumitem}
@@ -75,7 +75,7 @@
 
     \vspace{5px}
 
-    \textsc{Solución}\footnote{Destacamos que el argumento al que se recurrió en clase es, salvo que se demuestre los contrario, inválido.}: Así planteado, el interrogante es negativo. A modo de contraejemplo, estúdiese $X = \mathbb{R}$, $\tau = \tau_{t} = \{\emptyset, \mathbb{R}\}$ y $f \equiv 0$.
+    \textsc{Solución}\footnote{Destacamos que el argumento al que se recurrió en clase es, salvo que se demuestre lo contrario, inválido.}: Así planteado, el interrogante es negativo. A modo de contraejemplo, estúdiese $X = \mathbb{R}$, $\tau = \tau_{t} = \{\emptyset, \mathbb{R}\}$ y $f \equiv 0$.
 
     Para poder garantizar que $F = \{x \in X : f(x) = x\}$ sea cerrado, basta con exigir que $(X, \tau)$ sea Hausdorff. Para respaldar estas palabras, veamos que $X \setminus F$ es abierto. En efecto, dado $x \notin F$ se cumple $f(x) \neq x$ por lo que, al ser $(X, \tau)$ Hausdorff, existen $U \in \mathcal{E}(x)$ y $V \in \mathcal{E}(f(x))$ de modo que $U \cap V = \emptyset$. 
     
@@ -120,13 +120,45 @@ Para concluir, actuamos en vigor de la Proposición 2.4 deduciendo que $\mathbf{
     \end{cases}
 \end{equation*}
 
-Para terminar, damos la oportunidad al lector de cutivarse cotejando que $U \subset \mathbb{R}^\omega \setminus \mathbb{R}^\infty$, lo que nos permite concluir que $\mathbb{R}^\omega \setminus \mathbb{R}^\infty$ es cerrado. $\hfill\square$
+Para terminar, damos la oportunidad al lector de cultivarse cotejando que $U \subset \mathbb{R}^\omega \setminus \mathbb{R}^\infty$, lo que nos permite concluir que $\mathbb{R}^\omega \setminus \mathbb{R}^\infty$ es abierto. $\hfill\square$
+
+\bigskip
+
+\noindent\textbf{Problema 5 (sección \S 20)} \, \textit{Sea $\mathbb{R}^\infty$ el subconjunto de $\mathbb{R}^\omega$ formado por las sucesiones eventualmente cero. ¿Cuál es la clausura de $\mathbb{R}^\infty$ en $\mathbb{R}^\omega$ con la topologóa uniforme?}
+
+\medskip
+
+\noindent\textsc{Solución}: Veamos que, dado $\mathbf{x} = (x_n)_n \in \mathbb{R}^\omega$, se tiene que $\mathbf{x} \in \overline{\mathbb{R}^\infty}$ si y solo si $(x_n)_n \to 0$, estudiando para ello la doble implicación independientemente.
+
+\begin{itemize}
+    \item[($\Longrightarrow$)] Supongamos que $\mathbf{x} \in \overline{\mathbb{R}^\infty}$ y sea $\varepsilon > 0$ arbitrario, imponiendo sin pérdida de generalidad $\varepsilon < 1$. Por hipótesis, sabemos que $B_{\bar{\rho}}(\mathbf{x}, \varepsilon) \cap \mathbb{R}^\infty \neq \emptyset$, lo que nos garantiza la existencia de una sucesión $\mathbf{y} = (y_n)_n \in \mathbb{R}^\omega$ tal que $y_n = 0$ apartir de cierto $n_0 \in \mathbb{N}$ y, a su vez, con $\mathbf{y} \in B_{\bar{\rho}}(\mathbf{x}, \varepsilon)$. En consecuencia, deducimos que $\bar{d}(x_n, 0) < \varepsilon$ para todo $n \geq n_0$ y, por darse $\varepsilon < 1$, llegamos a que $|x_n| < \varepsilon$ para todo $n \geq n_0$. Concluimos de esta manera que $(x_n)_n \to 0$.
+    
+    
+    \item[($\Longleftarrow$)] Recíprocamente, supongamos que $(x_n)_n \to 0$
+\end{itemize}
 
 \newpage
 
 \section{Resultados Teóricos}
 
+Los resultados marcados con * forman parte de la lista de teoría candidata a salir en el examen. (Válido para curso 2025/26.)
+
 \subsection{Tema 3}
+
+\noindent\textbf{Proposición 3.8*} \, \textit{El producto de cualquier familia de espacios conexos es un espacio conexo con la topología producto.}
+
+\medskip
+
+\noindent\textsc{Demostración}: (Solo se pide el caso de producto finito.) Procedemos por inducción sobre $n$: el número de espacios conexos a multiplicar.
+
+Para el caso base\footnote{Poco ha de decirse sobre el caso $n = 1$.}, $n = 2$, tomamos dos espacios conexos $(X, \mathcal{T})$ e $(Y, \mathcal{T}')$ arbitrarios. A continuación, fijamos $x_0 \in X$ y notamos que $V_0 = \{x_0\} \times Y$ es conexo, pues la aplicación $Y \to V_0$ que asigna $y \mapsto (x_0, y)$ es un claro homeomorfismo. Adicionalmente, para cada $y \in Y$ consideramos $H_y = X \times \{y\}$ conexo (por razones análogas a $V_0$) y, además, cumpliendo \[V_0 \cap H_y = \{(x_0, y)\} \neq \emptyset.\] En consecuencia, como $V_0 \cap H_y \neq \emptyset$ para todo $y \in Y$, invocamos el criterio del peine para deducir que la unión \begin{equation}
+    V_0 \cup \left(\bigcup_{y \in Y} H_y\right)
+    \label{eq:001}
+\end{equation} es conexa. Para terminar, contando con tu colaboración, dejamos que compruebes que \eqref{eq:001} coincide con $X \times Y$, lo que nos permite zanjar el caso base.
+
+Para el salto inductivo, solo una sutil adaptación del caso base es necesaria. Disculpen las mejoras. \hfill{\textsc{Q.e.d.}}
+
+\bigskip
 
 \noindent\textbf{Proposición} \, \textit{Sea $(X, \tau)$ un espacio localmente conexo por caminos. Si $U \in \tau$ es un abierto de $X$, entonces el subespacio $(U, \tau\vert_{ U})$ es localmente conexo por caminos. Es decir, la cualidad de ser localmente conexo por caminos es hereditaria bajo abiertos.}
 

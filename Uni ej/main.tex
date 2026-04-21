@@ -14,6 +14,7 @@
 
 \renewcommand{\contentsname}{Índice de Contenidos}
 \newcommand{\mcd}{\text{mcd}}
+\renewcommand{\sin}{\operatorname{sen}}
 
 \begin{document}
 
@@ -1360,7 +1361,7 @@ En particular, por ser $n > 1$ sabemos que cada término $a_n$ depende de, como 
 
 \section{Challenger}
 
-\textbf{Problema} \, \textit{Sea $x \in \mathbb{R}$ un número real arbitrario y definimos la sucesión recurrente $(x_n)_n \subset \mathbb{R}$ dada por}
+\noindent\textbf{Problema} \, \textit{Sea $x \in \mathbb{R}$ un número real arbitrario y definimos la sucesión recurrente $(x_n)_n \subset \mathbb{R}$ dada por}
 
 \[
 x_n :=
@@ -1558,7 +1559,48 @@ En definitiva, asumiendo $n \in \mathbb{Z}$ tal que $2 \nmid n$ y $3 \nmid n$, e
 
 Adicionalmente, y como pieza clave, notamos que el exponente $2^k - 1$ es impar, pues $k > 0$, por lo que podemos aplicar la mundialmente conocida identidad \[x^\mu + 1 = (x + 1)(x^{\mu-1} - x^{\mu-2} + \cdots - x + 1),\] válida cuando $\mu$ es impar, tomando en nuestro caso de interés $\mu = 2^k-1$ y $x = a^{2^n}$. En consecuencia, inferimos que \[A_m + A_n - 2 = a^{2^n}\left(a^{2^n} + 1\right)S = a^{2^n}A_nS,\] donde $S$ es el correspondiente sumatorio $\sum_{j=0}^{\mu-1} (-1)^jx^j$. Dicho de otra manera, hemos probado que $A_n \mid A_m + A_n - 2$.
 
-Este resultado, unido al hecho trivial de que $A_n \mid A_n$, nos permite afirmar que $A_n \mid A_m - 2$ para cualquiera $m > n$. Por subsiguiente, denotando $d = \mcd(A_n, A_m)$, notamos que, por un lado, juntando $d \mid A_n$ y $A_n \mid A_m - 2$ llegamos a que $d \mid A_m - 2$ y, por otro lado, como $d \mid A_m$ por definición, concluimos que \[d \mid 2 = A_m - (A_m - 2).\]
+Este resultado, unido al hecho trivial de que $A_n \mid A_n$, nos permite afirmar que $A_n \mid A_m - 2$ para cualesquiera $m > n$. Por subsiguiente, denotando $d = \mcd(A_n, A_m)$, notamos que, por un lado, juntando $d \mid A_n$ y $A_n \mid A_m - 2$ llegamos a que $d \mid A_m - 2$ y, por otro lado, como $d \mid A_m$ por definición, concluimos que \[d \mid 2 = A_m - (A_m - 2).\]
 
 Argumentando como previamente nos deja dos posibilidades para $d$, siendo éstas $d = 1$ o $d = 2$. Mediante una irrisoria y poco estimulante distinción de casos, concluimos que $d = 1$ si $a$ es par, mientras que $d = 2$ en caso contrario. $\hfill\square$
+
+\bigskip
+
+\noindent\textbf{Proposición} \, \textit{Dados $u, v \in \mathbb{R}$ se cumplen las siguientes propiedades:}
+
+\begin{itemize}
+        \item[\textit{(i)}] \textit{Si $\cos u = \cos v$ y $\sin u = \sin v$, entonces $u - v \in 2\pi\mathbb{Z}$.}
+
+        \textsc{Demostración}: Supuesto $\cos u = \cos v$ y $\sin u = \sin v$, desarrollamos la expresión $\cos(u - v)$:
+        \begin{equation*}
+            \begin{split}
+                \cos(u-v) &= \cos u \cos v + \sin u \sin v \\
+                &= \cos^2u + \sin u \sin v \quad [\cos u = \cos v] \\
+                &= \cos^2u + \sin^2u \quad [\sin u = \sin v] \\
+                &= 1.
+            \end{split}
+        \end{equation*}
+        Por la periocidad de la función $\cos$ sabemos que esto implica que $u - v = 2\pi k$, donde $k \in \mathbb{Z}$. Esto es, se cumple que $u - v \in 2\pi\mathbb{Z}$. \hfill{\textsc{Q.e.d.}}
+
+        \medskip
+    
+        \item[\textit{(ii)}] \textit{Si $\sin u = \sin v$, entonces $u - v \in 2\pi\mathbb{Z}$ o $u + v \in \pi + 2\pi\mathbb{Z}$.}
+
+            \textsc{Demostración}: En primer lugar, notamos que se cumple \[\cos^2u = 1 - \sin^2u = 1 - \sin^2v = \cos^2v,\] por lo que deducimos que $\cos u = \pm \cos v$. En el caso de $\cos u = \cos v$, se dan las hipótesis de (i), por lo que inferimos que $u - v \in 2\pi\mathbb{Z}$. En caso contrario, si $\cos u = -\cos v$, desplegamos la expresión $\cos(u+v)$ para notar que
+        \begin{equation*}
+            \begin{split}
+                \cos(u+v) &= \cos u \cos v - \sin u \sin v \\
+                &= -\cos^2u - \sin u \sin v \quad \, [\cos u = -\cos v] \\
+                &= -\cos^2u - \sin^2u \qquad \quad [\sin u = \sin v] \\
+                &= -1.
+            \end{split}
+        \end{equation*}
+        Para terminar, volvemos a actuar bajo tutela de la periocidad de la función $\cos$ para concluir que $u + v = \pi + 2\pi k$, con $k \in \mathbb{Z}$, o lo que es lo mismo, $u + v \in \pi + 2\pi\mathbb{Z}$. \hfill{\textsc{Q.e.d.}} 
+
+        \medskip
+
+        \item[\textit{(iii)}] \textit{Si $\cos u = \cos v$, entonces $u - v \in 2\pi\mathbb{Z}$ o $u + v \in 2\pi\mathbb{Z}$.}
+
+        \textsc{Demostración}: Manipulación y argumentación cortadas con el mismo filo que (ii). \hfill{\textsc{Q.e.d.}}
+\end{itemize}
+
 \end{document}

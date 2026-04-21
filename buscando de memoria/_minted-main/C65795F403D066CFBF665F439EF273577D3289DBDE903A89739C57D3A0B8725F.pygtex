@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+En R A4
+
+Router\PYGZsh{}conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)\PYGZsh{}interface serial 3/0
+Router(config\PYGZhy{}if)\PYGZsh{}shutdown
+
+Router(config\PYGZhy{}if)\PYGZsh{}exit
+Router(config)\PYGZsh{}exit
+Router\PYGZsh{}sh ip route
+Codes: C \PYGZhy{} connected, S \PYGZhy{} static, I \PYGZhy{} IGRP, R \PYGZhy{} RIP, M \PYGZhy{} mobile, B \PYGZhy{} BGP
+       D \PYGZhy{} EIGRP, EX \PYGZhy{} EIGRP external, O \PYGZhy{} OSPF, IA \PYGZhy{} OSPF inter area
+       N1 \PYGZhy{} OSPF NSSA external type 1, N2 \PYGZhy{} OSPF NSSA external type 2
+       E1 \PYGZhy{} OSPF external type 1, E2 \PYGZhy{} OSPF external type 2, E \PYGZhy{} EGP
+       i \PYGZhy{} IS\PYGZhy{}IS, L1 \PYGZhy{} IS\PYGZhy{}IS level\PYGZhy{}1, L2 \PYGZhy{} IS\PYGZhy{}IS level\PYGZhy{}2, ia \PYGZhy{} IS\PYGZhy{}IS inter area
+       * \PYGZhy{} candidate default, U \PYGZhy{} per\PYGZhy{}user static route, o \PYGZhy{} ODR
+       P \PYGZhy{} periodic downloaded static route
+
+Gateway of last resort is not set
+
+     172.84.0.0/16 is variably subnetted, 9 subnets, 3 masks
+R       172.84.16.0/23 [120/1] via 172.84.18.218, 00:00:09, Serial2/0
+R       172.84.18.128/26 [120/1] via 172.84.18.222, 00:00:03, Serial7/0
+R       172.84.18.196/30 [120/1] via 172.84.18.213, 00:00:09, Serial6/0
+R       172.84.18.204/30 [120/1] via 172.84.18.213, 00:00:09, Serial6/0
+R       172.84.18.208/30 [120/1] via 172.84.18.222, 00:00:03, Serial7/0
+C       172.84.18.212/30 is directly connected, Serial6/0
+C       172.84.18.216/30 is directly connected, Serial2/0
+C       172.84.18.220/30 is directly connected, Serial7/0
+R       172.84.18.224/30 [120/2] via 172.84.18.222, 00:00:03, Serial7/0
+                         [120/2] via 172.84.18.213, 00:00:09, Serial6/0
+\end{Verbatim}

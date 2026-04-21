@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
+\contentsline {section}{\numberline {2}Cuestiones Teóricas}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Encaminamiento Intra-Dominio IPv4}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Organización A}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Organización B}{10}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Interconexión y Redistribución de Rutas}{23}{subsection.2.2}%
